@@ -1,0 +1,222 @@
+
+/* normalize.css v2.1.3 | MIT License | git.io/normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a{background:transparent}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:0.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px
+solid #c0c0c0;margin:0
+2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,
+html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],
+html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}b,strong,.strong{font-weight:bold}dfn,em,.em{font-style:italic}small,.small{font-size:75%}ul,ol{padding:0;list-style-type:none}dd{margin:0}.sidebar ul,
+.sidebar ol,.commentlist{list-style:none}.clearfix{zoom:1}.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.image-replacement{text-indent:100%;white-space:nowrap;overflow:hidden}span.amp{font-family:Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;font-style:italic}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.alert-help,.alert-info,.alert-error,.alert-success{margin:10px;padding:5px
+18px;border:1px
+solid}.alert-help{border-color:#e8dc59;background:#ebe16f}.alert-info{border-color:#bfe4f4;background:#d5edf8}.alert-error{border-color:#f8cdce;background:#fbe3e4}.alert-success{border-color:#deeaae;background:#e6efc2}.button,.button:visited{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#5e7c9d;border:none;padding:18px
+36px;color:#0e1521;display:block;text-align:center;font-weight:bold;text-decoration:none;font-size:16px;line-height:16px;cursor:pointer;line-height:21px;text-transform:uppercase}.button:hover,.button:focus,.button:visited:hover,.button:visited:focus{background:#fdfdfe}.blue-button,.blue-button:visited{border-color:#1472ad;text-shadow:0 1px 1px #1472ad;background-color:#1681c4;background-image:-webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));background-image:-webkit-linear-gradient(top, #1990db, #1681c4);background-image:-moz-linear-gradient(top, #1990db, #1681c4);background-image:-o-linear-gradient(top, #1990db, #1681c4);background-image:linear-gradient(to bottom, #1990db, #1681c4);box-shadow:inset 0 0 3px #59b3ec}.blue-button:hover,.blue-button:focus,.blue-button:visited:hover,.blue-button:visited:focus{border-color:#116396;background-color:#1472ad;background-image:-webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));background-image:-webkit-linear-gradient(top, #1784c9, #1472ad);background-image:-moz-linear-gradient(top, #1784c9, #1472ad);background-image:-o-linear-gradient(top, #1784c9, #1472ad);background-image:linear-gradient(to bottom,#1784c9,#1472ad)}.blue-button:active,.blue-button:visited:active{background-color:#1990db;background-image:-webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));background-image:-webkit-linear-gradient(top, #1681c4, #1990db);background-image:-moz-linear-gradient(top, #1681c4, #1990db);background-image:-o-linear-gradient(top, #1681c4, #1990db);background-image:linear-gradient(to bottom, #1681c4, #1990db)}@keyframes
+fadein{from{opacity:0}to{opacity:1}}@-moz-keyframes
+fadein{from{opacity:0}to{opacity:1}}@-webkit-keyframes
+fadein{from{opacity:0}to{opacity:1}}@keyframes
+latefade{0%{opacity:0}35%{opacity:0}100%{opacity:1}}@-moz-keyframes
+latefade{0%{opacity:0}35%{opacity:0}100%{opacity:1}}@-webkit-keyframes
+latefade{0%{opacity:0}35%{opacity:0}100%{opacity:1}}@keyframes
+slidedownfade{0%{opacity:0;top:0px}85%{opacity:0;top:-18px}100%{opacity:1;top:0px}}@-moz-keyframes
+slidedownfade{0%{opacity:0;top:0px}85%{opacity:0;top:-18px}100%{opacity:1;top:0px}}@-webkit-keyframes
+slidedownfade{0%{opacity:0;top:0px}85%{opacity:0;top:-18px}100%{opacity:1;top:0px}}@keyframes
+lineslidedownfade{0%{margin-top:600px}35%{margin-top:600px}100%{margin-top:0px}}@-moz-keyframes
+lineslidedownfade{0%{margin-top:600px}35%{margin-top:600px}100%{margin-top:0px}}@-webkit-keyframes
+lineslidedownfade{0%{margin-top:600px}35%{margin-top:600px}100%{margin-top:0px}}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:22px;color:#616a7a;background:#0e1521}.wrap{width:100%;margin:0
+auto}a,a:visited{color:#0e1521;text-decoration:none}a:hover,a:focus,a:visited:hover,a:visited:focus{color:#5e7c9d}a:link,a:visited:link{-webkit-tap-highlight-color:rgba(0,0,0,0.3)}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{font-family:"league-gothic","Helvetica Neue",Helvetica,Arial,sans-serif;text-rendering:optimizelegibility;font-weight:400;text-transform:uppercase;margin:0}h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5
+a{text-decoration:none}h1,.h1{font-size:73px;line-height:65px;color:#fdfdfe}h2,.h2{font-size:73px;line-height:65px;color:#fdfdfe}h3,.h3{font-size:34px;line-height:34px;color:#fdfdfe}h4,.h4{font-size:34px;line-height:34px;color:#616a7a}h5,.h5{font-size:28px;line-height:28px;color:#fdfdfe}.header{position:fixed;background:#0e1521;top:0;left:0;width:100%;padding:10px;z-index:999}.header #inner-header{width:100%}#logo{width:51px;height:21px;display:block;float:left}#logo
+img{max-width:51px;height:21px}#logo:hover{opacity:0.9}.nav-icon{display:none}body.home .nav-icon{background:url("../../../themes/appliancetec/library/images/nav-icon.png") no-repeat 0 0 scroll;width:21px;height:21px;display:block;cursor:pointer;float:right}#navigation{position:fixed;top:41px;right:-250px;z-index:999;height:100%;width:250px;background:#1d2737;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out}#container.navactive
+#navigation{right:0}.nav{border:none;border-bottom:0;margin:0}.nav
+li{}.nav li
+a{display:block;text-decoration:none;padding:8px
+10px;border-bottom:1px dashed #3d4859;color:#fdfdfe;font-size:13px}.nav li a:hover, .nav li a:focus{color:#5e7c9d}.nav li ul.sub-menu li a,
+.nav li ul.children li
+a{padding-left:30px}#container{position:relative;right:0;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;background:#0e1521 url("../../../themes/appliancetec/library/images/mobile-bg.jpg") repeat top center scroll}#container.navactive{right:250px}body.page .scroll-section,
+body.archive .scroll-section,
+body.error404 .scroll-section,
+body.single .scroll-section{padding:80px
+0 40px 0}body.home .scroll-section{padding:40px
+0}.scroll-section{padding:40px
+0}.scroll-section h1, .scroll-section
+h2{text-align:center;margin:0
+auto;display:block;font-size:34px;line-height:32px;padding:12px
+0 5px 0;position:relative;z-index:5}.scroll-section h1 span, .scroll-section h2
+span{border:5px
+solid #fdfdfe;padding:2px
+18px 0 18px}.scroll-section div.content-box{background:#fdfdfe;padding:15px
+20px}.scroll-section div.content-box
+p{margin:0}.scroll-section div.content-box
+div.fact{display:block;margin-top:15px}.scroll-section div.content-box div.fact
+h4{display:inline-block}.scroll-section
+div.testimonial{padding:15px
+20px;margin:0
+30px;background:#0e1521;position:relative;font-size:12px}.scroll-section div.testimonial
+p{margin:0;color:#fdfdfe}.scroll-section div.testimonial p
+strong{color:#5e7c9d;text-transform:uppercase;font-weight:bold}.scroll-section div.testimonial span.speech-open{width:30px;height:30px;display:block;position:absolute;top:0;left:-30px;background:url("../../../themes/appliancetec/library/images/speech-open.png") no-repeat 0 0 scroll}.scroll-section div.testimonial span.speech-close{width:30px;height:30px;display:block;position:absolute;bottom:0;right:-30px;background:url("../../../themes/appliancetec/library/images/speech-close.png") no-repeat 0 0 scroll}.scroll-section span.dash-bottom{height:80px;width:2px;border-right:2px dashed #fdfdfe;display:block;position:absolute;z-index:1;left:50%;margin-left:-1px}#welcome img.welcome-logo{margin:60px
+auto;height:99px;width:160px;display:block;-webkit-animation:fadein 1.5s ease-in-out;-moz-animation:fadein 1.5s ease-in-out;animation:fadein 1.5s ease-in-out}#welcome
+h2{padding:12px
+0}#welcome
+h4{font-size:16px;line-height:16px;color:#616a7a;text-align:center}#welcome h4
+span{background:#fdfdfe;padding:2px
+10px}#types-of-repair .product-wrap-outer{width:100%;overflow:auto;background:#e5e8e8}#types-of-repair .product-wrap{width:1470px;border:5px
+solid #fdfdfe;padding:20px
+0px 0px 20px;position:relative}#types-of-repair .product-wrap .product-box{width:215px;float:left;margin-right:25px}#types-of-repair .product-wrap .product-box
+h3{text-align:center;display:block;font-size:28px;line-height:28px;border:5px
+solid #0e1521;padding:7px
+0;color:#0e1521}#types-of-repair .product-wrap .product-box
+p{font-size:12px;line-height:21px;color:#333}#types-of-repair .product-wrap .product-box
+img{width:150px;height:auto}#types-of-repair .product-wrap .swipe-icon{width:65px;height:42px;display:block;background:url("../../../themes/appliancetec/library/images/swipe-right.png") no-repeat 0 0 scroll;background-size:65px 42px;position:absolute;bottom:25px;left:20px}#contact .contact-inner div.content-box p
+strong{color:#5e7c9d}body
+.gform_wrapper{width:100%;margin:0;padding:0;max-width:100%;background:#0e1521;border:5px
+solid white;padding:10px
+20px 20px 20px}body .gform_wrapper .top_label input.large, body .gform_wrapper .top_label select.large, body .gform_wrapper .top_label
+textarea.textarea{width:100%}body .gform_wrapper .top_label
+.gfield_label{color:#fdfdfe;font-weight:normal;text-transform:uppercase}body .gform_wrapper input[type=text], body .gform_wrapper input[type=url], body .gform_wrapper input[type=email], body .gform_wrapper input[type=tel], body .gform_wrapper input[type=number], body .gform_wrapper input[type=password]{padding:12px;font-size:12px;border:none}body .gform_wrapper
+textarea{padding:12px;font-size:12px;border:none}body .gform_wrapper input[type=text]:focus, body .gform_wrapper input[type=url]:focus, body .gform_wrapper input[type=email]:focus, body .gform_wrapper input[type=tel]:focus, body .gform_wrapper input[type=number]:focus, body .gform_wrapper input[type=password]:focus, body .gform_wrapper textarea:focus{background:#5e7c9d;color:#fdfdfe}body .gform_wrapper
+.gform_footer{padding:0;margin:20px
+0 0 0;clear:both;position:relative}body .gform_wrapper .gform_footer input.button, body .gform_wrapper .gform_footer input[type=submit]{font-size:16px;width:100%;position:absolute;bottom:0}body .gform_wrapper
+div.validation_error{color:white;font-weight:normal;margin:0px
+0 0 0;font-size:13px}body .gform_wrapper .top_label
+.gfield_error{width:100%}body .gform_wrapper li.gfield.gfield_error, body .gform_wrapper
+li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{background:#1d3050;border-top:1px solid #5e7c9d;border-bottom:none;padding:0px
+4px 10px 4px !important;padding-left:8px !important}body .gform_wrapper .ginput_container+.gfield_description.validation_message{margin-top:0}body .gform_wrapper
+.validation_message{color:#fdfdfe}body .gform_wrapper li.gfield_error input[type=text], body .gform_wrapper li.gfield_error input[type=url], body .gform_wrapper li.gfield_error input[type=email], body .gform_wrapper li.gfield_error input[type=tel], body .gform_wrapper li.gfield_error input[type=number], body .gform_wrapper li.gfield_error input[type=password], body .gform_wrapper li.gfield_error
+textarea{border:1px
+solid #fdfdfe}body .gform_wrapper
+li.gfield.gfield_error.gfield_contains_required{margin-bottom:0 !important;margin-top:8px}.byline{color:#999}.entry-content{}.entry-content
+dd{margin-left:0;font-size:0.9em;color:#787878;margin-bottom:1.5em}.entry-content
+img{margin:0
+0 1.5em 0;max-width:100%;height:auto}.entry-content video, .entry-content
+object{max-width:100%;height:auto}.entry-content
+pre{background:#eee;border:1px
+solid #cecece;padding:10px}.wp-caption{max-width:100%;background:#eee;padding:5px}.wp-caption
+img{max-width:100%;margin-bottom:0;width:100%}.wp-caption p.wp-caption-text{font-size:0.85em;margin:4px
+0 7px;text-align:center}.pagination,.wp-prev-next{margin:1.1em 0 2.2em}.pagination{text-align:center}.pagination
+ul{display:inline-block;white-space:nowrap;padding:0;clear:both;margin:1px}.pagination ul
+li{padding:0;margin:0;float:left;display:inline;overflow:hidden}.pagination ul li a, .pagination ul li
+span{margin:0;text-decoration:none;padding:0;line-height:1em;font-size:1em;font-weight:normal;padding: .5em;min-width:1em;display:block}.pagination ul li
+span.current{font-weight:bold}.wp-prev-next .prev-link{float:left}.wp-prev-next .next-link{float:right}#comments{}.commentlist{}.commentlist
+li{position:relative;clear:both;overflow:hidden;list-style-type:none;margin-bottom:1.5em;padding:0.7335em 10px}.commentlist li:last-child{margin-bottom:0}.commentlist li
+ul.children{margin:0}.commentlist li[class*=depth-]{margin-top:1.1em}.commentlist li.depth-1{margin-left:0;margin-top:0}.commentlist li:not(.depth-1){margin-right:-10px;margin-left:-10px;margin-top:0;padding-bottom:0}.commentlist
+.odd{background:#eee}.commentlist
+.even{background:#fefefe}.commentlist
+.vcard{margin-left:50px}.commentlist .vcard
+cite.fn{font-weight:700;font-style:normal}.commentlist .vcard
+time{float:right}.commentlist .vcard time
+a{color:#999;text-decoration:none}.commentlist .vcard time a:hover{text-decoration:underline}.commentlist .vcard
+img.avatar{position:absolute;left:10px;padding:2px;border:1px
+solid #cecece;background:#fff}.commentlist
+.comment_content{margin-left:50px}.commentlist .comment_content
+p{margin:0.7335em 0 1.5em;font-size:1em;line-height:1.5em}.commentlist .comment-reply-link{text-decoration:none;float:right;background:#4598bb;padding:3px
+5px;color:#fff;opacity:0.65;margin-bottom:10px;font-weight:700;font-size:0.9em}.commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus{opacity:1}.respond-form{margin:1.5em 10px;padding-bottom:2.2em}.respond-form
+form{margin:0.75em 0}.respond-form form
+li{list-style-type:none;clear:both;margin-bottom:0.7335em}.respond-form form li label,
+.respond-form form li
+small{display:none}.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url],
+.respond-form form
+textarea{padding:3px
+6px;background:#efefef;border:2px
+solid #cecece;line-height:1.5em}.respond-form form input[type=text]:focus,
+.respond-form form input[type=email]:focus,
+.respond-form form input[type=url]:focus,
+.respond-form form textarea:focus{background:#fff}.respond-form form input[type=text]:invalid,
+.respond-form form input[type=email]:invalid,
+.respond-form form input[type=url]:invalid,
+.respond-form form textarea:invalid{outline:none;border-color:#fbc2c4;background-color:#f6e7eb;-webkit-box-shadow:none;-moz-box-shadow:none;-ms-box-shadow:none;box-shadow:none}.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url]{max-width:400px;min-width:250px}.respond-form form
+textarea{resize:none;width:97.3%;height:150px}#comment-form-title{margin:0
+0 1.1em}#allowed_tags{margin:1.5em 10px 0.7335em 0}.nocomments{margin:0
+20px 1.1em}.sidebar{margin:0;padding:0}.widget{margin:0;padding:0}.widget
+ul{margin:0;padding:0}.widget ul
+li{}.footer{clear:both;background:#0e1521}.footer #inner-footer{padding:15px
+20px}.footer
+nav{margin:0}.footer nav
+ul{background:none;margin:0;padding:0;border:none}.footer nav ul
+li{margin:0;padding:0;float:left;margin-right:10px}.footer nav ul li
+a{margin:0;padding:0;background:none;color:#5e7c9d;border:none}.footer nav ul li a:hover{color:#fdfdfe;background:none}.copyright{margin:0}.copyright
+a{color:#5e7c9d}.copyright a:hover{color:#fdfdfe}@media only screen and (min-width: 481px){.menu{}.menu
+ul{}.menu ul
+li{}.menu ul li
+a{}.entry-content{}.entry-content .alignleft, .entry-content
+img.alignleft{margin-right:1.5em;display:inline;float:left}.entry-content .alignright, .entry-content
+img.alignright{margin-left:1.5em;display:inline;float:right}.entry-content .aligncenter, .entry-content
+img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both}}@media only screen and (min-width: 768px){.onecol{width:5.801104972%}.twocol{width:14.364640883%}.threecol{width:22.928176794%}.fourcol{width:31.491712705%}.fivecol{width:40.055248616%}.sixcol{width:48.618784527%}.sevencol{width:57.182320438000005%}.eightcol{width:65.74585634900001%}.ninecol{width:74.30939226%}.tencol{width:82.87292817100001%}.elevencol{width:91.436464082%}.twelvecol{width:99.999999993%}.onecol,.twocol,.threecol,.fourcol,.fivecol,.sixcol,.sevencol,.eightcol,.ninecol,.tencol,.elevencol,.twelvecol{position:relative;float:left;margin-left:2.762430939%}.first{margin-left:0}.last{float:right}#container{background:#0e1521;height:100%}.scroll-bg{position:fixed;width:100%;height:100%;top:0;left:0;display:block}.bg-initial{z-index:0;background:url("../../../themes/appliancetec/library/images/bg1-fade.jpg") repeat center center scroll}.bg1{z-index:1;background:url("../../../themes/appliancetec/library/images/bg1.jpg") repeat center center scroll;visibility:hidden;opacity:0}.bg1-fade{z-index:2;background:url("../../../themes/appliancetec/library/images/bg1-fade.jpg") repeat center center scroll}.bg2{z-index:3;background:url("../../../themes/appliancetec/library/images/bg2.jpg") repeat center center scroll}.bg2-fade{z-index:4;background:url("../../../themes/appliancetec/library/images/bg2-fade.jpg") repeat center center scroll}.bg3{z-index:5;background:url("../../../themes/appliancetec/library/images/bg3.jpg") repeat center center scroll}.bg3-fade{z-index:6;background:url("../../../themes/appliancetec/library/images/bg3-fade.jpg") repeat center center scroll}#content-wrapper{height:100%;width:100%;position:relative;z-index:10}.scrollContainer{overflow-y:scroll;overflow-x:hidden;width:100%;height:100%;position:relative}}@media only screen and (min-width: 768px) and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape){.scrollContainer{height:692px !important}}@media only screen and (min-width: 768px){}@media only screen and (min-width: 768px) and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){.scrollContainer{height:928px !important}}@media only screen and (min-width: 768px){a{-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out}body.home .scroll-section{padding:150px
+0 450px 0}.scroll-section{padding:150px
+0 450px 0;position:relative;height:auto}.scroll-section h1, .scroll-section
+h2{text-align:center;margin:0
+auto;display:block;font-size:68px;line-height:66px;padding:20px
+0 8px 0;position:relative;z-index:5}.scroll-section h1 span, .scroll-section h2
+span{border:10px
+solid #fdfdfe;padding:2px
+25px 0 25px}.scroll-section div.content-box{background:#fdfdfe;width:750px;padding:25px;margin:0
+auto;position:relative;z-index:5}.scroll-section div.content-box
+p{margin:0;float:left;width:69%}.scroll-section div.content-box
+div.fact{display:block;margin-top:0;float:right;width:30%}.scroll-section div.content-box div.fact
+h4{display:block;text-align:right;font-size:33px}.scroll-section div.content-box div.fact h4.fact-value{font-size:145px;line-height:120px;letter-spacing:-2px}.scroll-section div.content-box div.fact-left{display:block;padding-top:4px}.scroll-section div.content-box div.fact-left
+h4{line-height:35px;text-align:left;float:right;width:88px}.scroll-section div.content-box div.fact-left h4.fact-value{font-size:130px;line-height:107px;letter-spacing:-4px;display:block;float:left;width:112px;text-align:right}.scroll-section
+div.testimonial{padding:18px
+20px;margin:0
+auto;background:#0e1521;font-size:12px;width:400px;position:relative;z-index:5}.scroll-section div.testimonial
+p{margin:0;color:#fdfdfe}.scroll-section div.testimonial p
+strong{color:#5e7c9d;text-transform:uppercase;font-weight:bold;display:block}.scroll-section div.testimonial span.speech-open{width:30px;height:30px;display:block;position:absolute;top:0;left:-30px;background:url("../../../themes/appliancetec/library/images/speech-open.png") no-repeat 0 0 scroll}.scroll-section div.testimonial span.speech-close{width:30px;height:30px;display:block;position:absolute;bottom:0;right:-30px;background:url("../../../themes/appliancetec/library/images/speech-close.png") no-repeat 0 0 scroll}.scroll-section span.dash-bottom{height:600px;width:4px;border-right:4px dashed #fdfdfe;display:block;position:absolute;z-index:1;left:50%;margin-left:-2px}.scroll-section span.dash-top{height:680px;top:-530px;width:4px;border-right:4px dashed #fdfdfe;display:block;position:absolute;z-index:-1;left:50%;margin-left:-2px}.scroll-section span.dash-right{height:4px;width:100%;border-top:4px dashed #fdfdfe;display:block;position:absolute;z-index:1;left:50%;top:50%;margin-top:-155px}.scroll-section span.dash-left{height:4px;width:100%;border-top:4px dashed #fdfdfe;display:block;position:absolute;z-index:1;right:50%;top:50%;margin-top:-155px}body.home #about div.content-box
+p{width:74%}#about div.content-box div.fact-left h4.fact-value{width:78px}#about div.content-box
+div.fact{width:25%}#maintenance-contracts div.content-box
+h4{font-size:32px}#maintenance-contracts div.content-box h4.fact-value{font-size:118px;line-height:95px;height:96px}#maintenance-contracts div.content-box h4.fact-value
+span{font-size:70px}body.page .scroll-section div.content-box p,
+body.archive .scroll-section div.content-box
+p{float:none;width:100%}body.home .scroll-section div.content-box
+p{float:left;width:69%}span.dash-vert{height:800px;top:-975px;width:4px;border-right:4px dashed #fdfdfe;display:block;position:absolute;z-index:-1;left:50%;margin-left:-2px}#welcome{padding-top:150px}#welcome img.welcome-logo{margin:60px
+auto;height:143px;width:232px;display:block}#welcome
+h2{padding:20px
+0 8px 0;-webkit-animation:latefade 2.5s ease-in-out;-moz-animation:latefade 2.5s ease-in-out;animation:latefade 2.5s ease-in-out}#welcome
+h4{padding:7px
+0;font-size:28px;line-height:28px;color:#616a7a;text-align:center;position:relative;z-index:5}#welcome h4
+span{background:#fdfdfe;padding:4px
+14px;position:relative;-webkit-animation:slidedownfade 3.3s ease-in-out;-moz-animation:slidedownfade 3.3s ease-in-out;animation:slidedownfade 3.3s ease-in-out}#welcome span.dash-bottom{-webkit-animation:lineslidedownfade 3.4s ease-in-out;-moz-animation:lineslidedownfade 3.4s ease-in-out;animation:lineslidedownfade 3.4s ease-in-out}#about span.dash-bottom{display:none}span.pin-trigger{position:relative;top:330px}#pin-outer{width:100%;overflow:hidden;display:block}#pin-outer #pin-inner{position:relative}#pin-outer #pin-inner section.scroll-section{float:left}#pin-outer #pin-inner #types-of-repair{padding:100px
+400px 50px 400px;width:2670px !important}span.pin-trigger2{position:relative;top:330px;display:block}#pin-outer2{width:100%;overflow:hidden;display:block}#pin-outer2 #pin-inner2{position:relative}#pin-outer2 #pin-inner2 section.scroll-section{float:left}#pin-outer2 #pin-inner2 #appliance-suppliers{padding:150px
+400px 150px 400px;width:2670px !important}#types-of-repair{background:url("../../../themes/appliancetec/library/images/diagonal-bg.png") no-repeat center center scroll;z-index:10}#types-of-repair span.dash-bottom{display:none}#types-of-repair .product-wrap-outer{width:1870px;overflow:auto;background:none;z-index:5;position:relative}#types-of-repair .product-wrap{width:100%;border:none;padding:40px
+0px 0px 40px;position:relative}#types-of-repair .product-wrap .product-box{width:265px;float:left;margin-right:40px;position:relative}#types-of-repair .product-wrap .product-box
+h3{text-align:center;display:block;border:none;padding:0;margin:0}#types-of-repair .product-wrap .product-box h3
+span{text-align:center;font-size:28px;line-height:28px;border:8px
+solid #0e1521;padding:4px
+0px;color:#0e1521;width:220px;display:block;margin:0
+auto}#types-of-repair .product-wrap .product-box
+p{font-size:12px;line-height:21px;color:#333;display:block;margin:0;padding:0;position:absolute;top:44px;left:22px;width:220px;background:#0e1521;color:#fdfdfe;overflow:hidden;border-bottom:8px solid #5e7c9d}#types-of-repair .product-wrap .product-box p
+span{padding:12px
+20px 18px 20px;display:block}#types-of-repair .product-wrap .product-box
+img{width:265px;height:auto;margin-top:20px}#types-of-repair .product-wrap .swipe-icon{display:none}#appliance-rework span.dash-bottom{display:none}#product-evaluation span.dash-bottom{display:none}#appliance-suppliers{background:url("../../../themes/appliancetec/library/images/diagonal-bg.png") no-repeat center center scroll;z-index:10;min-height:700px}#appliance-suppliers
+h2{color:#0e1521}#appliance-suppliers h2
+span{border-color:#0e1521;color:#0e1521}#appliance-suppliers div.content-box{background:#0e1521;color:#fdfdfe}#appliance-suppliers div.content-box div.fact
+h4{color:#fdfdfe}#appliance-suppliers
+div.testimonial{background:#fdfdfe}#appliance-suppliers div.testimonial
+p{color:#0e1521}#appliance-suppliers div.logo-wrap{background:url("../../../themes/appliancetec/library/images/diagonal-logo-bg.png") no-repeat center center scroll;width:2670px;height:170px;position:absolute;top:0;left:0;display:block;z-index:20;top:432px;overflow:hidden}#appliance-suppliers div.logo-wrap div.logo-wrap-inner{width:2050px;height:170px;margin:0
+0 0 240px;display:block;z-index:20;overflow:hidden;position:relative}#appliance-suppliers div.logo-wrap span.grad-left{background:url("../../../themes/appliancetec/library/images/grad-left.png") no-repeat 0 0 scroll;width:303px;height:170px;position:absolute;top:0;left:0px;display:block;z-index:30}#appliance-suppliers div.logo-wrap span.grad-right{background:url("../../../themes/appliancetec/library/images/grad-right.png") no-repeat 0 0 scroll;width:303px;height:170px;position:absolute;top:0;right:0px;display:block;z-index:30}#appliance-suppliers div.logo-wrap div#logo-list{background:url("../../../themes/appliancetec/library/images/logo-list.png") no-repeat center center scroll;width:4000px;height:170px;position:absolute;top:0;left:150px;display:block;z-index:25}#appliance-suppliers span.dash-bottom{display:none}#appliance-suppliers .suppliers-wrap-outer{background:#e5e8e8}#maintenance-contracts span.dash-bottom{display:none}#contact{padding-bottom:150px}#contact .contact-inner{background:#0e1521;width:750px;padding:40px;margin:0
+auto;position:relative}#contact .contact-inner
+h2{padding:0
+0 8px 0;margin:0;text-align:left;font-size:40px;line-height:40px}#contact .contact-inner h2
+span{padding:0;margin:0;border:none}#contact .contact-inner div.content-box{background:none;width:28%;float:right;padding:25px
+0 0 0}#contact .contact-inner div.content-box
+p{width:100%;color:#fdfdfe;padding:0}#contact .contact-inner div.content-box p
+a{margin-top:17px;color:#fdfdfe}#contact .contact-inner div.content-box p a:hover{color:#5e7c9d}#contact .contact-inner div.content-box p
+strong{color:#5e7c9d}body
+.gform_wrapper{background:none;border:none;padding:0;width:68.5%;float:left}body .gform_wrapper
+.gform_footer{position:absolute;right:40px;bottom:40px;width:188px}body .gform_wrapper .gform_footer input.button, body .gform_wrapper .gform_footer input[type=submit]{font-size:16px;width:100%;height:57px;position:absolute;bottom:0}body .gform_wrapper .ginput_container+.gfield_description.validation_message{display:none}.header{width:100%}.header #inner-header{width:100%}.sidebar{margin:0;padding:0}.widgettitle{margin:0;padding:0}.widget{margin:0;padding:0}.widget
+ul{margin:0;padding:0}.widget ul
+li{margin-bottom:0.75em}.widget ul li
+ul{margin-top:0.75em;padding-left:1em}.footer{position:relative;z-index:20}.footer
+nav{margin-right:0px;float:right}.footer-links ul
+li{}}@media only screen and (min-width: 1030px){#container{background:#0e1521 url("../../../themes/appliancetec/library/images/bg1-fade.jpg") no-repeat top center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.bg-initial{background:url("../../../themes/appliancetec/library/images/bg1-fade.jpg") no-repeat top center scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.bg1{background:url("../../../themes/appliancetec/library/images/bg1.jpg") no-repeat top center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.bg1-fade{background:url("../../../themes/appliancetec/library/images/bg1-fade.jpg") no-repeat top center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.bg2{background:url("../../../themes/appliancetec/library/images/bg2.jpg") no-repeat top center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.bg2-fade{background:url("../../../themes/appliancetec/library/images/bg2-fade.jpg") no-repeat top center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.bg3{background:url("../../../themes/appliancetec/library/images/bg3.jpg") no-repeat top center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.bg3-fade{background:url("../../../themes/appliancetec/library/images/bg3-fade.jpg") no-repeat top center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}#types-of-repair .product-wrap .product-box
+p{left:23px}}@media only screen and (min-width: 1240px){.scroll-section
+div.testimonial{position:absolute;left:60%}.scroll-section span.dash-right{margin-top:-102px}.scroll-section span.dash-left{margin-top:-115px}#appliance-rework h1, #appliance-rework
+h2{height:78px;padding:0;width:100%;display:block}#appliance-rework h1 span, #appliance-rework h2
+span{position:absolute;left:15%}#product-evaluation
+div.testimonial{position:absolute;left:15%}#appliance-suppliers h1, #appliance-suppliers
+h2{height:78px;padding:0;width:100%;display:block}#appliance-suppliers h1 span, #appliance-suppliers h2
+span{position:absolute;left:18%}#appliance-suppliers
+div.testimonial{position:absolute;left:55%;top:126px}#maintenance-contracts h1, #maintenance-contracts
+h2{height:78px;padding:0;width:100%;display:block}#maintenance-contracts h1 span, #maintenance-contracts h2
+span{position:absolute;right:16%}#maintenance-contracts
+div.testimonial{position:absolute;left:60%}}@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){body.home .nav-icon{background:url("../../../themes/appliancetec/library/images/nav-icon%402x.png") no-repeat;background-size:21px 21px}.scroll-section div.testimonial span.speech-open{background:url("../../../themes/appliancetec/library/images/speech-open%402x.png") no-repeat;background-size:30px 30px}.scroll-section div.testimonial span.speech-close{background:url("../../../themes/appliancetec/library/images/speech-close%402x.png") no-repeat;background-size:30px 30px}}@media
+print{*{background:transparent !important;color:black !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important}a,a:visited{color:#444 !important;text-decoration:underline}a:after,a:visited:after{content:" (" attr(href) ")"}a abbr[title]:after, a:visited abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px
+solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}.sidebar,.page-navigation,.wp-prev-next,.respond-form,nav{display:none}}
