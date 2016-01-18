@@ -8,7 +8,7 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Galeria_Imagen;
 use App\Bar;
-use App\Pais;
+use App\Estado;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -43,8 +43,9 @@ class BarController extends Controller
         $bar->id_galeria = $this->creategallery();
         $bar->tipo = $request->input('tipo');
         $bar->descripcion = $request->input('descripcion');
-        $bar->estado = $request->input('estado');
-        $bar->ciudad = $request->input('ciudad');
+        $bar->estado = $request->input('pais');
+        $bar->municipio = $request->input('estado');
+        $bar->localidad = $request->input('ciudad');
         $bar->direccion = $request->input('direccion');
         $bar->latitud = $request->input('latitud');
         $bar->longitud = $request->input('longitud');
@@ -66,10 +67,10 @@ class BarController extends Controller
 
     public function editbar($id){
         $bar = Bar::where('id','=', $id)->get()->first();
-        $paises = Pais::where('active','=',1)->orderBy('nombre')->get();
+        $estados = DB::table('estados')->orderBy('nombre')->get();
 
 
-        return view('providers.serviciosturisticos.editbar',compact('bar', 'paises'));
+        return view('providers.serviciosturisticos.editbar',compact('bar', 'estados'));
     }
 
     public function updatebar(Request $request, $id)
@@ -85,8 +86,9 @@ class BarController extends Controller
         $bar->nombre = $request->input('nombre');
         $bar->tipo = $request->input('tipo');
         $bar->descripcion = $request->input('descripcion');
-        $bar->estado = $request->input('estado');
-        $bar->ciudad = $request->input('ciudad');
+        $bar->estado = $request->input('pais');
+        $bar->municipio = $request->input('estado');
+        $bar->localidad = $request->input('ciudad');
         $bar->direccion = $request->input('direccion');
         $bar->latitud = $request->input('latitud');
         $bar->longitud = $request->input('longitud');

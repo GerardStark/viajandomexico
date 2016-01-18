@@ -8,7 +8,7 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Galeria_Imagen;
 use App\Spa;
-use App\Pais;
+use App\Estado;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -42,8 +42,9 @@ class SpaController extends Controller
         $spa->id_galeria = $this->creategallery();
         $spa->tipo = $request->input('tipo');
         $spa->descripcion = $request->input('descripcion');
-        $spa->estado = $request->input('estado');
-        $spa->ciudad = $request->input('ciudad');
+        $spa->estado = $request->input('pais');
+        $spa->municipio = $request->input('estado');
+        $spa->localidad = $request->input('ciudad');
         $spa->direccion = $request->input('direccion');
         $spa->latitud = $request->input('latitud');
         $spa->longitud = $request->input('longitud');
@@ -65,10 +66,10 @@ class SpaController extends Controller
 
       public function editspa($id){
         $spa = Spa::where('id','=', $id)->get()->first();
-        $paises = Pais::where('active','=',1)->orderBy('nombre')->get();
+          $estados = DB::table('estados')->orderBy('nombre')->get();
 
 
-        return view('providers.serviciosturisticos.editspa',compact('spa', 'paises'));
+        return view('providers.serviciosturisticos.editspa',compact('spa', 'estados'));
     }
 
 
@@ -87,8 +88,9 @@ class SpaController extends Controller
         $spa->id_galeria = $this->creategallery();
         $spa->tipo = $request->input('tipo');
         $spa->descripcion = $request->input('descripcion');
-        $spa->estado = $request->input('estado');
-        $spa->ciudad = $request->input('ciudad');
+        $spa->estado = $request->input('pais');
+        $spa->municipio = $request->input('estado');
+        $spa->localidad = $request->input('ciudad');
         $spa->direccion = $request->input('direccion');
         $spa->latitud = $request->input('latitud');
         $spa->longitud = $request->input('longitud');

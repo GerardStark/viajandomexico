@@ -68,18 +68,18 @@
                                     </div>
                                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                         <div class="form-group col-md-12">
-                                            <label for="">Pais:</label>
+                                            <label for="">Estado:</label>
                                             <div class="">
                                                 <select name="pais" id="pais" class="form-control">
                                                     <option value="0">Seleccione..</option>
-                                                    @foreach($paises as $pais)
-                                                        <option value="{!! $pais->id !!}">{!!  $pais->nombre !!}</option>
+                                                    @foreach($estados as $estado)
+                                                        <option value="{!! $estado->id !!}">{!!  $estado->nombre !!}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <div class=""><label for="">Estado:</label></div>
+                                            <div class=""><label for="">Municipio:</label></div>
                                             <div class="">
                                                 <select name="estado" id="estado" class="form-control">
                                                     <option value="0">Seleccione..</option>
@@ -87,7 +87,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <div class=""><label for="">Ciudad:</label></div>
+                                            <div class=""><label for="">Localidad:</label></div>
 
                                             <select name="ciudad" id="ciudad" class="form-control">
                                                 <option value="0">Seleccione..</option>
@@ -95,14 +95,14 @@
 
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <div class="">{!!  Form::label('codigo_postal', 'Codigo Postal:') !!}</div>
-                                            <div class="">{!! Form::text('codigo_postal',null,['class' => 'form-control']) !!}</div>
+                                            {!!  Form::label('codigo_postal', 'Codigo Postal:') !!}
+                                            {!! Form::text('codigo_postal',null,['class' => 'form-control']) !!}
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <div class="">{!!   Form::label('direccion', 'Dirección:') !!}</div>
-                                            <div class="">{!!  Form::text('direccion','Playa del Carmen',null,['class' => 'form-control']) !!}
-                                                <input type="button" value="Ubicar en Mapa" onclick="codeAddress()" class="form-control">
-                                            </div>
+                                            {!!   Form::label('direccion', 'Dirección:') !!}
+                                            {!!  Form::text('direccion','Playa del Carmen',['class' => 'form-control']) !!}
+                                            <input type="button" value="Ubicar en Mapa" onclick="codeAddress()" class="form-control">
+
                                         </div>
                                         <div class="form-group col-md-12">
                                             <div class=""><label>Direccion: </label></div>
@@ -111,11 +111,11 @@
                                                     <div class="lat-long">
                                                         <div>
                                                             {!!  Form::label('latitud', 'Latitud') !!}
-                                                            {!!  Form::text('latitud', '20.644217120001013',null,['class' => 'form-control']) !!}
+                                                            {!!  Form::text('latitud', '20.644217120001013',['class' => 'form-control']) !!}
                                                         </div>
                                                         <div>
                                                             {!!  Form::label('longitud', 'Longitud') !!}
-                                                            {!! Form::text('longitud', '-87.07094038085938',null,['class' => 'form-control']) !!}
+                                                            {!! Form::text('longitud', '-87.07094038085938',['class' => 'form-control']) !!}
                                                             <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
                                                         </div>
                                                     </div>
@@ -123,7 +123,6 @@
                                                     <span id="err" style="color:red"></span>
                                                 </div>
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
                                 {{--END AREA 3--}}

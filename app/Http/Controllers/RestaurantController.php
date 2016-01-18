@@ -8,7 +8,7 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Galeria_Imagen;
 use App\Restaurante;
-use App\Pais;
+use App\Estado;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -42,8 +42,9 @@ class RestaurantController extends Controller
         $restaurant->id_galeria = $this->creategallery();
         $restaurant->tipo_alimento = $request->input('tipo_alimento');
         $restaurant->descripcion = $request->input('descripcion');
-        $restaurant->estado = $request->input('estado');
-        $restaurant->ciudad = $request->input('ciudad');
+        $restaurant->estado = $request->input('pais');
+        $restaurant->municipio = $request->input('estado');
+        $restaurant->localidad = $request->input('ciudad');
         $restaurant->direccion = $request->input('direccion');
         $restaurant->latitud = $request->input('latitud');
         $restaurant->longitud = $request->input('longitud');
@@ -80,10 +81,10 @@ class RestaurantController extends Controller
     }
     public function editrestaurant($id){
         $restaurant = Restaurante::where('id','=', $id)->get()->first();
-        $paises = Pais::where('active','=',1)->orderBy('nombre')->get();
+        $estados = DB::table('estados')->orderBy('nombre')->get();
 
 
-        return view('providers.serviciosturisticos.editrestaurant',compact('restaurant', 'paises'));
+        return view('providers.serviciosturisticos.editrestaurant',compact('restaurant', 'estados'));
     }
 
 
@@ -101,8 +102,9 @@ class RestaurantController extends Controller
         $restaurant->nombre = $request->input('nombre');
         $restaurant->tipo_alimento = $request->input('tipo_alimento');
         $restaurant->descripcion = $request->input('descripcion');
-        $restaurant->estado = $request->input('estado');
-        $restaurant->ciudad = $request->input('ciudad');
+        $restaurant->estado = $request->input('pais');
+        $restaurant->municipio = $request->input('estado');
+        $restaurant->localidad = $request->input('ciudad');
         $restaurant->direccion = $request->input('direccion');
         $restaurant->latitud = $request->input('latitud');
         $restaurant->longitud = $request->input('longitud');
