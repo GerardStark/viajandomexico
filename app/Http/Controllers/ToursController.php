@@ -33,8 +33,6 @@ class ToursController extends Controller
 
     public function registertour(Request $request)
     {
-
-
         $validator = $this->validator($request->all());
 
         if ($validator->fails()) {
@@ -49,6 +47,7 @@ class ToursController extends Controller
         $tour->max_pax = $request->input('max_pax');
         $tour->min_pax = $request->input('min_pax');
         $tour->categoria = $request->input('categoria');
+        $tour->otra_categoria = $request->input('otra_categoria');
         $tour->horario_inicio = $request->input('horario_inicio');
         $tour->horario_fin = $request->input('horario_fin');
         $tour->estado = $request->input('pais');
@@ -141,6 +140,7 @@ class ToursController extends Controller
         $tour->max_pax = $request->input('max_pax');
         $tour->min_pax = $request->input('min_pax');
         $tour->categoria = $request->input('categoria');
+        $tour->otra_categoria = $request->input('otra_categoria');
         $tour->horario_inicio = $request->input('horario_inicio');
         $tour->horario_fin = $request->input('horario_fin');
         $tour->estado = $request->input('pais');

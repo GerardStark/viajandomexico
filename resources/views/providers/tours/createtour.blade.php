@@ -69,7 +69,13 @@
                                                     <option value="Actividad física ">Actividad física </option>
                                                     <option value="Tour de buceo">Tour de buceo</option>
                                                     <option value="Tour de cavernas">Tour de cavernas</option>
+                                                    <option value="otra_categoria">Otra Categoria...</option>
                                                 </select>
+
+                                                <div id="otra_categoria" style="display:none;">
+                                                    <label for="specify">Otra Categoria</label>
+                                                    <input type="text" name="otra_categoria" placeholder="Espesificar nueva categoria" class="form-control"/>
+                                                </div>
                                             </div>
 
                                             <div class="form-group">
@@ -84,6 +90,28 @@
                                         </div>
                                     </div>
                                 </div>
+                                {{--END AREA 1--}}
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                Horarios
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <div id="dynamicInput">
+                                                    Entry 1<br><input type="text" name="myInputs[]" class="form-control">
+                                                </div>
+                                                <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                {{--END AREA 2--}}
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingTwo">
                                         <h4 class="panel-title">
@@ -108,10 +136,10 @@
                                                 <label for="otros">Otros</label>
                                                 <textarea class="form-control" name="otros" id="otros" cols="10" rows="5"></textarea>
                                             </div>
-                                            </div>
                                         </div>
                                     </div>
-                               {{--END AREA 1--}}
+                                </div>
+                               {{--END AREA 3--}}
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingThree">
                                         <h4 class="panel-title">
@@ -180,7 +208,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{--END AREA 3--}}
+                                {{--END AREA 4--}}
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default">Guardar</button>
                                 </div>
@@ -196,6 +224,29 @@
 @section('scripts')
     {!! HTML::script('js/lugares.js') !!}
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script>
+        $('#categoria').on('change',function(){
+            if( $(this).val()==="otra_categoria"){
+                $("#otra_categoria").show()
+            }
+            else{
+                $("#otra_categoria").hide()
+            }
+        });
+        var counter = 1;
+        var limit = 3;
+        function addInput(divName){
+            if (counter == limit)  {
+                alert("You have reached the limit of adding " + counter + " inputs");
+            }
+            else {
+                var newdiv = document.createElement('div');
+                newdiv.innerHTML = "Entry " + (counter + 1) + " <br><input type='text' name='myInputs[]'>";
+                document.getElementById(divName).appendChild(newdiv);
+                counter++;
+            }
+        }
+    </script>
     <script type="text/javascript">
         // VARIABLES GLOBALES JAVASCRIPT
         var geocoder;

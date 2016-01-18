@@ -54,22 +54,27 @@
                                                 <select name="categoria" id="categoria">
                                                     <option value="{{$tour -> categoria}}">{{ $tour -> categoria }}
                                                     <option value="Aventura">Aventura</option>
-                                                    <option value="Actividades acu�ticas">Actividades acu�ticas</option>
-                                                    <option value="Sitios arqueol�gicos">Sitios arqueol�gicos</option>
+                                                    <option value="Actividades acuáticas">Actividades acuáticas</option>
+                                                    <option value="Sitios arqueológicos">Sitios arqueológicos</option>
                                                     <option value="Parque de diversiones">Parque de diversiones</option>
                                                     <option value="Eco tour">Eco tour</option>
                                                     <option value="Recorrido">Recorrido</option>
-                                                    <option value="Interacci�n animal">Interacci�n animal</option>
+                                                    <option value="Interacción animal">Interacción animal</option>
                                                     <option value="Tour marino">Tour marino</option>
                                                     <option value="Eventos y shows">Eventos y shows</option>
                                                     <option value="Tour nocturno">Tour nocturno</option>
                                                     <option value="Tour citadino">Tour citadino</option>
                                                     <option value="Tour en barco">Tour en barco</option>
-                                                    <option value="Actividades acu�ticas">Actividades acu�ticas</option>
-                                                    <option value="Actividad f�sica ">Actividad f�sica </option>
+                                                    <option value="Actividad física ">Actividad física </option>
                                                     <option value="Tour de buceo">Tour de buceo</option>
                                                     <option value="Tour de cavernas">Tour de cavernas</option>
+                                                    <option value="otra_categoria">Otra Categoria...</option>
                                                 </select>
+
+                                                <div id="otherType" style="display:none;">
+                                                    <label for="specify">Specify</label>
+                                                    <input type="text" name="specify" placeholder="Specify Databse Type"/>
+                                                </div>
                                             </div>
 
                                             <div class="form-group">
@@ -81,6 +86,27 @@
                                                 <label for="horario_fin">Duracion</label>
                                                 <input type="text" class="form-control" placeholder="Duracion del Tour" value="{{ $tour -> horario_fin }}" name="horario_fin">
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{--END AREA 1--}}
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                Horarios
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <div id="dynamicInput">
+                                                    Entry 1<br><input type="text" name="myInputs[]" class="form-control">
+                                                </div>
+                                                <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -207,6 +233,29 @@
 @section('scripts')
     {!! HTML::script('js/lugares.js') !!}
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script>
+        $('#categoria').on('change',function(){
+            if( $(this).val()==="otra_categoria"){
+                $("#otherType").show()
+            }
+            else{
+                $("#otherType").hide()
+            }
+        });
+        var counter = 1;
+        var limit = 3;
+        function addInput(divName){
+            if (counter == limit)  {
+                alert("You have reached the limit of adding " + counter + " inputs");
+            }
+            else {
+                var newdiv = document.createElement('div');
+                newdiv.innerHTML = "Entry " + (counter + 1) + " <br><input type='text' name='myInputs[]'>";
+                document.getElementById(divName).appendChild(newdiv);
+                counter++;
+            }
+        }
+    </script>
     <script type="text/javascript">
         // VARIABLES GLOBALES JAVASCRIPT
         var geocoder;

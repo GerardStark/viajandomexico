@@ -82,7 +82,12 @@ class RutasTransController extends Controller
         $ruta->save();
         $servicios = $request->input('servicios');
         $idruta = $ruta->id;
-        $this->createvehiculo($idruta);
+        $vehiculo = [
+            'descripcion' => $request->input('descripcion'),
+            'tipo' => $request->input('tipo_vehiculo'),
+            'capacidad' => $request->input('capacidad'),
+        ];
+        $this->createvehiculo($idruta, $vehiculo);
         $this->storestuff($idruta);
         $this->saveservicios($idruta, $servicios);
 
@@ -169,6 +174,15 @@ class RutasTransController extends Controller
     }
 
     private function createvehiculo($ruta, $data){
+        $id_ruta = $ruta;
+        $vehiculo_info = $data;
+        $vehiculo = new Vehiculo();
+        $vehiculo->id_ruta = $id_ruta;
+        $vehiculo->descripcion = $vehiculo_info['descripcion'];
+        $vehiculo->tipo_vehiculo = $vehiculo_info['tipo'];
+        $vehiculo->capacidad = $vehiculo_info['capacidad'];
+        $vehiculo->activo = 1;
+        $vehiculo->save();
 
     }
 }
