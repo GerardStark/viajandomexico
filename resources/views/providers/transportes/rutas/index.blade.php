@@ -1,5 +1,4 @@
 @extends('layout')
-
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -9,19 +8,24 @@
                     <div class="panel-heading">Rutas del Transporte {{$transporte->name}}</div>
                     <div class="panel-body">
                         <p><a href="{{url('crearruta/'.$transporte->id)}}">Crear Ruta</a></p>
-                        @if(count($rutas)>0)
-                            @foreach($rutas as $ruta)
-                                {{$ruta->nombre}}
-                            @endforeach
-                        @else
-                            <div class="col-md-12">
-                                <p>No tienes rutas registradas.</p>
+                        @foreach($rutas as $ruta)
+                            <div class="well">
+                                <div class="form-group">
+                                    <label for="id_hotels">ID de la Ruta</label>
+                                    <label for="id_hotel"> {{$ruta->id}}</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nombre_hotel">Nombre de la Ruta</label>
+                                    <label for="nombre">{{$ruta->nombre}}</label>
+                                </div>
+                                <div class="form-group">
+                                    <ul>
+                                        <li><a href="{{url('editarruta/'.$ruta->id)}}">Editar Info</a></li>
+                                        <li><a href="{{url('eliminarruta/'.$ruta->id)}}">Eliminar</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        @endif
-
-
-
-
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -301,6 +301,23 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'registerruta'
         ]);
 
+        Route::get('editarruta/{id}', [
+            'uses'  => 'RutasTransController@edit',
+            'as'    => 'crearruta'
+        ]);
+
+        Route::get('updateruta/{id}', [
+            'uses'  => 'RutasTransController@update',
+            'as'    => 'crearruta'
+        ]);
+
+        Route::get('eliminarruta/{id}', [
+            'uses'  => 'RutasTransController@destroy',
+            'as'    => 'crearruta'
+        ]);
+
+
+
 
         //Rutas de los Vehiculos
 

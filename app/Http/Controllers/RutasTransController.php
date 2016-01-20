@@ -39,8 +39,9 @@ class RutasTransController extends Controller
     {
         $transporte = Transporte::where('id',$id)->get()->first();
         $rutas = Ruta::where('id_transporte', '=' ,$id)->get();
+        $vehiculos = Vehiculo::get();
 
-        return view('providers.transportes.rutas.index', compact('transporte', 'rutas'));
+        return view('providers.transportes.rutas.index', compact('transporte', 'rutas','vehiculos'));
     }
 
     /**
@@ -170,7 +171,6 @@ class RutasTransController extends Controller
                 $actual->save();
             }
         }
-
     }
 
     private function createvehiculo($ruta, $data){
