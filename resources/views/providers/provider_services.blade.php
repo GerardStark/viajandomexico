@@ -279,7 +279,7 @@
                                     <div role="tabpanel" class="tab-pane active" id="Servtur">
 
 
-                                        @if(count($hoteles)>0 || count($tours)>0 || count($transports)>0 ||count($restaurantes)>0 || count($bares)>0 || count($spas)>0)
+                                        @if(count($restaurantes)>0 || count($bares)>0 || count($spas)>0)
                                             @foreach($restaurantes as $restaurant)
                                                 <div class="well">
                                                     <div class="form-group">
@@ -303,54 +303,52 @@
                                                     </div>
                                                 </div>
                                             @endforeach
-
-                                                @foreach($bares as $bar)
-                                                    <div class="well">
-                                                        <div class="form-group">
-                                                            <label for="id">ID del bar</label>
-                                                            <label for="id"> {{$bar->id}}</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="nombre">Nombre Bar</label>
-                                                            <label for="nombre">{{$bar->nombre}}</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="tipo">{{$bar->tipo}}</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <ul>
-                                                                <li><a href="{{url('editbar/'.$bar->id)}}">Editar Info</a></li>
-                                                                <li><a href="{{url('creategaleria/'.$bar->id_galeria)}}">Editar Galeria</a></li>
-                                                                {{--<li><a href="{{url('costosbar/'.$bar->id)}}">Costos</a></li>--}}
-                                                                <li><a href="{{url('eliminarbar/'.$bar->id)}}">Eliminar</a></li>
-                                                            </ul>
-                                                        </div>
+                                            @foreach($bares as $bar)
+                                                <div class="well">
+                                                    <div class="form-group">
+                                                        <label for="id">ID del bar</label>
+                                                        <label for="id"> {{$bar->id}}</label>
                                                     </div>
-                                                @endforeach
-
-                                                @foreach($spas as $spa)
-                                                    <div class="well">
-                                                        <div class="form-group">
-                                                            <label for="id">ID del spa</label>
-                                                            <label for="id"> {{$spa->id}}</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="nombre">Nombre Spa</label>
-                                                            <label for="nombre">{{$spa->nombre}}</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="tipo">{{$spa->tipo}}</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <ul>
-                                                                <li><a href="{{url('editspa/'.$spa->id)}}">Editar Info</a></li>
-                                                                <li><a href="{{url('creategaleria/'.$spa->id_galeria)}}">Editar Galeria</a></li>
-                                                                <li><a href="{{url('costosspa/'.$spa->id)}}">Costos</a></li>
-                                                                <li><a href="{{url('eliminarspa/'.$spa->id)}}">Eliminar</a></li>
-                                                            </ul>
-                                                        </div>
+                                                    <div class="form-group">
+                                                        <label for="nombre">Nombre Bar</label>
+                                                        <label for="nombre">{{$bar->nombre}}</label>
                                                     </div>
-                                                @endforeach
+                                                    <div class="form-group">
+                                                        <label for="tipo">{{$bar->tipo}}</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <ul>
+                                                            <li><a href="{{url('editbar/'.$bar->id)}}">Editar Info</a></li>
+                                                            <li><a href="{{url('creategaleria/'.$bar->id_galeria)}}">Editar Galeria</a></li>
+                                                            {{--<li><a href="{{url('costosbar/'.$bar->id)}}">Costos</a></li>--}}
+                                                            <li><a href="{{url('eliminarbar/'.$bar->id)}}">Eliminar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                            @foreach($spas as $spa)
+                                                <div class="well">
+                                                    <div class="form-group">
+                                                        <label for="id">ID del spa</label>
+                                                        <label for="id"> {{$spa->id}}</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="nombre">Nombre Spa</label>
+                                                        <label for="nombre">{{$spa->nombre}}</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="tipo">{{$spa->tipo}}</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <ul>
+                                                            <li><a href="{{url('editspa/'.$spa->id)}}">Editar Info</a></li>
+                                                            <li><a href="{{url('creategaleria/'.$spa->id_galeria)}}">Editar Galeria</a></li>
+                                                            <li><a href="{{url('costosspa/'.$spa->id)}}">Costos</a></li>
+                                                            <li><a href="{{url('eliminarspa/'.$spa->id)}}">Eliminar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            @endforeach
                                         @else
                                             <p>No Tienes un Servicio Turistico registrado, registra uno.</p>
                                             <a href="{{route('createnewservice')}}">Crear Servicio </a>
