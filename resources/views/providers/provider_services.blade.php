@@ -78,9 +78,6 @@
                                                     <label for="name">{{$transport->name}}</label>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="ciudad">{{$transport->nombreciudad->nombre}}</label>
-                                                </div>
-                                                <div class="form-group">
                                                     <ul>
                                                         <li><a href="{{url('edittransport/'.$transport->id)}}">Editar Info</a></li>
                                                         <li><a href="{{url('creategaleria/'.$transport->id_galeria)}}">Editar Galeria</a></li>
@@ -246,9 +243,6 @@
                                             <div class="form-group">
                                                 <label for="name">Nombre Transporte</label>
                                                 <label for="name">{{$transport->name}}</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="ciudad">{{$transport->nombreciudad->nombre}}</label>
                                             </div>
                                             <div class="form-group">
                                                 <ul>
