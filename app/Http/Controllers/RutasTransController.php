@@ -93,28 +93,19 @@ class RutasTransController extends Controller
         $this->saveservicios($idruta, $servicios);
 
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-
-    public function show($id)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
-        //
+        $ruta = Ruta::where('id',$id)->get()->first();
+        $vehiculo = Vehiculo::where('id_ruta',$id)->get()->first();
+        $servicios = Servicio_Transporte::where('id_transporte',$id)->orderBy('id_servicio')->get();
+        return view('providers.transportes.rutas.edit', compact('ruta','vehiculo','servicios'));
     }
 
     /**
@@ -159,14 +150,13 @@ class RutasTransController extends Controller
             if(count($localservicios) > 0)
                 DB::table('serv_transportes')->insert($localservicios);
         }
-
     }
-    private function saveservicios($transporte, $servicios){
+    private function saveservicios($idruta, $servicios){
         $total_servicios = count($servicios);
 
         if($total_servicios > 0){
             foreach ($servicios as $servicio) {
-                $actual = Servicio_Transporte::where('id_servicio', $servicio)->get()->first();
+                $actual = Servicio_Transporte::where('id_servicio', $servicio)->where('id_transporte',$idruta)->get()->first();
                 $actual->activo = 1;
                 $actual->save();
             }
