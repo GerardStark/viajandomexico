@@ -386,7 +386,7 @@
                                         @endif
                                     </div>
 
-                                    <div role="tabpanel" class="tab-pane active" id="Bar">
+                                    <div role="tabpanel" class="tab-pane" id="Bar">
 
                                         @if(count($bares)>0)
                                             @foreach($bares as $bar)
@@ -418,7 +418,7 @@
                                         @endif
                                     </div>
 
-                                    <div role="tabpanel" class="tab-pane active" id="Spa">
+                                    <div role="tabpanel" class="tab-pane" id="Spa">
 
                                         @if(count($bares)>0)
                                             @foreach($spas as $spa)
