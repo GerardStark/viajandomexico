@@ -42,22 +42,22 @@
 
                                             <div class="form-group">
                                                 <label for="duracion">Duracion del recorrido</label>
-                                                <input type="text" class="form-control" placeholder="duracion" name="duracion">
+                                                <input type="number" class="form-control" placeholder="duracion" name="duracion">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="hora_inicio">Horario de Inicio</label>
-                                                <input type="text" class="form-control" placeholder="horario inicio" name="horario_inicio">
+                                                <input type="time" class="form-control" placeholder="horario inicio" name="horario_inicio">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="min_pax">Horario de Finalizacion</label>
-                                                <input type="text" class="form-control" placeholder="Horario de Finalizacion" name="horario_finaliza">
+                                                <input type="time" class="form-control" placeholder="Horario de Finalizacion" name="horario_finaliza">
                                             </div>
                                             
                                             <div class="form-group">
                                                 <label for="precio_standard">Precio Rack</label>
-                                                <input type="text" class="form-control" name="precio_standard" placeholder="Precio Rack">
+                                                <input type="number" class="form-control" name="precio_standard" placeholder="Precio Rack">
                                             </div>
                                         </div>
                                     </div>

@@ -80,6 +80,8 @@ class RutasTransController extends Controller
         $ruta->horario_apertura = $request->input('horario_inicio');
         $ruta->horario_cierre = $request->input('horario_finaliza');
         $ruta->precio_standard = $request->input('precio_standard');
+        $ruta->serv_cargo = $request->input('servicios_cargo');
+        $ruta->serv_libres = $request->input('servicios_sin');
         $ruta->save();
         $servicios = $request->input('servicios');
         $idruta = $ruta->id;
@@ -117,7 +119,35 @@ class RutasTransController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        $ruta = new Ruta();
+        $ruta->id_transporte = $request->input('id_transporte');
+        $ruta->nombre = $request->input('nombre_ruta');
+        $ruta->descripcion = $request->input('descripcion');
+        $ruta->duracion = $request->input('duracion');
+        $ruta->horario_apertura = $request->input('horario_inicio');
+        $ruta->horario_cierre = $request->input('horario_finaliza');
+        $ruta->precio_standard = $request->input('precio_standard');
+        $ruta->serv_cargo = $request->input('servicios_cargo');
+        $ruta->serv_libres = $request->input('servicios_sin');
+        $ruta->save();
+        $servicios = $request->input('servicios');
+        $idruta = $ruta->id;
+        $vehiculo = [
+            'descripcion' => $request->input('descripcion'),
+            'tipo' => $request->input('tipo_vehiculo'),
+            'capacidad' => $request->input('capacidad'),
+        ];
+        $this->createvehiculo($idruta, $vehiculo);
+        $this->storestuff($idruta);
+        $this->saveservicios($idruta, $servicios);
     }
 
     /**

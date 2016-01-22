@@ -11,7 +11,7 @@
                     <div class="panel-heading">Crear Ruta</div>
                     <div class="panel-body">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <form role="form" method="POST" action="{{ route('registerruta') }}" files="true">
+                            <form role="form" method="POST" action="{{ url('editarruta/'.$ruta->id) }}" files="true">
                                 <div class="panel panel-default">
 
                                     <div class="panel-heading" role="tab" id="headingOne">
@@ -31,32 +31,32 @@
 
                                             <div class="form-group">
                                                 <label for="nombre_ruta">Nombre de la Ruta</label>
-                                                <input class="form-control" type="text" placeholder="nombre de la Ruta" name="nombre_ruta">
+                                                <input class="form-control" type="text" value="{!! $ruta->nombre !!}" name="nombre_ruta">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="descripcion">descripcion</label>
-                                                <textarea class="form-control" name="descripcion" id="descripcion" cols="10" rows="5" >{{ old('descripcion')}} </textarea>
+                                                <textarea class="form-control" name="descripcion" id="descripcion" cols="10" rows="5" >{!! $ruta->descripcion !!} </textarea>
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="duracion">Duracion del recorrido</label>
-                                                <input type="text" class="form-control" placeholder="duracion" name="duracion">
+                                                <input type="number" class="form-control" placeholder="horas" name="duracion">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="hora_inicio">Horario de Inicio</label>
-                                                <input type="text" class="form-control" placeholder="horario inicio" name="horario_inicio">
+                                                <input type="time" class="form-control" value="{!! $ruta->horario_apertura !!}" name="horario_inicio">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="min_pax">Horario de Finalizacion</label>
-                                                <input type="text" class="form-control" placeholder="Horario de Finalizacion" name="horario_finaliza">
+                                                <input type="time" class="form-control" value="{!! $ruta->horario_cierre !!}" name="horario_finaliza">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="precio_standard">Precio Rack</label>
-                                                <input type="text" class="form-control" name="precio_standard" placeholder="Precio Rack">
+                                                <input type="number" class="form-control" name="precio_standard" value="{!! $ruta->precio_standard !!}">
                                             </div>
                                         </div>
                                     </div>
@@ -73,15 +73,15 @@
                                         <div class="panel-body">
                                             <div class="form-group">
                                                 <label for="descripcion_vehiculo">Descripcion del Vehiculo</label>
-                                                <textarea class="form-control" name="descripcion_vehiculo" id="descripcion_vehiculo" cols="10" rows="5" >{{ old('descripcion_vehiculo')}} </textarea>
+                                                <textarea class="form-control" name="descripcion_vehiculo" id="descripcion_vehiculo" cols="10" rows="5" >{!! $vehiculo->descripcion !!} </textarea>
                                             </div>
                                             <div class="form group">
                                                 <label for="Tipo de Vehiculo">Tipo de vehiculo</label>
-                                                <input type="text" class="form-control" placeholder="ej: camioneta, auto compacto, motocicleta, etc." name="tipo_vehiculo">
+                                                <input type="text" class="form-control" value="{!! $vehiculo->tipo_vehiculo !!}" name="tipo_vehiculo">
                                             </div>
                                             <div class="form group">
                                                 <label for="capacidad">Capacidad Maxima de personas:</label>
-                                                <input type="text" class="form-control" placeholder="Capacidad Maxima de personas" name="capacidad">
+                                                <input type="text" class="form-control" value="{!! $vehiculo->capacidad !!}" name="capacidad">
                                             </div>
 
                                         </div>
@@ -119,11 +119,11 @@
                                             </div>
                                             <div class="form-group col-md-12">
                                                 <label for="servicios_cargo">servicios con cargo extra</label>
-                                                <textarea class="form-control" name="servicios_cargo" id="servicios_cargo" cols="10" rows="5"></textarea>
+                                                <textarea class="form-control" name="servicios_cargo" id="servicios_cargo" cols="10" rows="5">{!! $ruta->serv_cargo !!}</textarea>
                                             </div>
                                             <div class="form-group col-md-12">
                                                 <label for="servicios">Otros</label>
-                                                <textarea class="form-control" name="servicios_sin" id="servicios_sin" cols="10" rows="5"></textarea>
+                                                <textarea class="form-control" name="servicios_sin" id="servicios_sin" cols="10" rows="5">{!! $ruta->serv_libres !!}</textarea>
                                             </div>
                                         </div>
                                     </div>
