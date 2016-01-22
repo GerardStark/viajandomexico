@@ -85,6 +85,7 @@ class RutasTransController extends Controller
         $ruta->save();
         $servicios = $request->input('servicios');
         $idruta = $ruta->id;
+        $transporte = $request->input('id_transporte');
         $vehiculo = [
             'descripcion' => $request->input('descripcion'),
             'tipo' => $request->input('tipo_vehiculo'),
@@ -93,6 +94,8 @@ class RutasTransController extends Controller
         $this->createvehiculo($idruta, $vehiculo);
         $this->storestuff($idruta);
         $this->saveservicios($idruta, $servicios);
+
+        return redirect()->route('rutastransport',[$transporte]);
 
     }
     /**
@@ -140,6 +143,7 @@ class RutasTransController extends Controller
         $ruta->save();
         $servicios = $request->input('servicios');
         $idruta = $ruta->id;
+        $transporte = $request->input('id_transporte');
         $vehiculo = [
             'descripcion' => $request->input('descripcion'),
             'tipo' => $request->input('tipo_vehiculo'),
@@ -147,6 +151,8 @@ class RutasTransController extends Controller
         ];
         $this->editvehiculo($idruta, $vehiculo);
         $this->saveeditservicios($idruta, $servicios);
+
+        return redirect()->route('rutastransport',[$transporte]);
     }
 
     /**
@@ -157,7 +163,14 @@ class RutasTransController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ruta = Ruta::where('id',$id)->get()->first();
+        $transporte = $ruta->id_transporte;
+        Ruta::destroy($id);
+        Vehiculo::destroy('id_ruta',$id);
+
+        return redirect()->route('rutastransport',[$transporte]);
+
+
     }
 
     private function storestuff($transporte){
