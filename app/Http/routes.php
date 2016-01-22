@@ -301,6 +301,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'registerruta'
         ]);
 
+        Route::post('costosruta/{id}', [
+            'uses'  => 'RutasTransController@costosruta',
+            'as'    => 'costosruta'
+        ]);
+
         Route::get('editarruta/{id}', [
             'uses'  => 'RutasTransController@edit',
             'as'    => 'crearruta'
