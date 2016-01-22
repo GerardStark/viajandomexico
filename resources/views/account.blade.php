@@ -5,13 +5,13 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">My account</div>
+                    <div class="panel-heading">Mi Cuenta</div>
                     <div class="panel-body">
                         @include('partials/success')
                         <ul>
-                            <li><a href="{{ url('account/edit-profile') }}">Edit profile</a></li>
-                            <li><a href="{{ url('account/password') }}">Change password</a></li>
-                            <li><a href="{{ url('account/verify/') }}">Verify</a></li>
+                            <li><a href="{{ url('account/edit-profile') }}">Editar Perfil</a></li>
+                            <li><a href="{{ url('account/password') }}">Cambiar Contraseña</a></li>
+                            <li><a href="{{ url('account/verify/') }}">Verificar Cuenta</a></li>
                         </ul>
                     </div>
                 </div>

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Edit profile</div>
+                    <div class="panel-heading">Editar Perfil</div>
                     <div class="panel-body">
                         @include('partials/errors')
 
@@ -15,7 +15,7 @@
                             {!! csrf_field() !!}
 
                             <div class="form-group">
-                                <label class="col-md-4 control-label">@lang('validation.attributes.name')</label>
+                                <label class="col-md-4 control-label">Nombre</label>
 
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="name" value="{{ old('name', $user->name) }}">
