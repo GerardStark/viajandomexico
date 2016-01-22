@@ -165,7 +165,7 @@
                                     @endif
                                 </ul>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="Hoteles" name="Hoteles">
+                            <div role="tabpanel" class="tab-pane" id="Hoteles">
 
                                 <h3>Hoteles</h3>
 
