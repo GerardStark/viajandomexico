@@ -145,9 +145,8 @@ class RutasTransController extends Controller
             'tipo' => $request->input('tipo_vehiculo'),
             'capacidad' => $request->input('capacidad'),
         ];
-        $this->createvehiculo($idruta, $vehiculo);
-        $this->storestuff($idruta);
-        $this->saveservicios($idruta, $servicios);
+        $this->editvehiculo($idruta, $vehiculo);
+        $this->saveeditservicios($idruta, $servicios);
     }
 
     /**
@@ -193,11 +192,38 @@ class RutasTransController extends Controller
         }
     }
 
+    private function saveeditservicios($idruta, $servicios){
+        $total_servicios = count($servicios);
+        $actuales = Servicio_Transporte::where('id_hotel', $idruta)->get();
+        foreach($actuales as $actual){
+            $actual->activo = 0;
+            $actual->save();
+        }
+        if($total_servicios > 0){
+            foreach ($servicios as $service) {
+                $serv = Servicio_Transporte::where('id_servicio', $service)->get()->first();
+                $serv->activo = 1;
+                $serv->save();
+            }
+        }
+    }
+
     private function createvehiculo($ruta, $data){
         $id_ruta = $ruta;
         $vehiculo_info = $data;
         $vehiculo = new Vehiculo();
         $vehiculo->id_ruta = $id_ruta;
+        $vehiculo->descripcion = $vehiculo_info['descripcion'];
+        $vehiculo->tipo_vehiculo = $vehiculo_info['tipo'];
+        $vehiculo->capacidad = $vehiculo_info['capacidad'];
+        $vehiculo->activo = 1;
+        $vehiculo->save();
+
+    }
+
+    private function editvehiculo($ruta, $data){
+        $vehiculo_info = $data;
+        $vehiculo =  Vehiculo::where('id_ruta',$ruta)->get()->first();
         $vehiculo->descripcion = $vehiculo_info['descripcion'];
         $vehiculo->tipo_vehiculo = $vehiculo_info['tipo'];
         $vehiculo->capacidad = $vehiculo_info['capacidad'];
