@@ -82,7 +82,7 @@
                                             </div>
                                             <div class="form group">
                                                 <label for="capacidad">Capacidad Maxima de personas:</label>
-                                                <input type="text" class="form-control" placeholder="Capacidad Maxima de personas" name="capacidad">
+                                                <input type="number" class="form-control" placeholder="Capacidad Maxima de personas" name="capacidad">
                                             </div>
 
                                         </div>

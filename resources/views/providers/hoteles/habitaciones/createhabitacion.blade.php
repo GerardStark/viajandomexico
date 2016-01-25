@@ -55,17 +55,17 @@
                                              </div>
                                             <div class="form-group">
                                                 <label for="maximo_personas">Maximo de personas por habitacion</label>
-                                                <input class="form-control" type="text" placeholder="maximo personas" name="maximo_personas" value="{{ old('maximo_personas') }}">
+                                                <input class="form-control" type="number" placeholder="maximo personas" name="maximo_personas" value="{{ old('maximo_personas') }}">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="cant_habitaciones">Cantidad de Habitaciones disponibles</label>
-                                                <input class="form-control" type="text" placeholder="cantidad de habitaciones" name="cant_habitaciones" value="{{ old('cant_habitaciones') }}">
+                                                <input class="form-control" type="number" placeholder="cantidad de habitaciones" name="cant_habitaciones" value="{{ old('cant_habitaciones') }}">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="precio_estandar">Precio Estandar(rack)</label>
-                                                <input class="form-control" type="text" placeholder="Precio normal manejado" name="precio_estandar" value="{{ old('precio_estandar') }}">
+                                                <input class="form-control" type="number" placeholder="Precio normal manejado" name="precio_estandar" value="{{ old('precio_estandar') }}">
                                             </div>
 
                                              <div class="form-group">

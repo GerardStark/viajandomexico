@@ -21,7 +21,7 @@
                                 <div class="form-group">
                                     <ul>
                                         <li><a href="{{url('editarruta/'.$ruta->id)}}">Editar Info</a></li>
-                                        <li><a href="{{url('costosruta/'.$ruta->id)}}">Eliminar</a></li>
+                                        <li><a href="{{url('costosruta/'.$ruta->id)}}">Costos</a></li>
                                         <li><a href="{{url('eliminarruta/'.$ruta->id)}}">Eliminar</a></li>
                                     </ul>
                                 </div>

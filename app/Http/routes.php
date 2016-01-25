@@ -301,7 +301,7 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'registerruta'
         ]);
 
-        Route::post('costosruta/{id}', [
+        Route::get('costosruta/{id}', [
             'uses'  => 'RutasTransController@costosruta',
             'as'    => 'costosruta'
         ]);
@@ -311,7 +311,7 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'crearruta'
         ]);
 
-        Route::get('updateruta/{id}', [
+        Route::post('updateruta/{id}', [
             'uses'  => 'RutasTransController@update',
             'as'    => 'crearruta'
         ]);
@@ -496,12 +496,12 @@ Route::group(['middleware' => 'auth'], function () {
     /*
      * Calendar Routes Transportes
      */
-    Route::post('costostransport/dopbcp/php-file/load.php',[
+    Route::post('costosruta/dopbcp/php-file/load.php',[
         'as' => 'loadingfile',
         'uses' =>'TransportsController@loadingfile'
     ]);
 
-    Route::post('costostransport/dopbcp/php-file/save.php',[
+    Route::post('costosruta/dopbcp/php-file/save.php',[
         'as' => 'loadingfile',
         'uses' =>'TransportsController@savingfile'
     ]);
@@ -541,6 +541,19 @@ Route::group(['middleware' => 'auth'], function () {
     ]);
 
     Route::post('costosspa/dopbcp/php-file/save.php',[
+        'as' => 'loadingfile',
+        'uses' =>'SpaController@savingfile'
+    ]);
+
+    /*
+     * Calendar Routes Rutas
+     */
+    Route::post('costosrutas/dopbcp/php-file/load.php',[
+        'as' => 'loadingfile',
+        'uses' =>'SpaController@loadingfile'
+    ]);
+
+    Route::post('costosrutas/dopbcp/php-file/save.php',[
         'as' => 'loadingfile',
         'uses' =>'SpaController@savingfile'
     ]);

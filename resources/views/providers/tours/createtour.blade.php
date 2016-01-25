@@ -41,12 +41,12 @@
 
                                             <div class="form-group">
                                                 <label for="max_pax">Max Pax</label>
-                                                <input type="text" class="form-control" placeholder="Max Pax" name="max_pax">
+                                                <input type="number" class="form-control" placeholder="Max Pax" name="max_pax">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="min_pax">Min Pax</label>
-                                                <input type="text" class="form-control" placeholder="Min Pax" name="min_pax">
+                                                <input type="number" class="form-control" placeholder="Min Pax" name="min_pax">
                                             </div>
 
                                             <div class="form-group">
@@ -79,13 +79,13 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="horario_inicio">Horario inicio</label>
-                                                <input type="text" class="form-control" placeholder="Horario de inicio" name="horario_inicio">
+                                                <label for="horario_inicio">Horario de apertura</label>
+                                                <input type="time" class="form-control" placeholder="Horario de inicio" name="horario_inicio">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="horario_fin">Duracion</label>
-                                                <input type="text" class="form-control" placeholder="Duracion del Tour" name="horario_fin">
+                                                <input type="number" class="form-control" placeholder="Duracion del Tour" name="horario_fin">
                                             </div>
                                         </div>
                                     </div>

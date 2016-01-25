@@ -49,22 +49,22 @@
                                                     <option value="ipo suite junior">Tipo suite junior</option>
                                                     <option value="Tipo suite doble">Tipo suite doble</option>
                                                     <option value="Tipo suite presidencial">Tipo suite presidencial</option>
-                                                    <option value="cabañas">cabañas</option>
+                                                    <option value="cabaï¿½as">cabaï¿½as</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
                                                 <label for="maximo_personas">Maximo de personas por habitacion</label>
-                                                <input class="form-control" type="text" placeholder="maximo personas" name="maximo_personas" value="{{ $habitacion -> maximo_personas }}">
+                                                <input class="form-control" type="number" placeholder="maximo personas" name="maximo_personas" value="{{ $habitacion -> maximo_personas }}">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="cant_habitaciones">Cantidad de Habitaciones disponibles</label>
-                                                <input class="form-control" type="text" placeholder="cantidad de habitaciones" name="cant_habitaciones" value="{{ $habitacion -> cant_habitaciones }}">
+                                                <input class="form-control" type="number" placeholder="cantidad de habitaciones" name="cant_habitaciones" value="{{ $habitacion -> cant_habitaciones }}">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="precio_estandar">Precio Estandar(rack)</label>
-                                                <input class="form-control" type="text" placeholder="Precio normal manejado" name="precio_estandar" value="{{ $habitacion -> precio_estandar }}">
+                                                <input class="form-control" type="number" placeholder="Precio normal manejado" name="precio_estandar" value="{{ $habitacion -> precio_estandar }}">
                                             </div>
 
                                             <div class="form-group">

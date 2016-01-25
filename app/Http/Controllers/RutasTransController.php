@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Galeria;
 use App\Ruta;
-use App\Vehiculo;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Galeria_Imagen;
@@ -39,9 +38,8 @@ class RutasTransController extends Controller
     {
         $transporte = Transporte::where('id',$id)->get()->first();
         $rutas = Ruta::where('id_transporte', '=' ,$id)->get();
-        $vehiculos = Vehiculo::get();
 
-        return view('providers.transportes.rutas.index', compact('transporte', 'rutas','vehiculos'));
+        return view('providers.transportes.rutas.index', compact('transporte', 'rutas'));
     }
 
     /**
@@ -82,16 +80,13 @@ class RutasTransController extends Controller
         $ruta->precio_standard = $request->input('precio_standard');
         $ruta->serv_cargo = $request->input('servicios_cargo');
         $ruta->serv_libres = $request->input('servicios_sin');
+        $ruta->vehiculo_descripcion = $request->input('descripcion_vehiculo');
+        $ruta->vehiculo_capacidad = $request->input('tipo_vehiculo');
+        $ruta->vehiculo_tipo = $request->input('capacidad');
         $ruta->save();
         $servicios = $request->input('servicios');
         $idruta = $ruta->id;
         $transporte = $request->input('id_transporte');
-        $vehiculo = [
-            'descripcion' => $request->input('descripcion'),
-            'tipo' => $request->input('tipo_vehiculo'),
-            'capacidad' => $request->input('capacidad'),
-        ];
-        $this->createvehiculo($idruta, $vehiculo);
         $this->storestuff($idruta);
         $this->saveservicios($idruta, $servicios);
 
@@ -108,8 +103,7 @@ class RutasTransController extends Controller
     public function edit($id)
     {
         $ruta = Ruta::where('id',$id)->get()->first();
-        $vehiculo = Vehiculo::where('id_ruta',$id)->get()->first();
-        $servicios = Servicio_Transporte::where('id_transporte',$id)->orderBy('id_servicio')->get();
+        $servicios = Servicio_Transporte::where('id_ruta',$id)->orderBy('id_servicio')->get();
         return view('providers.transportes.rutas.edit', compact('ruta','vehiculo','servicios'));
     }
 
@@ -130,8 +124,7 @@ class RutasTransController extends Controller
             );
         }
 
-        $ruta = new Ruta();
-        $ruta->id_transporte = $request->input('id_transporte');
+        $ruta = Ruta::find($id);
         $ruta->nombre = $request->input('nombre_ruta');
         $ruta->descripcion = $request->input('descripcion');
         $ruta->duracion = $request->input('duracion');
@@ -140,16 +133,13 @@ class RutasTransController extends Controller
         $ruta->precio_standard = $request->input('precio_standard');
         $ruta->serv_cargo = $request->input('servicios_cargo');
         $ruta->serv_libres = $request->input('servicios_sin');
+        $ruta->vehiculo_descripcion = $request->input('descripcion_vehiculo');
+        $ruta->vehiculo_capacidad = $request->input('tipo_vehiculo');
+        $ruta->vehiculo_tipo = $request->input('capacidad');
         $ruta->save();
         $servicios = $request->input('servicios');
         $idruta = $ruta->id;
-        $transporte = $request->input('id_transporte');
-        $vehiculo = [
-            'descripcion' => $request->input('descripcion'),
-            'tipo' => $request->input('tipo_vehiculo'),
-            'capacidad' => $request->input('capacidad'),
-        ];
-        $this->editvehiculo($idruta, $vehiculo);
+        $transporte = $ruta->id_transporte;
         $this->saveeditservicios($idruta, $servicios);
 
         return redirect()->route('rutastransport',[$transporte]);
@@ -164,9 +154,8 @@ class RutasTransController extends Controller
     public function destroy($id)
     {
         $ruta = Ruta::where('id',$id)->get()->first();
-        $transporte = $ruta->id_transporte;
+        $transporte = $ruta->id_ruta;
         Ruta::destroy($id);
-        Vehiculo::destroy('id_ruta',$id);
 
         return redirect()->route('rutastransport',[$transporte]);
 
@@ -181,7 +170,7 @@ class RutasTransController extends Controller
         if($total_servicios > 0){
             foreach ($servicios as $servicio) {
                 $tempservicio = array(
-                    'id_transporte' => $transporte,
+                    'id_ruta' => $transporte,
                     'id_servicio' => $servicio->id,
                     'cargo' => 0,
                     'activo' => 0
@@ -198,7 +187,7 @@ class RutasTransController extends Controller
 
         if($total_servicios > 0){
             foreach ($servicios as $servicio) {
-                $actual = Servicio_Transporte::where('id_servicio', $servicio)->where('id_transporte',$idruta)->get()->first();
+                $actual = Servicio_Transporte::where('id_servicio', $servicio)->where('id_ruta',$idruta)->get()->first();
                 $actual->activo = 1;
                 $actual->save();
             }
@@ -207,7 +196,7 @@ class RutasTransController extends Controller
 
     private function saveeditservicios($idruta, $servicios){
         $total_servicios = count($servicios);
-        $actuales = Servicio_Transporte::where('id_hotel', $idruta)->get();
+        $actuales = Servicio_Transporte::where('id_ruta', $idruta)->get();
         foreach($actuales as $actual){
             $actual->activo = 0;
             $actual->save();
@@ -221,27 +210,34 @@ class RutasTransController extends Controller
         }
     }
 
-    private function createvehiculo($ruta, $data){
-        $id_ruta = $ruta;
-        $vehiculo_info = $data;
-        $vehiculo = new Vehiculo();
-        $vehiculo->id_ruta = $id_ruta;
-        $vehiculo->descripcion = $vehiculo_info['descripcion'];
-        $vehiculo->tipo_vehiculo = $vehiculo_info['tipo'];
-        $vehiculo->capacidad = $vehiculo_info['capacidad'];
-        $vehiculo->activo = 1;
-        $vehiculo->save();
-
+    public function costosruta($id){
+        $ruta = Ruta::where('id','=',$id)->get()->first();
+        return view('providers.transportes.rutas.costos',compact('ruta'));
     }
 
-    private function editvehiculo($ruta, $data){
-        $vehiculo_info = $data;
-        $vehiculo =  Vehiculo::where('id_ruta',$ruta)->get()->first();
-        $vehiculo->descripcion = $vehiculo_info['descripcion'];
-        $vehiculo->tipo_vehiculo = $vehiculo_info['tipo'];
-        $vehiculo->capacidad = $vehiculo_info['capacidad'];
-        $vehiculo->activo = 1;
-        $vehiculo->save();
+    public function loadingfile()
+    {
 
+        if (isset($_POST['dopbcp_calendar_id'])) { // If calendar ID is received.
+        // Show file content.
+            $file = public_path() . '/dopbcp/php-file/data/contentruta' . $_POST['dopbcp_calendar_id'] . '.txt';
+
+            if (file_exists($file)) {
+                echo file_get_contents($file);
+            } else {
+                echo '';
+            }
+        }
     }
+
+    public function savingfile()
+    {
+        if (isset($_POST['dopbcp_calendar_id'])) { // If calendar ID is received.
+// Save data in a file in folder data.
+            $file = fopen(public_path() . '/dopbcp/php-file/data/contentruta' . $_POST['dopbcp_calendar_id'] . '.txt', 'w');
+            fwrite($file, $_POST['dopbcp_schedule']);
+            fclose($file);
+        }
+    }
+
 }

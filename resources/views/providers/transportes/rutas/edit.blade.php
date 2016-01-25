@@ -11,7 +11,7 @@
                     <div class="panel-heading">Crear Ruta</div>
                     <div class="panel-body">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <form role="form" method="POST" action="{{ url('editarruta/'.$ruta->id) }}" files="true">
+                            <form role="form" method="POST" action="{{ url('updateruta/'.$ruta->id) }}" files="true">
                                 <div class="panel panel-default">
 
                                     <div class="panel-heading" role="tab" id="headingOne">
@@ -27,6 +27,7 @@
                                                 <label class="" for="owner">{{ Auth::user()->id}}</label>
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <input type="hidden" name="owner" value="{!! Auth::user()->id !!}">
+
                                             </div>
 
                                             <div class="form-group">
@@ -41,7 +42,7 @@
 
                                             <div class="form-group">
                                                 <label for="duracion">Duracion del recorrido</label>
-                                                <input type="number" class="form-control" placeholder="horas" name="duracion">
+                                                <input type="number" class="form-control"value="{!! $ruta->duracion !!}" name="duracion">
                                             </div>
 
                                             <div class="form-group">
@@ -73,15 +74,15 @@
                                         <div class="panel-body">
                                             <div class="form-group">
                                                 <label for="descripcion_vehiculo">Descripcion del Vehiculo</label>
-                                                <textarea class="form-control" name="descripcion_vehiculo" id="descripcion_vehiculo" cols="10" rows="5" >{!! $vehiculo->descripcion !!} </textarea>
+                                                <textarea class="form-control" name="descripcion_vehiculo" id="descripcion_vehiculo" cols="10" rows="5" >{!! $ruta->vehiculo_descripcion !!} </textarea>
                                             </div>
                                             <div class="form group">
                                                 <label for="Tipo de Vehiculo">Tipo de vehiculo</label>
-                                                <input type="text" class="form-control" value="{!! $vehiculo->tipo_vehiculo !!}" name="tipo_vehiculo">
+                                                <input type="text" class="form-control" value="{!! $ruta->vehiculo_tipo !!}" name="tipo_vehiculo">
                                             </div>
                                             <div class="form group">
                                                 <label for="capacidad">Capacidad Maxima de personas:</label>
-                                                <input type="text" class="form-control" value="{!! $vehiculo->capacidad !!}" name="capacidad">
+                                                <input type="number" class="form-control" value="{!! $ruta->vehiculo_capacidad !!}" name="capacidad">
                                             </div>
 
                                         </div>
