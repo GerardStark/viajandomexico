@@ -35,18 +35,18 @@
                                             <label for="tipo_alimento">Tipo de Cocina</label>
                                             <select name="tipo_alimento" id="tipo_alimento">
                                                 <option value="{{$restaurant -> restaurant}}">{{ $restaurant -> tipo_alimento }}</option>
-                                                <option value="Asiática">Asiática</option>
-                                                <option value="Árabe">Árabe</option>
+                                                <option value="Asiï¿½tica">Asiï¿½tica</option>
+                                                <option value="ï¿½rabe">ï¿½rabe</option>
                                                 <option value="Carnes">Carnes</option>
                                                 <option value="China">China</option>
-                                                <option value="Fusión">Fusión</option>
-                                                <option value="Hindú">Hindú</option>
+                                                <option value="Fusiï¿½n">Fusiï¿½n</option>
+                                                <option value="Hindï¿½">Hindï¿½</option>
                                                 <option value="Internacional">Internacional</option>
                                                 <option value="Italiana">Italiana</option>
                                                 <option value="Mariscos SPA">Mariscos</option>
-                                                <option value="Mediterránea">Mediterránea</option>
+                                                <option value="Mediterrï¿½nea">Mediterrï¿½nea</option>
                                                 <option value="Mexicana">Mexicana</option>
-                                                <option value="Rápida">Rápida</option>
+                                                <option value="Rï¿½pida">Rï¿½pida</option>
                                                 <option value="Vegetariana">Vegetariana</option>
                                             </select>                                            </div>
 
@@ -57,73 +57,74 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="panel-heading" role="tab" id="headingFour">
-                                <h4 class="panel-title">
-                                    <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Localizacion
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                <div class="form-group col-md-12">
-                                    <label for="">Pais:</label>
-                                    <div class="">
-                                        <select name="pais" id="pais" class="form-control">
-                                            <option value="0">Seleccione..</option>
-                                            @foreach($paises as $pais)
-                                            <option value="{!! $pais->id !!}">{!!  $pais->nombre !!}</option>
-                                            @endforeach
-                                        </select>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingFour">
+                                    <h4 class="panel-title">
+                                        <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Localizacion
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                    <div class="form-group col-md-12">
+                                        <label for="">Estado:</label>
+                                        <div class="">
+                                            <select name="pais" id="pais" class="form-control">
+                                                <option value="{!! $restaurant->estado!!}">{!! $restaurant->nomstate->nombre!!}</option>
+                                                @foreach($estados as $estado)
+                                                    <option value="{!! $estado->id !!}">{!!  $estado->nombre !!}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <div class=""><label for="">Estado:</label></div>
-                                    <div class="">
-                                        <select name="estado" id="estado" class="form-control">
-                                            <option value="0">Seleccione..</option>
-                                        </select>
+                                    <div class="form-group col-md-12">
+                                        <div class=""><label for="">Municipio:</label></div>
+                                        <div class="">
+                                            <select name="estado" id="estado" class="form-control">
+                                                <option value="{!! $restaurant->municipio!!}">{!! $restaurant->nommunicipio->nombre!!}</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <div class=""><label for="">Ciudad:</label></div>
+                                    <div class="form-group col-md-12">
+                                        <div class=""><label for="">Localidad:</label></div>
 
-                                    <select name="ciudad" id="ciudad" class="form-control">
-                                        <option value="0">Seleccione..</option>
-                                    </select>
+                                        <select name="ciudad" id="ciudad" class="form-control">
+                                            <option value="{!! $restaurant->localidad!!}">{!! $restaurant->nomlocalidad->nombre!!}</option>
+                                        </select>
 
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <div class="">{!!  Form::label('codigo_postal', 'Codigo Postal:') !!}</div>
-                                    <div class="">{!! Form::text('codigo_postal',$restaurant->cp,null,['class' => 'form-control']) !!}</div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <div class="">{!!   Form::label('direccion', 'Dirección:') !!}</div>
-                                    <div class="">{!!  Form::text('direccion',$restaurant->direccion,null,['class' => 'form-control']) !!}
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        {!!  Form::label('codigo_postal', 'Codigo Postal:') !!}
+                                        {!! Form::text('codigo_postal',$restaurant->cp,['class' => 'form-control']) !!}
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        {!!   Form::label('direccion', 'DirecciÃ³n:') !!}
+                                        {!!  Form::text('direccion',$restaurant->direccion,['class' => 'form-control']) !!}
                                         <input type="button" value="Ubicar en Mapa" onclick="codeAddress()" class="form-control">
+
                                     </div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <div class=""><label>Direccion: </label></div>
-                                    <div class="">
-                                        <div class="mapa">
-                                            <div class="lat-long">
-                                                <div>
-                                                    {!!  Form::label('latitud', 'Latitud') !!}
-                                                    {!!  Form::text('latitud', $restaurant->latitud,null,['class' => 'form-control']) !!}
+                                    <div class="form-group col-md-12">
+                                        <div class=""><label>Direccion: </label></div>
+                                        <div class="">
+                                            <div class="mapa">
+                                                <div class="lat-long">
+                                                    <div>
+                                                        {!!  Form::label('latitud', 'Latitud') !!}
+                                                        {!!  Form::text('latitud', $restaurant->latitud,['class' => 'form-control']) !!}
+                                                    </div>
+                                                    <div>
+                                                        {!!  Form::label('longitud', 'Longitud') !!}
+                                                        {!! Form::text('longitud',$restaurant->longitud,['class' => 'form-control']) !!}
+                                                        <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    {!!  Form::label('longitud', 'Longitud') !!}
-                                                    {!! Form::text('longitud', $restaurant->longitud,null,['class' => 'form-control']) !!}
-                                                    <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
-                                                </div>
+                                                <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                <span id="err" style="color:red"></span>
                                             </div>
-                                            <div id="mapCanvas" style="width:100%;height:350px;"></div>
-                                            <span id="err" style="color:red"></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                    </div>
                     {{--END AREA 4--}}
                     <div class="form-group">
                         <button type="submit" class="btn btn-default">Guardar</button>
@@ -201,7 +202,7 @@
     }
 
 
-    // Permito la gesti¢n de los eventos DOM
+    // Permito la gestiï¿½n de los eventos DOM
     //google.maps.event.addDomListener(window, 'load', initialize);
     /*function cargarmapa (){
      initialize()

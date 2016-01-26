@@ -41,7 +41,7 @@
                                                     <option value="SPA Destino">SPA Destino</option>
                                                     <option value="SPA Fitness">SPA Fitness</option>
                                                     <option value="SPA Hotel">SPA Hotel</option>
-                                                    <option value="Terapeutico Medico">Terapeutico Médicos</option>
+                                                    <option value="Terapeutico Medico">Terapeutico Mï¿½dicos</option>
                                                     <option value="Terapeutico Fisio">Terapeutico Fisio</option>
                                                     <option value="Beauty SPA">Beauty SPA</option>
                                                     <option value="Hotel SPA">Hotel SPA</option>
@@ -56,6 +56,76 @@
                                         </div>
                                     </div>
                                 </div>
+                                    {{-- AREA 2--}}
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFour">
+                                            <h4 class="panel-title">
+                                                <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                    Localizacion
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                            <div class="form-group col-md-12">
+                                                <label for="">Estado:</label>
+                                                <div class="">
+                                                    <select name="pais" id="pais" class="form-control">
+                                                        <option value="{!! $spa->estado!!}">{!! $spa->nomstate->nombre!!}</option>
+                                                        @foreach($estados as $estado)
+                                                            <option value="{!! $estado->id !!}">{!!  $estado->nombre !!}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <div class=""><label for="">Municipio:</label></div>
+                                                <div class="">
+                                                    <select name="estado" id="estado" class="form-control">
+                                                        <option value="{!! $spa->municipio!!}">{!! $spa->nommunicipio->nombre!!}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <div class=""><label for="">Localidad:</label></div>
+
+                                                <select name="ciudad" id="ciudad" class="form-control">
+                                                    <option value="{!! $spa->localidad!!}">{!! $spa->nomlocalidad->nombre!!}</option>
+                                                </select>
+
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                {!!  Form::label('codigo_postal', 'Codigo Postal:') !!}
+                                                {!! Form::text('codigo_postal',$spa->cp,['class' => 'form-control']) !!}
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                {!!   Form::label('direccion', 'DirecciÃ³n:') !!}
+                                                {!!  Form::text('direccion',$spa->direccion,['class' => 'form-control']) !!}
+                                                <input type="button" value="Ubicar en Mapa" onclick="codeAddress()" class="form-control">
+
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <div class=""><label>Direccion: </label></div>
+                                                <div class="">
+                                                    <div class="mapa">
+                                                        <div class="lat-long">
+                                                            <div>
+                                                                {!!  Form::label('latitud', 'Latitud') !!}
+                                                                {!!  Form::text('latitud', $spa->latitud,['class' => 'form-control']) !!}
+                                                            </div>
+                                                            <div>
+                                                                {!!  Form::label('longitud', 'Longitud') !!}
+                                                                {!! Form::text('longitud',$spa->longitud,['class' => 'form-control']) !!}
+                                                                <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
+                                                            </div>
+                                                        </div>
+                                                        <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                        <span id="err" style="color:red"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default">Guardar</button>
                                 </div>
@@ -132,7 +202,7 @@
         }
 
 
-        // Permito la gesti¢n de los eventos DOM
+        // Permito la gestiï¿½n de los eventos DOM
         //google.maps.event.addDomListener(window, 'load', initialize);
         /*function cargarmapa (){
          initialize()

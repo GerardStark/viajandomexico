@@ -51,7 +51,7 @@
                                                     <option value="Dancing saloon">Dancing saloon</option>
                                                     <option value="Discotheque">Discotheque</option>
                                                     <option value="Pub">Pub</option>
-                                                    <option value="Taberna">Taberna española</option>
+                                                    <option value="Taberna">Taberna espaï¿½ola</option>
                                                     <option value="carnotzet">carnotzet</option>
                                                 </select>
                                             </div>
@@ -69,74 +69,74 @@
                                     </div>
                                 </div>
                                 {{--END AREA 1--}}
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingFour">
-                                    <h4 class="panel-title">
-                                        <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                            Localizacion
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                    <div class="form-group col-md-12">
-                                        <label for="">Pais:</label>
-                                        <div class="">
-                                            <select name="pais" id="pais" class="form-control">
-                                                <option value="0">Seleccione..</option>
-                                                @foreach($paises as $pais)
-                                                    <option value="{!! $pais->id !!}">{!!  $pais->nombre !!}</option>
-                                                @endforeach
-                                            </select>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingFour">
+                                        <h4 class="panel-title">
+                                            <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                Localizacion
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                        <div class="form-group col-md-12">
+                                            <label for="">Estado:</label>
+                                            <div class="">
+                                                <select name="pais" id="pais" class="form-control">
+                                                    <option value="{!! $bar->estado!!}">{!! $bar->nomstate->nombre!!}</option>
+                                                    @foreach($estados as $estado)
+                                                        <option value="{!! $estado->id !!}">{!!  $estado->nombre !!}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <div class=""><label for="">Estado:</label></div>
-                                        <div class="">
-                                            <select name="estado" id="estado" class="form-control">
-                                                <option value="0">Seleccione..</option>
-                                            </select>
+                                        <div class="form-group col-md-12">
+                                            <div class=""><label for="">Municipio:</label></div>
+                                            <div class="">
+                                                <select name="estado" id="estado" class="form-control">
+                                                    <option value="{!! $bar->municipio!!}">{!! $bar->nommunicipio->nombre!!}</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <div class=""><label for="">Ciudad:</label></div>
+                                        <div class="form-group col-md-12">
+                                            <div class=""><label for="">Localidad:</label></div>
 
-                                        <select name="ciudad" id="ciudad" class="form-control">
-                                            <option value="0">Seleccione..</option>
-                                        </select>
+                                            <select name="ciudad" id="ciudad" class="form-control">
+                                                <option value="{!! $bar->localidad!!}">{!! $bar->nomlocalidad->nombre!!}</option>
+                                            </select>
 
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <div class="">{!!  Form::label('codigo_postal', 'Codigo Postal:') !!}</div>
-                                        <div class="">{!! Form::text('codigo_postal',$bar->cp,null,['class' => 'form-control']) !!}</div>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <div class="">{!!   Form::label('direccion', 'Dirección:') !!}</div>
-                                        <div class="">{!!  Form::text('direccion',$bar->direccion,null,['class' => 'form-control']) !!}
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            {!!  Form::label('codigo_postal', 'Codigo Postal:') !!}
+                                            {!! Form::text('codigo_postal',$bar->cp,['class' => 'form-control']) !!}
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            {!!   Form::label('direccion', 'DirecciÃ³n:') !!}
+                                            {!!  Form::text('direccion',$bar->direccion,['class' => 'form-control']) !!}
                                             <input type="button" value="Ubicar en Mapa" onclick="codeAddress()" class="form-control">
+
                                         </div>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <div class=""><label>Direccion: </label></div>
-                                        <div class="">
-                                            <div class="mapa">
-                                                <div class="lat-long">
-                                                    <div>
-                                                        {!!  Form::label('latitud', 'Latitud') !!}
-                                                        {!!  Form::text('latitud', $bar->latitud,null,['class' => 'form-control']) !!}
+                                        <div class="form-group col-md-12">
+                                            <div class=""><label>Direccion: </label></div>
+                                            <div class="">
+                                                <div class="mapa">
+                                                    <div class="lat-long">
+                                                        <div>
+                                                            {!!  Form::label('latitud', 'Latitud') !!}
+                                                            {!!  Form::text('latitud', $bar->latitud,['class' => 'form-control']) !!}
+                                                        </div>
+                                                        <div>
+                                                            {!!  Form::label('longitud', 'Longitud') !!}
+                                                            {!! Form::text('longitud',$bar->longitud,['class' => 'form-control']) !!}
+                                                            <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
+                                                        </div>
                                                     </div>
-                                                    <div>
-                                                        {!!  Form::label('longitud', 'Longitud') !!}
-                                                        {!! Form::text('longitud', $bar->longitud,null,['class' => 'form-control']) !!}
-                                                        <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
-                                                    </div>
+                                                    <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                    <span id="err" style="color:red"></span>
                                                 </div>
-                                                <div id="mapCanvas" style="width:100%;height:350px;"></div>
-                                                <span id="err" style="color:red"></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             {{--END AREA 4--}}
                             <div class="form-group">
                                 <button type="submit" class="btn btn-default">Guardar</button>
@@ -214,7 +214,7 @@
         }
 
 
-        // Permito la gesti¢n de los eventos DOM
+        // Permito la gestiï¿½n de los eventos DOM
         //google.maps.event.addDomListener(window, 'load', initialize);
         /*function cargarmapa (){
          initialize()
