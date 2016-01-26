@@ -48,31 +48,6 @@
                                                     <textarea name="descripcion" id="descripcion" cols="5" rows="5" class="form-control">{!! $transporte->descripcion !!}</textarea>
                                                 </div>
 
-
-                                                {{--<div class="form-group">--}}
-                                                {{--<label for="tipo_transporte">Tipo de Transprote</label>--}}
-                                                {{--<select name="tipo_transporte" id="tipo_transporte">--}}
-                                                {{--<option value="vacio">Seleccione...</option>--}}
-                                                {{--<option value="terrestre">terrestre</option>--}}
-                                                {{--<option value="aereo">aereo</option>--}}
-                                                {{--<option value="maritimo">maritimo</option>--}}
-                                                {{--<option value="ferroviaro">ferroviaro</option>--}}
-                                                {{--</select>--}}
-                                                {{--</div>--}}
-
-                                                {{--<div class="form-group">--}}
-                                                {{--<label for="horario">Horario</label>--}}
-                                                {{--<textarea class="form-control" name="horario" id="horario" cols="10" rows="5" >{{ old('horario')}} </textarea>--}}
-                                                {{--</div>--}}
-
-
-
-                                                {{--<div class="form-group">--}}
-                                                {{--<label for="tipo_vehiculo">tipo vehiculo</label>--}}
-                                                {{--<input class="form-control" type="text" name="tipo_vehiculo" placeholder="tipo vehiculo">--}}
-                                                {{--</div>--}}
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -134,7 +109,7 @@
                                                 <div class=""><label for="">Municipio:</label></div>
                                                 <div class="">
                                                     <select name="estado" id="estado" class="form-control">
-                                                        <option value="{!! $transporte->municipio !!}">$transporte->nommunicipio->nombre</option>
+                                                        <option value="{!! $transporte->municipio !!}">{!! $transporte->nommunicipio->nombre !!}</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -148,7 +123,7 @@
                                             </div>
                                             <div class="form-group col-md-12">
                                                 {!!  Form::label('codigo_postal', 'Codigo Postal:') !!}
-                                                {!! Form::text('codigo_postal',null,['class' => 'form-control']) !!}
+                                                {!! Form::text('codigo_postal',$transporte->cp,['class' => 'form-control']) !!}
                                             </div>
                                             <div class="form-group col-md-12">
                                                 {!!   Form::label('direccion', 'Dirección:') !!}

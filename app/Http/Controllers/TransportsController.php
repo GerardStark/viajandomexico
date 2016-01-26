@@ -122,8 +122,6 @@ class TransportsController extends Controller
     public function edittransport($id)
     {
         $transporte = Transporte::where('id', '=', $id)->get()->first();
-        $serviciostransporte = Servicio_Transporte::where('id_transporte', $id)->get();
-        $servicios = DB::table('servtrans')->orderBy('id')->get();
         $estados = DB::table('estados')->orderBy('nombre')->get();
         return view('providers.transportes.edittransport', compact('transporte', 'servicios', 'serviciostransporte','estados' ));
     }

@@ -1,5 +1,4 @@
 @extends('layout')
-
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -21,6 +20,34 @@
                                     <input type="text" class="form-control" name="name" value="{{ old('name', $user->name) }}">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Apellidos</label>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="apellido" value="{{ old('name', $user->name) }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Foto de perfil</label>
+
+                                <div class="col-md-6">
+                                    <input type="file" name="foto_perfil" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Direccion</label>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="direccion" value="{{ old('name', $user->direccion) }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Descripcion</label>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="descripcion" value="{{ old('name', $user->descripcion) }}">
+                                </div>
+                            </div>
 
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
@@ -36,3 +63,4 @@
         </div>
     </div>
 @endsection
+@stop

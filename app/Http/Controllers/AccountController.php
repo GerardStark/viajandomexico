@@ -27,7 +27,7 @@ class AccountController extends Controller
         if(!Hash::check($request->get('current_password'), $user->password))
         {
             return redirect()->back()->withErrors([
-               'current_password' => 'The current password is not valid'
+               'current_password' => 'La contraseña actual no es valida'
             ]);
         }
 
@@ -40,7 +40,7 @@ class AccountController extends Controller
         $user->save();
 
         return redirect('account')
-            ->with('alert', 'Your password has been changed');
+            ->with('alert', 'tu contraseña ha sido cambiada');
     }
 
     public function editProfile(Request $request)
@@ -62,7 +62,7 @@ class AccountController extends Controller
         $user->save();
 
         return redirect('account')
-            ->with('alert', 'Your profile has been updated');
+            ->with('alert', 'Tu perfil ha sido actualizado');
     }
 
     public function verify(Request $request){
@@ -86,7 +86,4 @@ class AccountController extends Controller
         return redirect()->route('controlpanel')
             ->with('alert', 'Por favor confirma tu email: ' . $user->email);
     }
-
-
-
 }
