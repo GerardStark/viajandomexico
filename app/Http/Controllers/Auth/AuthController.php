@@ -16,7 +16,7 @@ class AuthController extends Controller
 
     //protected $username = 'username';
 
-    protected $maxLoginAttempts = 2;
+    protected $maxLoginAttempts = 5;
     protected $lockoutTime = 300;
 
     /*
@@ -56,7 +56,7 @@ class AuthController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'email' => 'required|email|max:255|unique:users|confirmed',
             'password' => 'required|confirmed|min:6',
         ]);
     }
@@ -203,7 +203,7 @@ class AuthController extends Controller
 
         return \Lang::has('auth.throttle')
             ? \Lang::get('auth.throttle', ['minutes' => $minutes])
-            : 'Too many login attempts. Please try again in '.$seconds.' seconds.';
+            : 'Demaciados intentos fallidos, vuelve a intentar en '.$seconds.' segundos.';
     }
 
 }

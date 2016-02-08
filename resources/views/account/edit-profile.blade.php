@@ -31,7 +31,7 @@
                                 <label class="col-md-4 control-label">Foto de perfil</label>
 
                                 <div class="col-md-6">
-                                    <input type="file" name="foto_perfil" value="">
+                                    <input type="file" name="foto_perfil">
                                 </div>
                             </div>
                             <div class="form-group">

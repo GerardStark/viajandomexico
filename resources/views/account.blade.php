@@ -12,6 +12,7 @@
                             <li><a href="{{ url('account/edit-profile') }}">Editar Perfil</a></li>
                             <li><a href="{{ url('account/password') }}">Cambiar Contraseña</a></li>
                             <li><a href="{{ url('account/verify/') }}">Verificar Cuenta</a></li>
+                            <li><a href="{{ url('account/paymentmethods/') }}">Metodos de Pago/Cobro</a></li>
                         </ul>
                     </div>
                 </div>

@@ -58,7 +58,13 @@ class AccountController extends Controller
             'name' => 'required|min:2'
         ]);
 
-        $user->fill($request->only(['name']));
+        $user->fill($request->input([
+            'name',
+            'apeliido',
+            'foto_perfil',
+            'direccion',
+            'descripcion'
+        ]));
         $user->save();
 
         return redirect('account')
