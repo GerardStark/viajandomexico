@@ -58,13 +58,15 @@ class AccountController extends Controller
             'name' => 'required|min:2'
         ]);
 
-        $user->fill($request->input([
-            'name',
-            'apeliido',
-            'foto_perfil',
-            'direccion',
-            'descripcion'
-        ]));
+        $user->name = $request->only('name');
+        $user->apeliido = $request->only('apeliido');
+        $user->direccion = $request->only('direccion');
+        $file = $request->file('foto_perfil');
+        $fileName = strtolower(str_random(40) .'.'. $file->getClientOriginalExtension());
+        $path = public_path().$request->input('path');
+        $file->move($path, $fileName);
+        $user->foto_perfil = $fileName;
+        $user->descripcion = $request->only('descripcion');
         $user->save();
 
         return redirect('account')
@@ -83,9 +85,7 @@ class AccountController extends Controller
         $user = $request->user();
         $user->registration_token = str_random(40);
         $user->save();
-
         $url = route('confirmation', ['token' => $user->registration_token]);
-
         Mail::send('emails/registration', compact('user', 'url'), function ($m) use ($user) {
             $m->to($user->email, $user->name)->subject('Activa tu cuenta!');
         });

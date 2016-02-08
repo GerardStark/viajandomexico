@@ -12,6 +12,7 @@
 
                             {!! method_field('PUT') !!}
                             {!! csrf_field() !!}
+                            <input type="hidden" name="path" id="path" value="/profiles/{{$user->id}}/">
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Nombre</label>
@@ -31,7 +32,7 @@
                                 <label class="col-md-4 control-label">Foto de perfil</label>
 
                                 <div class="col-md-6">
-                                    <input type="file" name="foto_perfil">
+                                    <input type="file" name="foto_perfil" id="foto_perfil">
                                 </div>
                             </div>
                             <div class="form-group">
