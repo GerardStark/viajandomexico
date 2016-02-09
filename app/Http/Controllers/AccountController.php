@@ -58,15 +58,10 @@ class AccountController extends Controller
             'name' => 'required|min:2'
         ]);
 
-        $user->name = $request->only('name');
-        $user->apeliido = $request->only('apeliido');
-        $user->direccion = $request->only('direccion');
-        $file = $request->file('foto_perfil');
-        $fileName = strtolower(str_random(40) .'.'. $file->getClientOriginalExtension());
-        $path = public_path().$request->input('path');
-        $file->move($path, $fileName);
-        $user->foto_perfil = $fileName;
-        $user->descripcion = $request->only('descripcion');
+        $user->name = $request->input('name');
+        $user->apeliido = $request->input('apeliido');
+        $user->direccion = $request->input('direccion');
+        $user->descripcion = $request->input('descripcion');
         $user->save();
 
         return redirect('account')

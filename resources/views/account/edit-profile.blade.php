@@ -28,13 +28,13 @@
                                     <input type="text" class="form-control" name="apellido" value="{{ old('name', $user->name) }}">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">Foto de perfil</label>
+                            {{--<div class="form-group">--}}
+                                {{--<label class="col-md-4 control-label">Foto de perfil</label>--}}
 
-                                <div class="col-md-6">
-                                    <input type="file" name="foto_perfil" id="foto_perfil">
-                                </div>
-                            </div>
+                                {{--<div class="col-md-6">--}}
+                                    {{--<input type="file" name="foto_perfil" id="foto_perfil">--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Direccion</label>
 
