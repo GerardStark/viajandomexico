@@ -36,14 +36,14 @@
                                 {{--</div>--}}
                             {{--</div>--}}
                             <div class="form-group">
-                                <label class="col-md-4 control-label">Direccion</label>
+                                <label class="col-md-4 control-label">Dirección</label>
 
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="direccion" value="{{ old('name', $user->direccion) }}">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-4 control-label">Descripcion</label>
+                                <label class="col-md-4 control-label">Descripción</label>
 
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="descripcion" value="{{ old('name', $user->descripcion) }}">

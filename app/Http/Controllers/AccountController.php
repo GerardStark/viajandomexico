@@ -59,7 +59,7 @@ class AccountController extends Controller
         ]);
 
         $user->name = $request->input('name');
-        $user->apeliido = $request->input('apeliido');
+        $user->apellidos = $request->input('apellido');
         $user->direccion = $request->input('direccion');
         $user->descripcion = $request->input('descripcion');
         $user->save();
