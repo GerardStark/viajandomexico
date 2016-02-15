@@ -78,14 +78,14 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="horario_inicio">Horario de apertura</label>
-                                                <input type="time" class="form-control" placeholder="Horario de inicio" name="horario_inicio">
-                                            </div>
+                                            {{--<div class="form-group">--}}
+                                                {{--<label for="horario_inicio">Horario de apertura</label>--}}
+                                                {{--<input type="time" class="form-control" placeholder="Horario de inicio" name="horario_inicio">--}}
+                                            {{--</div>--}}
 
                                             <div class="form-group">
                                                 <label for="horario_fin">Duracion</label>
-                                                <input type="number" class="form-control" placeholder="Duracion del Tour" name="horario_fin">
+                                                <input type="number" class="form-control" placeholder="Duracion del Tour" name="duracion_tour">
                                             </div>
                                         </div>
                                     </div>
@@ -100,14 +100,20 @@
                                         </h4>
                                     </div>
                                     <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                                        <div class="panel-body">
+                                        <div class="panel-body form-inline">
                                             <div class="form-group">
-                                                <div id="dynamicInput">
-                                                    Entry 1<br><input type="text" name="myInputs[]" class="form-control">
+                                                <input type="button" value="Agregar+" onClick="addInput('dynamicInput');">
+                                                <div id="dynamicInput" class="">
+                                                    <div class="form-group">
+                                                        <label for="Horario Inicio">Horario Inicio 1</label>
+                                                        <input type="time" class="form-control" id="exampleInputName2" name="horarios_inicio">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="Horario Termina">Horario Termina 1</label>
+                                                        <input type="time" class="form-control" id="exampleInputEmail2" name="horarios_fin">
+                                                    </div>
                                                 </div>
-                                                <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -233,15 +239,22 @@
                 $("#otra_categoria").hide()
             }
         });
-        var counter = 1;
-        var limit = 3;
+        var counter = 2;
+        var limit = 99;
         function addInput(divName){
             if (counter == limit)  {
                 alert("You have reached the limit of adding " + counter + " inputs");
             }
             else {
                 var newdiv = document.createElement('div');
-                newdiv.innerHTML = "Entry " + (counter + 1) + " <br><input type='text' name='myInputs[]'>";
+                newdiv.innerHTML = "<div class='form-group'>"+
+                "<label for='Horario Inicio'>Horario Inicio "+ counter +"</label>"+
+                "<input type='time' class='form-control' id='exampleInputName2' name='horarios_inicio'>"+
+                        "</div>"+
+                        "<div class='form-group'>"+
+                        "<label for='Horario Termina'>Horario Termina " + counter +"</label>"+
+                "<input type='time' class='form-control' id='exampleInputEmail2' name='horarios_fin'>"+
+                        "</div>";
                 document.getElementById(divName).appendChild(newdiv);
                 counter++;
             }

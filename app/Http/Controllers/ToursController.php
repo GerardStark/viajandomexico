@@ -60,10 +60,13 @@ class ToursController extends Controller
         $tour->otros = $request->input('otros');
         $tour->id_galeria = $this->creategallery();
         $incluye = $request->input('incluye');
+        $horariosini = $request->input('horarios_inicio');
+        $horariosfin = $request->input('horarios_fin');
         $tour->save();
         $tourid = $tour->id;
         $this->storestuff($tourid);
         $this->saveincluye($tourid, $incluye);
+        $this->horarios($horariosfin, $horariosini, $tourid);
         return redirect()->route('mis_servicios');
     }
 
@@ -213,6 +216,17 @@ class ToursController extends Controller
     public function eliminartour($id, Request $request){
        Tour::destroy($id);
        return redirect()->back()->with('alert', 'Tour Eliminado con Exito');
+    }
+
+    public function horarios($horariosini, $horariosfin, $tourid){
+        $cuantosini = count($horariosini);
+        $cuantosfin = count($horariosfin);
+        if($cuantosfin === $cuantosfin){
+            foreach($horariosini as $horarios){
+
+            }
+        }
+
     }
 
   }
