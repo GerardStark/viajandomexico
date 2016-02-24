@@ -8,6 +8,7 @@
     <title>Viajando Mexico</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('css/overwritecss.css') }}" type="text/css">
     @yield('css')
 </head>
@@ -26,28 +27,29 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="{{route('controlpanel')}}">Home</a></li>
+                {{--<li><a href="{{route('controlpanel')}}">Home</a></li>--}}
                 @if (Auth::check())
                     <li><a href="{{ url('account') }}">@lang('auth.account')</a></li>
                     @if(Auth::guest())
                     @elseif(Auth::user()->role == 'provider')
                         <li><a href="{{route('mis_servicios')}}">Mis servicios</a></li>
-                        <li><a href="{{route('createnewservice')}}">Nuevo Servicio</a></li>
+                        {{--<li><a href="{{route('createnewservice')}}">Nuevo Servicio</a></li>--}}
 
                     @elseif(Auth::user()->role == 'admin')
                         <li><a href="{{route('mis_servicios')}}">Asdasd</a></li>
-
                     @endif
                 @endif
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right user-options">
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('registernew') }}">Register</a></li>
                 @else
                     <li class="dropdown">
+
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <img src="http://placehold.it/50x50/" alt="">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
@@ -59,7 +61,6 @@
         </div>
     </div>
 </nav>
-
 @yield('content')
 
 <!-- Scripts -->

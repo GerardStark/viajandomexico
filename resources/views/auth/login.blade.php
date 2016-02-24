@@ -3,13 +3,14 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-6 img-tipa">
+                <img src="" alt="">
+            </div>
+            <div class="col-md-6 pull-right login-form">
                 <div class="panel panel-default">
-                    <div class="panel-heading">@lang('auth.login_title')</div>
                     <div class="panel-body">
                         @include('partials.errors')
                         @include('partials.success')
-
                         <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -29,7 +30,6 @@
 
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <div class="checkbox">

@@ -8,14 +8,31 @@
             <div class="col-md-8 col-md-offset-2">
                 @include('partials/success')
                 <div class="panel panel-default">
-                    <div class="panel-heading">Mis Servicios</div>
+                    <div></div>
                     <div class="panel-body">
+                        <div class="col-md-3 text-center user-nombre">
+                            <div class="perfil-info">
+                                <img src="http://placehold.it/150x150/" alt="" class="col-md-12">
+                                <label for="descripcion">{!! Auth::user()->name !!}</label>
+                            </div>
+                            <div class="notificaciones">
+                                <i class="fa fa-bell"></i> Notificaciones <span>12</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 user-desc">
+                            <label for="Descripcion">Descripcion:</label>
+                            <p>{!! Auth::user()->descripcion !!}</p>
+                        </div>
+                    </div>
+                    <div class="panel-body tabs-select">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active"><a href="#Mis_Servicios" aria-controls="Mis_Servicios" role="tab" data-toggle="tab">Mis Servicios</a></li>
                                 <li role="presentation"><a href="#Hoteles" aria-controls="Hoteles" role="tab" data-toggle="tab">Hoteles</a></li>
                                 <li role="presentation"><a href="#Tours" aria-controls="Tours" role="tab" data-toggle="tab">Tours</a></li>
                                 <li role="presentation"><a href="#Transporte" aria-controls="Transporte" role="tab" data-toggle="tab">Transporte</a></li>
                                 <li role="presentation"><a href="#Servi_turs" aria-controls="Servi_turs" role="tab" data-toggle="tab">Servicios Turisticos</a></li>
+                                <li role="presentation"><a href="{{route('createnewservice')}}"><i class="fa fa-plus"></i> Nuevo Servicio</a></li>
                             </ul>
 
                         <div class="tab-content">

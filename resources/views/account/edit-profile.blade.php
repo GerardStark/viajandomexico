@@ -46,7 +46,7 @@
                                 <label class="col-md-4 control-label">Descripción</label>
 
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="descripcion" value="{{ old('name', $user->descripcion) }}">
+                                    <textarea name="descripcion" id="descripcion" cols="5" rows="5" class="form-control">{{ old('descripcion', $user->descripcion) }}</textarea>
                                 </div>
                             </div>
 

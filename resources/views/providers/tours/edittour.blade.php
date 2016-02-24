@@ -77,14 +77,14 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="horario_inicio">Horario inicio</label>
-                                                <input type="text" class="form-control" placeholder="Horario de inicio" value="{{ $tour -> horario_inicio }}" name="horario_inicio">
-                                            </div>
+                                            {{--<div class="form-group">--}}
+                                                {{--<label for="horario_inicio">Horario inicio</label>--}}
+                                                {{--<input type="text" class="form-control" placeholder="Horario de inicio" value="{{ $tour -> horario_inicio }}" name="horario_inicio">--}}
+                                            {{--</div>--}}
 
                                             <div class="form-group">
-                                                <label for="horario_fin">Duracion</label>
-                                                <input type="text" class="form-control" placeholder="Duracion del Tour" value="{{ $tour -> horario_fin }}" name="horario_fin">
+                                                <label for="Duracion">Duracion</label>
+                                                <input type="text" class="form-control" placeholder="Duracion del Tour" value="{{ $tour -> duracion }}" name="duracion">
                                             </div>
                                         </div>
                                     </div>
@@ -102,14 +102,13 @@
                                         <div class="panel-body form-inline">
                                             <input type="button" value="Agregar+" onClick="addInput('dynamicInput');">
                                             <div id="dynamicInput" class="">
-
                                                 <div class="form-group">
                                                     <label for="Horario Inicio">Horario Inicio 1</label>
-                                                    <input type="time" class="form-control" id="exampleInputName2" name="horarios_inicio">
+                                                    <input type="time" class="form-control" id="exampleInputName2" name="horarios_inicio[]">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="Horario Termina">Horario Termina 1</label>
-                                                    <input type="time" class="form-control" id="exampleInputEmail2" name="horarios_fin">
+                                                    <input type="time" class="form-control" id="exampleInputEmail2" name="horarios_fin[]">
                                                 </div>
                                             </div>
 
@@ -248,8 +247,8 @@
                 $("#otherType").hide()
             }
         });
-        var counter = 1;
-        var limit = 3;
+        var counter = 2;
+        var limit = 99;
         function addInput(divName){
             if (counter == limit)  {
                 alert("You have reached the limit of adding " + counter + " inputs");

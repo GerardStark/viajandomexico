@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Horario;
 use App\Tour_Incluye;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -48,8 +49,7 @@ class ToursController extends Controller
         $tour->min_pax = $request->input('min_pax');
         $tour->categoria = $request->input('categoria');
         $tour->otra_categoria = $request->input('otra_categoria');
-        $tour->horario_inicio = $request->input('horario_inicio');
-        $tour->horario_fin = $request->input('horario_fin');
+        $tour->duracion = $request->input('duracion');
         $tour->estado = $request->input('pais');
         $tour->municipio = $request->input('estado');
         $tour->localidad = $request->input('ciudad');
@@ -144,8 +144,7 @@ class ToursController extends Controller
         $tour->min_pax = $request->input('min_pax');
         $tour->categoria = $request->input('categoria');
         $tour->otra_categoria = $request->input('otra_categoria');
-        $tour->horario_inicio = $request->input('horario_inicio');
-        $tour->horario_fin = $request->input('horario_fin');
+        $tour->duracion = $request->input('duracion');
         $tour->estado = $request->input('pais');
         $tour->municipio = $request->input('estado');
         $tour->localidad = $request->input('ciudad');
@@ -221,9 +220,10 @@ class ToursController extends Controller
     public function horarios($horariosini, $horariosfin, $tourid){
         $cuantosini = count($horariosini);
         $cuantosfin = count($horariosfin);
-        if($cuantosfin === $cuantosfin){
+        if($cuantosini === $cuantosfin){
             foreach($horariosini as $horarios){
-
+                $tourhourario = new Horario();
+                $tourhourario->id_tour = $tourid;
             }
         }
 
