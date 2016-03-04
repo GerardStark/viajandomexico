@@ -18,6 +18,7 @@
     <script type="text/javascript" src="js/plugins/debug.addIndicators.js"></script>
     <script type="text/javascript" src="js/jssor.js"></script>
     <script type="text/javascript" src="js/jssor.slider.js"></script>
+
     <script>
         $(function() {
             $('a[href*=#]:not([href=#])').click(function() {
@@ -141,6 +142,7 @@
     </script>
    </head>
 <body>
+
     <nav class="row">
         <ul class="main-menu">
             <li class="logo"><img src="http://placehold.it/150x150"></li>
@@ -150,6 +152,7 @@
             <li class="menu-item"><a href="#contactanos">Contactanos</a></li>
             <li class="menu-item"><a href="{{url('controlpanel')}}">Login/Registro</a></li>
             <li class="agenda"><img src="{{asset('img/agenda.png')}}" width="150px" height="150px"></li>
+
         </ul>
     </nav>
     <div id="content-wrapper">

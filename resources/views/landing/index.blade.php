@@ -12,6 +12,9 @@
     <script type="text/javascript" src="js/jssor.slider.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider.js"></script>
     <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+
+
+
     <script>
 
         jQuery(document).ready(function ($) {
@@ -116,15 +119,46 @@
             };
             var jssor_slider1 = new $JssorSlider$("slider1_container1", options);
         });
-    </script>
 
+
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+        })
+
+
+    </script>
 </head>
 <body>
+
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+            AGENDA PHP xD!!!
+            </div>
+            <div class="modal-footer">
+                Damn!
+                <br>
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <header>
         <video autoplay muted id="bgvid" loop>
             <source src="img/La_Catrina_Holbox.webm" type="video/webm">
         </video>
         <nav>
+
+
+
             <div class="container">
                 <img src="http://placehold.it/100x100" alt="Viajando Mexico" class="logo">
                 <ul class="main-nav">
@@ -133,6 +167,10 @@
                     <li><a href="#seccion-dos">Testimonios</a></li>
                     <li><a href="#seccion-contacto">Contacto</a></li>
                     <li><a href="{{url('controlpanel')}}">Login/Registro</a></li>
+                    <li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                            Launch demo modal
+                        </button>
+                    </li>
                 </ul>
                 {{--<a href="#"><img src="{{asset('img/agenda.png')}}" alt="Agenda" class="agenda"></a>--}}
             </div>
@@ -674,5 +712,6 @@
             });
         });
     </script>
+
 </body>
 </html>
