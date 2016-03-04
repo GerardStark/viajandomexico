@@ -167,12 +167,9 @@
                     <li><a href="#seccion-dos">Testimonios</a></li>
                     <li><a href="#seccion-contacto">Contacto</a></li>
                     <li><a href="{{url('controlpanel')}}">Login/Registro</a></li>
-                    <li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                            Launch demo modal
-                        </button>
-                    </li>
+                    <li><a href="#"><img src="{{asset('img/agenda.png')}}" alt="Agenda" class="agenda"data-toggle="modal" data-target="#myModal"></a></li>
                 </ul>
-                {{--<a href="#"><img src="{{asset('img/agenda.png')}}" alt="Agenda" class="agenda"></a>--}}
+
             </div>
             <div class="hero-text-box">
                 <h1>Viajando Mexico. <br> Atrevete a Descubrir.</h1>
