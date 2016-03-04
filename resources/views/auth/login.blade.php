@@ -4,34 +4,37 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 img-tipa">
-                <img src="" alt="">
+                <img src="{{ asset('img/login/tipa.png') }}" alt="tipa" class="img-responsive">
             </div>
-            <div class="col-md-6 pull-right login-form">
+            <div class="col-md-5 login-form">
+
                 <div class="panel panel-default">
-                    <div class="panel-body">
+                    <div class="pull-right">
+                        <img src="{{ asset('/img/login/logogris.png') }}" alt="logo" class="img-responsive">
+                    </div>
+                    <div class="panel-body login-box">
                         @include('partials.errors')
                         @include('partials.success')
+
                         <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             <div class="form-group">
-                                <label class="col-md-4 control-label">@lang('validation.attributes.email')</label>
+                                <label class="col-md-1 control-label"><i class="fa fa-user icono"></i></label>
 
-                                <div class="col-md-6">
-                                    <input name="email" type="email" value="{{ old('email') }}" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">@lang('validation.attributes.password')</label>
-
-                                <div class="col-md-6">
-                                    <input name="password" type="password" class="form-control">
-
+                                <div class="col-md-11">
+                                    <input name="email" type="email" value="{{ old('email') }}" class="form-control formulario">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
+                                <label class="col-md-1 control-label"><i class="fa fa-lock icono"></i></label>
+
+                                <div class="col-md-11">
+                                    <input name="password" type="password" class="form-control formulario">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-1">
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" name="remember">@lang('auth.remember')
@@ -39,19 +42,25 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="col-md-12  col-md-offset-1">
+                                <a href="/password/email">@lang('auth.forgot_link')</a>
+                            </div>
                             <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary" style="margin-right: 15px;">
+                                <div class="col-md-12 botones">
+                                    <button type="submit" class="btn btn-primary col-md-6 boton">
                                         @lang('auth.login_button')
                                     </button>
-
-                                    <a href="/password/email">@lang('auth.forgot_link')</a>
+                                    <button class="btn btn-primary col-md-6 boton">
+                                        <a href="{{ route('registernew') }}">Regristrate</a>
+                                    </button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
+                    <div class="terms">
+                        * al registrarte aceptas los terminos y condiciones y confirmas que los has leido.
+                    </div>
             </div>
         </div>
     </div>
