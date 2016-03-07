@@ -33,8 +33,13 @@ class ProvidersController extends Controller
     }
 
     public function createnewservice(){
+        $servicios = DB::table('servicios')->orderBy('nombre')->get();
+        $especiales = DB::table('necesidades_espesificas')->orderBy('nombre')->get();
+        $estados = DB::table('estados')->orderBy('nombre')->get();
+        $incluye = DB::table('incluye')->orderBy('nombre')->get();
+        $serviciostur = DB::table('servtrans')->orderBy('nombre')->get();
 
-        return view('providers.create_services');
+        return view('providers.create_services', compact('servicios','especiales','incluye','serviciostur','estados'));
     }
 
     public function servicios(){
