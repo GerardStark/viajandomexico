@@ -20,16 +20,6 @@ Route::get('/', [
     'as'   => 'home'
 ]);
 
-Route::get('about', [
-    'uses' => 'HomeController@about',
-    'as'   => 'home'
-]);
-
-Route::get('testimonials', [
-    'uses' => 'HomeController@testimonials',
-    'as'   => 'home'
-]);
-
 Route::get('controlpanel', [
     'uses' => 'HomeController@panel',
     'as'   => 'controlpanel'
