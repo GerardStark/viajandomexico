@@ -22,18 +22,6 @@
                         </div>
                         <div class="col-md-6 lista-crear col-md-pull-1">
                             <div class="col-md-12 col-md-offset-1">
-                                {{--<a href="#"  id="hotel-btn">--}}
-                                    {{--<li><img src="{{asset('img/login/hoteles.png')}}" alt="hoteles" class="img-responsive"></li>--}}
-                                {{--</a>--}}
-                                {{--<a href="{{route('createtour')}}">--}}
-                                    {{--<li><img src="{{asset('img/login/tours.png')}}" alt="Tours" class="img-responsive "></li>--}}
-                                {{--</a>--}}
-                                {{--<a href="{{route('createservtur')}}">--}}
-                                    {{--<li><img src="{{asset('img/login/servtur.png')}}" alt="Servicios Turisticos" class="img-responsive "></li>--}}
-                                {{--</a>--}}
-                                {{--<a href="{{route('createtransport')}}">--}}
-                                    {{--<li><img src="{{asset('img/login/transport.png')}}" alt="Transportes" class="img-responsive "></li>--}}
-                                {{--</a>--}}
                                 <div>
 
                                     <!-- Nav tabs -->

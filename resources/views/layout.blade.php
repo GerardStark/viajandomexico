@@ -43,8 +43,8 @@
 
             <ul class="nav navbar-nav navbar-right user-options">
                 @if (Auth::guest())
-                    <li><a href="{{ route('login') }}">Login</a></li>
-                    <li><a href="{{ route('registernew') }}">Register</a></li>
+                    {{--<li><a href="{{ route('login') }}">Login</a></li>--}}
+                    {{--<li><a href="{{ route('registernew') }}">Register</a></li>--}}
                 @else
                     <li class="dropdown">
 

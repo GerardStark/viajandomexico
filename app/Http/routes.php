@@ -30,11 +30,6 @@ Route::get('testimonials', [
     'as'   => 'home'
 ]);
 
-Route::get('contacto', [
-    'uses' => 'HomeController@contacto',
-    'as'   => 'home'
-]);
-
 Route::get('controlpanel', [
     'uses' => 'HomeController@panel',
     'as'   => 'controlpanel'

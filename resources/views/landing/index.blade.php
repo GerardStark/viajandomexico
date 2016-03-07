@@ -167,7 +167,7 @@
                     <li><a href="#seccion-nosotros">Nosotros</a></li>
                     <li><a href="#seccion-dos">Testimonios</a></li>
                     <li><a href="#seccion-contacto">Contacto</a></li>
-                    <li><a href="{{url('controlpanel')}}">Login/Registro</a></li>
+                    <li><a href="{{route('login')}}">Login/Registro</a></li>
                     <li><a href="#"><img src="{{asset('img/agenda.png')}}" alt="Agenda" class="agenda"data-toggle="modal" data-target="#myModal"></a></li>
                 </ul>
 
@@ -669,6 +669,7 @@
             </div>
         </div>
     </section>
+
     <script>
         jQuery(document).ready(function($){
             //create the slider
