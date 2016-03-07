@@ -1,0 +1,13 @@
+
+.agenda .even{
+	background-image:url(img/gradient-page-left.jpg);
+	background-position:right top;
+	background-repeat:repeat-y;
+}
+
+.agenda .odd{
+	background-image:url(img/gradient-page-right.jpg);
+	background-position:left top;
+	background-repeat:repeat-y;
+}
+
