@@ -123,7 +123,7 @@ class AuthController extends Controller
      */
     public function redirectPath()
     {
-        return route('controlpanel');
+        return route('mis_servicios');
     }
 
     /**
@@ -179,7 +179,7 @@ class AuthController extends Controller
         $user->registration_token = null;
         $user->save();
 
-        return redirect()->route('controlpanel')
+        return redirect()->route('mis_servicios')
             ->with('alert', '¡Tu email ya fue confirmado!');
     }
 

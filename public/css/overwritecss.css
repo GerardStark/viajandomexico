@@ -13,7 +13,7 @@ textarea {
     padding: 0;
     box-shadow: 6px 6px 3px #888888;
     border-radius: 10px;
-    z-index: 99999;
+    z-index: 1;
 }
 .user-nombre img{
     padding-top: 5%;
@@ -117,4 +117,8 @@ textarea {
     border-radius: 40px;
     background-color:#FFF;
     box-shadow: 5px 5px 5px -5px #000, 5px 5px 5px -5px #000, -5px 5px 5px -5px #000;
+}
+nav{
+    background: #ffffff !important;
+    border: none;
 }

@@ -7,6 +7,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 @include('partials/success')
+                @include('partials/errors')
                 <div class="panel panel-default">
                     <div></div>
                     <div class="panel-body">

@@ -16,12 +16,12 @@
 
                                     <div class="panel-heading" role="tab" id="headingOne">
                                         <h4 class="panel-title">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOneTour" aria-expanded="true" aria-controls="collapseOneTour">
                                                 Datos Generales del Tour
                                             </a>
                                         </h4>
                                     </div>
-                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div id="collapseOneTour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOneTour">
                                         <div class="panel-body">
                                             <div class="form-group">
                                                 <label class="" for="owner">{{Auth::user()->id}}</label>
@@ -94,12 +94,12 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingTwo">
                                         <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwoTour" aria-expanded="true" aria-controls="collapseTwoTour">
                                                 Horarios
                                             </a>
                                         </h4>
                                     </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div id="collapseTwoTour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwoTour">
                                         <div class="panel-body form-inline">
                                             <div class="form-group">
                                                 <input type="button" value="Agregar+" onClick="addInput('dynamicInput');">
@@ -121,12 +121,12 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingTwo">
                                         <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeTour" aria-expanded="true" aria-controls="collapseThreeTour">
                                                 Incluye
                                             </a>
                                         </h4>
                                     </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div id="collapseThreeTour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThreeTour">
                                         <div class="panel-body">
                                             <div class="form-inline">
                                                 @foreach($incluye as $include)
@@ -149,12 +149,12 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingThree">
                                         <h4 class="panel-title">
-                                            <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFourTour" aria-expanded="false" aria-controls="collapseFourTour">
                                                 Localizacion
                                             </a>
                                         </h4>
                                     </div>
-                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div id="collapseFourTour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourTour">
                                         <div class="form-group col-md-12">
                                             <label for="">Estado:</label>
                                             <div class="">

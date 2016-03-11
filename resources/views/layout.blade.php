@@ -6,9 +6,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Viajando Mexico</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/overwritecss.css') }}" type="text/css">
     @yield('css')
 </head>
@@ -23,16 +25,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Viajando Mexico</a>
+            <a href="/"><img src="{{asset('img/login/logogris.png')}}" alt="Viajando Mexico Logotipo" class="img-responsive"></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 {{--<li><a href="{{route('controlpanel')}}">Home</a></li>--}}
                 @if (Auth::check())
-                    <li><a href="{{ url('account') }}">@lang('auth.account')</a></li>
                     @if(Auth::guest())
                     @elseif(Auth::user()->role == 'provider')
-                        <li><a href="{{route('mis_servicios')}}">Mis servicios</a></li>
+
                         {{--<li><a href="{{route('createnewservice')}}">Nuevo Servicio</a></li>--}}
 
                     @elseif(Auth::user()->role == 'admin')
@@ -53,6 +54,11 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{route('mis_servicios')}}">Mis servicios</a></li>
+                            <li><a href="{{ url('account/edit-profile') }}" data-toggle="modal" data-target="#myModal">Editar Perfil</a></li>
+                            <li><a href="{{ url('account/password') }}" data-toggle="modal" data-target="#myModal">Cambiar Contraseña</a></li>
+                            <li><a href="{{ url('account/verify/') }}" data-toggle="modal" data-target="#myModal">Verificar Cuenta</a></li>
+                            <li><a href="{{ url('account/paymentmethods/') }}" data-toggle="modal" data-target="#myModal">Metodos de Pago/Cobro</a></li>
                             <li><a href="{{ route('logout') }}">Logout</a></li>
                         </ul>
                     </li>
@@ -63,14 +69,21 @@
 </nav>
 @yield('content')
 
-<!-- Scripts -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').focus()
-    })
-</script>
 @yield('scripts')
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#myBtn").click(function(){
+            $("#myModal").modal();
+        });
+    });
+</script>
+
 </body>
 </html>

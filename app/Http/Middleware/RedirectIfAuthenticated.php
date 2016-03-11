@@ -35,7 +35,7 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next)
     {
         if ($this->auth->check()) {
-            return redirect()->route('controlpanel');
+            return redirect()->route('mis_servicios');
         }
 
         return $next($request);

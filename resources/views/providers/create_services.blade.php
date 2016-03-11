@@ -13,15 +13,15 @@
                             <div class="col-md-12 col-md-offset-5">
                                 <img src="{{asset('img/login/otratipa.png')}}" alt="otra tipa" class="img-responsive">
                             </div>
-                            <div class="col-md-8 col-md-offset-3 texto-tipa" id="texto-tipa">
-                                <div class="col-md-11">
+                            <div class="col-md-8 col-md-offset-4 texto-tipa" id="texto-tipa">
+                                <div class="col-md-9">
                                     <h2>Crear Algo</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores optio quidem quos unde? Doloribus explicabo molestias recusandae repudiandae totam. Consequatur consequuntur delectus deleniti earum laborum minima minus nulla, obcaecati officiis!</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 lista-crear col-md-pull-1">
-                            <div class="col-md-12 col-md-offset-1">
+                            <div class="col-md-12">
                                 <div>
 
                                     <!-- Nav tabs -->
@@ -41,8 +41,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     @include('partials/errors')
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Crear Hotel</div>
+                                                    <div class="">
                                                         <div class="panel-body">
                                                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                 <form role="form" method="POST" action="{{ route('registerhotel') }}" files="true">
@@ -262,8 +261,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     @include('partials/errors')
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Crear Tour</div>
+                                                    <div class="">
                                                         <div class="panel-body">
                                                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                 <form role="form" method="POST" action="{{ route('registertour') }}" files="true">
@@ -271,12 +269,12 @@
 
                                                                         <div class="panel-heading" role="tab" id="headingOne">
                                                                             <h4 class="panel-title">
-                                                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOneTour" aria-expanded="true" aria-controls="collapseOneTour">
                                                                                     Datos Generales del Tour
                                                                                 </a>
                                                                             </h4>
                                                                         </div>
-                                                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                                        <div id="collapseOneTour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOneTour">
                                                                             <div class="panel-body">
                                                                                 <div class="form-group">
                                                                                     <label class="" for="owner">{{Auth::user()->id}}</label>
@@ -349,12 +347,12 @@
                                                                     <div class="panel panel-default">
                                                                         <div class="panel-heading" role="tab" id="headingTwo">
                                                                             <h4 class="panel-title">
-                                                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwoTour" aria-expanded="true" aria-controls="collapseTwoTour">
                                                                                     Horarios
                                                                                 </a>
                                                                             </h4>
                                                                         </div>
-                                                                        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                                                        <div id="collapseTwoTour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwoTour">
                                                                             <div class="panel-body form-inline">
                                                                                 <div class="form-group">
                                                                                     <input type="button" value="Agregar+" onClick="addInput('dynamicInput');">
@@ -376,12 +374,12 @@
                                                                     <div class="panel panel-default">
                                                                         <div class="panel-heading" role="tab" id="headingTwo">
                                                                             <h4 class="panel-title">
-                                                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeTour" aria-expanded="true" aria-controls="collapseThreeTour">
                                                                                     Incluye
                                                                                 </a>
                                                                             </h4>
                                                                         </div>
-                                                                        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                                                        <div id="collapseThreeTour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThreeTour">
                                                                             <div class="panel-body">
                                                                                 <div class="form-inline">
                                                                                     @foreach($incluye as $include)
@@ -404,12 +402,12 @@
                                                                     <div class="panel panel-default">
                                                                         <div class="panel-heading" role="tab" id="headingThree">
                                                                             <h4 class="panel-title">
-                                                                                <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                                <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFourTour" aria-expanded="false" aria-controls="collapseFourTour">
                                                                                     Localizacion
                                                                                 </a>
                                                                             </h4>
                                                                         </div>
-                                                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                                        <div id="collapseFourTour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourTour">
                                                                             <div class="form-group col-md-12">
                                                                                 <label for="">Estado:</label>
                                                                                 <div class="">
@@ -462,7 +460,7 @@
                                                                                                 <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                                                        <div id="mapCanvas2" style="width:100%;height:350px;"></div>
                                                                                         <span id="err" style="color:red"></span>
                                                                                     </div>
                                                                                 </div>
@@ -487,8 +485,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     @include('partials/errors')
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Crear Transporte</div>
+                                                    <div class="">
                                                         <div class="panel-body">
                                                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                 <form role="form" method="POST" action="{{ route('registertransport') }}" files="true">
@@ -496,12 +493,12 @@
 
                                                                         <div class="panel-heading" role="tab" id="headingOne">
                                                                             <h4 class="panel-title">
-                                                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOneTransport" aria-expanded="true" aria-controls="collapseOneTransport">
                                                                                     Datos Generales del Transporte
                                                                                 </a>
                                                                             </h4>
                                                                         </div>
-                                                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                                        <div id="collapseOneTransport" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOneTransport">
                                                                             <div class="panel-body">
 
                                                                                 <label class="" for="owner">{{Auth::user()->id}}</label>
@@ -529,16 +526,16 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                   {{--END AREA 2--}}
+                                                                    {{--END AREA 2--}}
                                                                     <div class="panel panel-default">
                                                                         <div class="panel-heading" role="tab" id="headingThree">
                                                                             <h4 class="panel-title">
-                                                                                <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                                                <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeTransport" aria-expanded="true" aria-controls="collapseThreeTransport">
                                                                                     Localizacion
                                                                                 </a>
                                                                             </h4>
                                                                         </div>
-                                                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                                        <div id="collapseThreeTransport" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThreeTransport">
                                                                             <div class="form-group col-md-12">
                                                                                 <label for="">Estado:</label>
                                                                                 <div class="">
@@ -591,7 +588,7 @@
                                                                                                 <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                                                        <div id="mapCanvas3" style="width:100%;height:350px;"></div>
                                                                                         <span id="err" style="color:red"></span>
                                                                                     </div>
                                                                                 </div>
@@ -614,10 +611,9 @@
                                     <div role="tabpanel" class="tab-pane fade" id="settings">
                                         <div class="container-fluid">
                                             <div class="row">
-                                                <div class="col-md-8 col-md-offset-2">
+                                                <div class="col-md-12">
                                                     @include('partials.success')
                                                     <div class="panel panel-default">
-                                                        <div class="panel-heading">Crear Servicio Turistico</div>
                                                         <div class="panel-body">
                                                             </a><a href="{{route('createrestaurant')}}">
                                                                 <li>Crear Restaurante</li>
@@ -655,25 +651,29 @@
         $(document).ready(function(){
             $("#hotel-btn").click(function(){
                 $("#texto-tipa").empty();
-                $("#texto-tipa").append("<div> <h2>Crear Hotel</h2> </div>");
+                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Hotel</h2> "+
+                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias commodi culpa facilis fuga illo iusto labore molestiae necessitatibus numquam quam quis quos ratione, repellat similique voluptatem! Doloribus, nostrum.</p></div>");
             });
         });
         $(document).ready(function(){
             $("#tour-btn").click(function(){
                 $("#texto-tipa").empty();
-                $("#texto-tipa").append("<div> <h2>Crear Tour</h2> </div>");
+                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Tour</h2>"+
+                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur autem beatae cumque dignissimos dolor dolorum esse molestiae nobis obcaecati odio, omnis placeat quia sed vero. Blanditiis iusto quis repudiandae!</p></div>");
             });
         });
         $(document).ready(function(){
             $("#restaurant-btn").click(function(){
                 $("#texto-tipa").empty();
-                $("#texto-tipa").append("<div> <h2>Crear Transporte</h2> </div>");
+                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Transporte</h2>"+
+                                "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium magni molestiae ratione. Aliquam, aliquid autem ea esse inventore ipsum itaque laborum laudantium molestias mollitia, natus quasi qui sit soluta vitae?</p></div>");
             });
         });
         $(document).ready(function(){
             $("#servtur-btn").click(function(){
                 $("#texto-tipa").empty();
-                $("#texto-tipa").append("<div> <h2>Crear Servicio Turistico</h2> </div>");
+                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Servicio Turistico</h2>"+
+                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam aut, consequatur cum debitis et eveniet facere, fuga ipsa laudantium maxime, natus non nostrum nulla porro ratione saepe tenetur vitae?</p></div>");
             });
         });
 

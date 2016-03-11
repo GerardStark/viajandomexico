@@ -39,7 +39,7 @@ class AccountController extends Controller
         $user->password = bcrypt($request->get('password'));
         $user->save();
 
-        return redirect('account')
+        return redirect('mis_servicios')
             ->with('alert', 'tu contraseña ha sido cambiada');
     }
 
@@ -64,7 +64,7 @@ class AccountController extends Controller
         $user->descripcion = $request->input('descripcion');
         $user->save();
 
-        return redirect('account')
+        return redirect('mis_servicios')
             ->with('alert', 'Tu perfil ha sido actualizado');
     }
 
@@ -84,7 +84,7 @@ class AccountController extends Controller
         Mail::send('emails/registration', compact('user', 'url'), function ($m) use ($user) {
             $m->to($user->email, $user->name)->subject('Activa tu cuenta!');
         });
-        return redirect()->route('controlpanel')
+        return redirect()->route('mis_servicios')
             ->with('alert', 'Por favor confirma tu email: ' . $user->email);
     }
 }

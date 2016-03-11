@@ -16,12 +16,12 @@
 
                                     <div class="panel-heading" role="tab" id="headingOne">
                                         <h4 class="panel-title">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOneTransport" aria-expanded="true" aria-controls="collapseOneTransport">
                                                 Datos Generales del Transporte
                                             </a>
                                         </h4>
                                     </div>
-                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div id="collapseOneTransport" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOneTransport">
                                         <div class="panel-body">
 
                                             <label class="" for="owner">{{Auth::user()->id}}</label>
@@ -112,12 +112,12 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingThree">
                                         <h4 class="panel-title">
-                                            <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                            <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeTransport" aria-expanded="true" aria-controls="collapseThreeTransport">
                                                 Localizacion
                                             </a>
                                         </h4>
                                     </div>
-                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div id="collapseThreeTransport" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThreeTransport">
                                         <div class="form-group col-md-12">
                                             <label for="">Estado:</label>
                                             <div class="">
