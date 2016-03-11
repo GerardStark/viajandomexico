@@ -164,7 +164,7 @@ body, ul, table, form{
 
 .agenda .p1,
 .agenda .p2,
-.agenda .p3, 
+.agenda .p3,
 .agenda .p11,
 .agenda .p12{
 	background-color:white;
@@ -188,7 +188,7 @@ body, ul, table, form{
 	background-image:-ms-linear-gradient(left, #bbb, #ddd, #bbb);
 	background-image:-o-linear-gradient(left, #bbb, #ddd, #bbb);
 	background-image:linear-gradient(left, #bbb, #ddd, #bbb);
-	
+
 	-webkit-transform:rotateY(-90deg);
 	-moz-transform:rotateY(-90deg);
 	-o-transform:rotateY(-90deg);
