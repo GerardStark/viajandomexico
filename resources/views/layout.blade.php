@@ -78,12 +78,9 @@
     </div>
 </div>
 <script>
-    $(document).ready(function(){
-        $("#myBtn").click(function(){
-            $("#myModal").modal();
-        });
+    $('body').on('hidden.bs.modal', '#myModal', function () {
+        $(this).removeData('bs.modal');
     });
 </script>
-
 </body>
 </html>
