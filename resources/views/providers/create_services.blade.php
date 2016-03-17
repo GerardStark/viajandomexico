@@ -7,6 +7,7 @@
         <div class="row">
             <div class="col-md-12">
                 @include('partials/success')
+                @include('partials/errors')
                 <div class="panel panel-default">
                     <div class="panel-body ">
                         <div class="col-md-6">
@@ -26,21 +27,27 @@
 
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-tabs" role="tablist">
-                                        <li id="hotel-btn" role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="{{asset('img/login/hoteles.png')}}" alt="hoteles" class="img-responsive"></a></li>
-                                        <li id="tour-btn" role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><img src="{{asset('img/login/tours.png')}}" alt="Tours" class="img-responsive "></a></li>
-                                        <li id="restaurant-btn" role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><img src="{{asset('img/login/transport.png')}}" alt="Servicios Turisticos" class="img-responsive "></a></li>
-                                        <li id="servtur-btn" role="presentation"><a href="#settings" aria-controls="messages" role="tab" data-toggle="tab"><img src="{{asset('img/login/servtur.png')}}" alt="Transportes" class="img-responsive "></a></li>
+                                        <li id="hotel-btn" role="presentation"><a href="#hoteles" aria-controls="hoteles" role="tab" data-toggle="tab"><img src="{{asset('img/login/hoteles.png')}}" alt="hoteles" class="img-responsive img-select-efecto"></a></li>
+                                        <li id="tour-btn" role="presentation"><a href="#tours" aria-controls="tours" role="tab" data-toggle="tab"><img src="{{asset('img/login/tours.png')}}" alt="Tours" class="img-responsive img-select-efecto "></a></li>
+                                        <li id="transport-btn" role="presentation"><a href="#transportes" aria-controls="transportes" role="tab" data-toggle="tab"><img src="{{asset('img/login/transport.png')}}" alt="Servicios Turisticos" class="img-responsive img-select-efecto "></a></li>
+                                        <li id="servtur-btn" class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{asset('img/login/servtur.png')}}" alt="Transportes" class="img-responsive img-select-efecto "></a>
+                                            <ul class="dropdown-menu">
+                                                <li id="restaurant-btn" role="presentation"><a href="#restaurantes" aria-controls="restaurantes" role="tab" data-toggle="tab"><img src="{{asset('img/login/restaurante.png')}}" alt="hoteles" class="img-responsive img-chica-redonda"></a></li>
+                                                <li id="bar-btn" role="presentation"><a href="#bares" aria-controls="bares" role="tab" data-toggle="tab"><img src="{{asset('img/login/bar.png')}}" alt="hoteles" class="img-responsive img-chica-redonda"></a></li>
+                                                <li id="spa-btn" role="presentation"><a href="#spas" aria-controls="spas" role="tab" data-toggle="tab"><img src="{{asset('img/login/spa.png')}}" alt="hoteles" class="img-responsive img-chica-redonda"></a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-12 cambia-form text-center" id="cambia">
                                 <!-- Tab panes -->
                                 <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="hoteles">
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    @include('partials/errors')
                                                     <div class="">
                                                         <div class="panel-body">
                                                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -244,10 +251,6 @@
                                                                         </div>
                                                                     </div>
                                                                     {{--END AREA 4--}}
-                                                                    <div class="form-group">
-                                                                        <button type="submit" class="btn btn-default">Guardar</button>
-                                                                    </div>
-                                                                    </a><a href="{{URL::previous()}}">Volver</a>
                                                                 </form>
                                                             </div>
                                                         </div>
@@ -256,11 +259,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane fade" id="profile">
+                                    <div role="tabpanel" class="tab-pane fade" id="tours">
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    @include('partials/errors')
                                                     <div class="">
                                                         <div class="panel-body">
                                                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -468,10 +470,6 @@
                                                                         </div>
                                                                     </div>
                                                                     {{--END AREA 4--}}
-                                                                    <div class="form-group">
-                                                                        <button type="submit" class="btn btn-default">Guardar</button>
-                                                                    </div>
-                                                                    </a><a href="{{URL::previous()}}">Volver</a>
                                                                 </form>
                                                             </div>
                                                         </div>
@@ -480,11 +478,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane fade" id="messages">
+                                    <div role="tabpanel" class="tab-pane fade" id="transportes">
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    @include('partials/errors')
                                                     <div class="">
                                                         <div class="panel-body">
                                                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -596,10 +593,6 @@
                                                                         </div>
                                                                     </div>
                                                                     {{--END AREA 3--}}
-                                                                    <div class="form-group">
-                                                                        <button type="submit" class="btn btn-default">Guardar</button>
-                                                                    </div>
-                                                                    </a><a href="{{URL::previous()}}">Volver</a>
                                                                 </form>
                                                             </div>
                                                         </div>
@@ -608,25 +601,417 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane fade" id="settings">
+                                    <div role="tabpanel" class="tab-pane fade" id="restaurantes">
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    @include('partials.success')
                                                     <div class="panel panel-default">
                                                         <div class="panel-body">
-                                                            </a><a href="{{route('createrestaurant')}}">
-                                                                <li>Crear Restaurante</li>
-                                                            </a>
-                                                            </a><a href="{{route('createbar')}}">
-                                                                <li>Crear Bar</li>
-                                                            </a>
-                                                            </a><a href="{{route('createspa')}}">
-                                                                <li>Crear Spa</li>
-                                                            </a>
-                                                            <a href="{{URL::previous()}}">
-                                                                <li>Volver</li>
-                                                            </a>
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">Crear Restaurante</div>
+                                                                <div class="panel-body">
+                                                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                                                        <form role="form" method="POST" action="{{ route('registerrestaurant') }}" files="true">
+                                                                            <div class="panel panel-default">
+                                                                                <div class="panel-heading" role="tab" id="headingOne">
+                                                                                    <h4 class="panel-title">
+                                                                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOneRestaurant" aria-expanded="true" aria-controls="collapseOneRestaurant">
+                                                                                            Datos Generales del Restaurante
+                                                                                        </a>
+                                                                                    </h4>
+                                                                                </div>
+                                                                                <div id="collapseOneRestaurant" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOneRestaurant">
+                                                                                    <div class="panel-body">
+                                                                                        <label class="" for="owner">{{Auth::user()->id}}</label>
+                                                                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                                                        <input type="hidden" name="owner" value="{!! Auth::user()->id !!}">
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="nombre">Nombre</label>
+                                                                                            <input class="form-control" type="text" name="nombre" placeholder="nombre del restaurante">
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="tipo_alimento">Tipo de Cocina</label>
+                                                                                            <select name="tipo_alimento" id="tipo_alimento">
+                                                                                                <option value="vacio">Seleccione...</option>
+                                                                                                <option value="Asiática">Asiática</option>
+                                                                                                <option value="Árabe">Árabe</option>
+                                                                                                <option value="Carnes">Carnes</option>
+                                                                                                <option value="China">China</option>
+                                                                                                <option value="Fusión">Fusión</option>
+                                                                                                <option value="Hindú">Hindú</option>
+                                                                                                <option value="Internacional">Internacional</option>
+                                                                                                <option value="Italiana">Italiana</option>
+                                                                                                <option value="Mariscos SPA">Mariscos</option>
+                                                                                                <option value="Mediterránea">Mediterránea</option>
+                                                                                                <option value="Mexicana">Mexicana</option>
+                                                                                                <option value="Rápida">Rápida</option>
+                                                                                                <option value="Vegetariana">Vegetariana</option>
+                                                                                            </select>                                            </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="descripcion">Descripcion</label>
+                                                                                            <textarea class="form-control" name="descripcion" id="descripcion" cols="10" rows="5" >{{ old('descripcion')}} </textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            {{--END AREA 1--}}
+                                                                            <div class="panel panel-default">
+                                                                                <div class="panel-heading" role="tab" id="headingThree">
+                                                                                    <h4 class="panel-title">
+                                                                                        <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeRestaurant" aria-expanded="true" aria-controls="collapseThreeRestaurant">
+                                                                                            Localizacion
+                                                                                        </a>
+                                                                                    </h4>
+                                                                                </div>
+                                                                                <div id="collapseThreeRestaurant" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThreeRestaurant">
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <label for="">Estado:</label>
+                                                                                        <div class="">
+                                                                                            <select name="pais" id="pais" class="form-control">
+                                                                                                <option value="0">Seleccione..</option>
+                                                                                                @foreach($estados as $estado)
+                                                                                                    <option value="{!! $estado->id !!}">{!!  $estado->nombre !!}</option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <div class=""><label for="">Municipio:</label></div>
+                                                                                        <div class="">
+                                                                                            <select name="estado" id="estado" class="form-control">
+                                                                                                <option value="0">Seleccione..</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <div class=""><label for="">Localidad:</label></div>
+
+                                                                                        <select name="ciudad" id="ciudad" class="form-control">
+                                                                                            <option value="0">Seleccione..</option>
+                                                                                        </select>
+
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        {!!  Form::label('codigo_postal', 'Codigo Postal:') !!}
+                                                                                        {!! Form::text('codigo_postal',null,['class' => 'form-control']) !!}
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        {!!   Form::label('direccion', 'Dirección:') !!}
+                                                                                        {!!  Form::text('direccion','Playa del Carmen',['class' => 'form-control']) !!}
+                                                                                        <input type="button" value="Ubicar en Mapa" onclick="codeAddress()" class="form-control">
+
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <div class=""><label>Direccion: </label></div>
+                                                                                        <div class="">
+                                                                                            <div class="mapa">
+                                                                                                <div class="lat-long">
+                                                                                                    <div>
+                                                                                                        {!!  Form::label('latitud', 'Latitud') !!}
+                                                                                                        {!!  Form::text('latitud', '20.644217120001013',['class' => 'form-control']) !!}
+                                                                                                    </div>
+                                                                                                    <div>
+                                                                                                        {!!  Form::label('longitud', 'Longitud') !!}
+                                                                                                        {!! Form::text('longitud', '-87.07094038085938',['class' => 'form-control']) !!}
+                                                                                                        <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                                                                <span id="err" style="color:red"></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                        {{--END AREA 3--}}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="bares">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-body">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">Crear Bar</div>
+                                                                <div class="panel-body">
+                                                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                                                        <form role="form" method="POST" action="{{ route('registerbar') }}" files="true">
+                                                                            <div class="panel panel-default">
+
+                                                                                <div class="panel-heading" role="tab" id="headingOneBar">
+                                                                                    <h4 class="panel-title">
+                                                                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOneBar" aria-expanded="true" aria-controls="collapseOneBar">
+                                                                                            Datos Generales del Bar
+                                                                                        </a>
+                                                                                    </h4>
+                                                                                </div>
+                                                                                <div id="collapseOneBar" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOneBar">
+                                                                                    <div class="panel-body">
+                                                                                        <div class="form-group">
+                                                                                            <label class="" for="owner">ID de Usuario: {!! Auth::user()->id !!}</label>
+                                                                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                                                            <input type="hidden" name="owner" value="{!! Auth::user()->id !!}" readonly>
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="name">Nombre</label>
+                                                                                            <input class="form-control" type="text" name="nombre" placeholder="nombre del bar">
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="tipo">Tipo de centro</label>
+                                                                                            <select name="tipo" id="tipo_bar">
+                                                                                                <option value="vacio">Seleccione...</option>
+                                                                                                <option value="ladies-bar">ladies-bar</option>
+                                                                                                <option value="piano-bar">piano-bar</option>
+                                                                                                <option value="lobby-bar">lobby-bar</option>
+                                                                                                <option value="terraza-bar">terraza-bar</option>
+                                                                                                <option value="piscina-bar">piscina-bar</option>
+                                                                                                <option value="teatro-bar">teatro-bar</option>
+                                                                                                <option value="pulqueria">pulqueria</option>
+                                                                                                <option value="salon de te">salon de te</option>
+                                                                                                <option value="Night club">Night club</option>
+                                                                                                <option value="Dancing saloon">Dancing saloon</option>
+                                                                                                <option value="Discotheque">Discotheque</option>
+                                                                                                <option value="Pub">Pub</option>
+                                                                                                <option value="Taberna">Taberna española</option>
+                                                                                                <option value="carnotzet">carnotzet</option>
+                                                                                            </select>
+                                                                                        </div>
+
+                                                                                        {{--<div class="form-group">--}}
+                                                                                        {{--<label for="name">Nombre</label>--}}
+                                                                                        {{--<input class="form-control" type="text" name="horario" placeholder="Horario de apertura y cierre">--}}
+                                                                                        {{--</div>--}}
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="descripcion">descripcion</label>
+                                                                                            <textarea class="form-control" name="descripcion" id="descripcion" cols="10" rows="5" >{{ old('descripcion')}} </textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            {{--END AREA 1--}}
+                                                                            <div class="panel panel-default">
+                                                                                <div class="panel-heading" role="tab" id="headingThree">
+                                                                                    <h4 class="panel-title">
+                                                                                        <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeBar" aria-expanded="true" aria-controls="collapseThree">
+                                                                                            Localizacion
+                                                                                        </a>
+                                                                                    </h4>
+                                                                                </div>
+                                                                                <div id="collapseThreeBar" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThreeBar">
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <label for="">Estado:</label>
+                                                                                        <div class="">
+                                                                                            <select name="pais" id="pais" class="form-control">
+                                                                                                <option value="0">Seleccione..</option>
+                                                                                                @foreach($estados as $estado)
+                                                                                                    <option value="{!! $estado->id !!}">{!!  $estado->nombre !!}</option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <div class=""><label for="">Municipio:</label></div>
+                                                                                        <div class="">
+                                                                                            <select name="estado" id="estado" class="form-control">
+                                                                                                <option value="0">Seleccione..</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <div class=""><label for="">Localidad:</label></div>
+
+                                                                                        <select name="ciudad" id="ciudad" class="form-control">
+                                                                                            <option value="0">Seleccione..</option>
+                                                                                        </select>
+
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        {!!  Form::label('codigo_postal', 'Codigo Postal:') !!}
+                                                                                        {!! Form::text('codigo_postal',null,['class' => 'form-control']) !!}
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        {!!   Form::label('direccion', 'Dirección:') !!}
+                                                                                        {!!  Form::text('direccion','Playa del Carmen',['class' => 'form-control']) !!}
+                                                                                        <input type="button" value="Ubicar en Mapa" onclick="codeAddress()" class="form-control">
+
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <div class=""><label>Direccion: </label></div>
+                                                                                        <div class="">
+                                                                                            <div class="mapa">
+                                                                                                <div class="lat-long">
+                                                                                                    <div>
+                                                                                                        {!!  Form::label('latitud', 'Latitud') !!}
+                                                                                                        {!!  Form::text('latitud', '20.644217120001013',['class' => 'form-control']) !!}
+                                                                                                    </div>
+                                                                                                    <div>
+                                                                                                        {!!  Form::label('longitud', 'Longitud') !!}
+                                                                                                        {!! Form::text('longitud', '-87.07094038085938',['class' => 'form-control']) !!}
+                                                                                                        <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                                                                <span id="err" style="color:red"></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                        {{--END AREA 3--}}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="spas">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-body">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">Crear Spa</div>
+                                                                <div class="panel-body">
+                                                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                                                        <form role="form" method="POST" action="{{ route('registerspa') }}" files="true">
+                                                                            <div class="panel panel-default">
+
+                                                                                <div class="panel-heading" role="tab" id="headingOne">
+                                                                                    <h4 class="panel-title">
+                                                                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOneSpa" aria-expanded="true" aria-controls="collapseOneSpa">
+                                                                                            Datos Generales del Spa
+                                                                                        </a>
+                                                                                    </h4>
+                                                                                </div>
+                                                                                <div id="collapseOneSpa" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOneSpa">
+                                                                                    <div class="panel-body">
+                                                                                        <div class="form-group">
+                                                                                            <label class="" for="owner">ID de Usuario: {!! Auth::user()->id !!}</label>
+                                                                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                                                            <input type="hidden" name="owner" value="{!! Auth::user()->id !!}" readonly>
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label for="nombre">Nombre</label>
+                                                                                            <input class="form-control" type="text" name="nombre" placeholder="nombre del spa">
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="tipo">Tipo de Spa</label>
+                                                                                            <select name="tipo" id="tipo">
+                                                                                                <option value="vacio">Seleccione...</option>
+                                                                                                <option value="SPA Urbano">SPA Urbano</option>
+                                                                                                <option value="SPA Destino">SPA Destino</option>
+                                                                                                <option value="SPA Fitness">SPA Fitness</option>
+                                                                                                <option value="SPA Hotel">SPA Hotel</option>
+                                                                                                <option value="Terapeutico Medico">Terapeutico Médicos</option>
+                                                                                                <option value="Terapeutico Fisio">Terapeutico Fisio</option>
+                                                                                                <option value="Beauty SPA">Beauty SPA</option>
+                                                                                                <option value="Hotel SPA">Hotel SPA</option>
+                                                                                                <option value="Fitness SPA">Fitness SPA</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label for="descripcion">descripcion</label>
+                                                                                            <textarea class="form-control" name="descripcion" id="descripcion" cols="10" rows="5" >{{ old('descripcion')}} </textarea>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            {{--END AREA 1--}}
+                                                                            <div class="panel panel-default">
+                                                                                <div class="panel-heading" role="tab" id="headingThreeSpa">
+                                                                                    <h4 class="panel-title">
+                                                                                        <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeSpa" aria-expanded="true" aria-controls="collapseThreeSpa">
+                                                                                            Localizacion
+                                                                                        </a>
+                                                                                    </h4>
+                                                                                </div>
+                                                                                <div id="collapseThreeSpa" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThreeSpa">
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <label for="">Estado:</label>
+                                                                                        <div class="">
+                                                                                            <select name="pais" id="pais" class="form-control">
+                                                                                                <option value="0">Seleccione..</option>
+                                                                                                @foreach($estados as $estado)
+                                                                                                    <option value="{!! $estado->id !!}">{!!  $estado->nombre !!}</option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <div class=""><label for="">Municipio:</label></div>
+                                                                                        <div class="">
+                                                                                            <select name="estado" id="estado" class="form-control">
+                                                                                                <option value="0">Seleccione..</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <div class=""><label for="">Localidad:</label></div>
+
+                                                                                        <select name="ciudad" id="ciudad" class="form-control">
+                                                                                            <option value="0">Seleccione..</option>
+                                                                                        </select>
+
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        {!!  Form::label('codigo_postal', 'Codigo Postal:') !!}
+                                                                                        {!! Form::text('codigo_postal',null,['class' => 'form-control']) !!}
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        {!!   Form::label('direccion', 'Dirección:') !!}
+                                                                                        {!!  Form::text('direccion','Playa del Carmen',['class' => 'form-control']) !!}
+                                                                                        <input type="button" value="Ubicar en Mapa" onclick="codeAddress()" class="form-control">
+
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-12">
+                                                                                        <div class=""><label>Direccion: </label></div>
+                                                                                        <div class="">
+                                                                                            <div class="mapa">
+                                                                                                <div class="lat-long">
+                                                                                                    <div>
+                                                                                                        {!!  Form::label('latitud', 'Latitud') !!}
+                                                                                                        {!!  Form::text('latitud', '20.644217120001013',['class' => 'form-control']) !!}
+                                                                                                    </div>
+                                                                                                    <div>
+                                                                                                        {!!  Form::label('longitud', 'Longitud') !!}
+                                                                                                        {!! Form::text('longitud', '-87.07094038085938',['class' => 'form-control']) !!}
+                                                                                                        <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                                                                <span id="err" style="color:red"></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                        {{--END AREA 3--}}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -654,26 +1039,25 @@
                 $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Hotel</h2> "+
                         "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias commodi culpa facilis fuga illo iusto labore molestiae necessitatibus numquam quam quis quos ratione, repellat similique voluptatem! Doloribus, nostrum.</p></div>");
             });
-        });
-        $(document).ready(function(){
             $("#tour-btn").click(function(){
                 $("#texto-tipa").empty();
                 $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Tour</h2>"+
                         "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur autem beatae cumque dignissimos dolor dolorum esse molestiae nobis obcaecati odio, omnis placeat quia sed vero. Blanditiis iusto quis repudiandae!</p></div>");
             });
-        });
-        $(document).ready(function(){
-            $("#restaurant-btn").click(function(){
+            $("#transport-btn").click(function(){
                 $("#texto-tipa").empty();
                 $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Transporte</h2>"+
-                                "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium magni molestiae ratione. Aliquam, aliquid autem ea esse inventore ipsum itaque laborum laudantium molestias mollitia, natus quasi qui sit soluta vitae?</p></div>");
+                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium magni molestiae ratione. Aliquam, aliquid autem ea esse inventore ipsum itaque laborum laudantium molestias mollitia, natus quasi qui sit soluta vitae?</p></div>");
             });
-        });
-        $(document).ready(function(){
             $("#servtur-btn").click(function(){
                 $("#texto-tipa").empty();
                 $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Servicio Turistico</h2>"+
                         "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam aut, consequatur cum debitis et eveniet facere, fuga ipsa laudantium maxime, natus non nostrum nulla porro ratione saepe tenetur vitae?</p></div>");
+            });
+            $("#restaurant-btn").click(function(){
+                $("#texto-tipa").empty();
+                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Restaurante</h2>"+
+                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eaque est excepturi placeat! Dignissimos, doloribus, possimus! Alias architecto beatae dolorem dolores, harum ipsa ipsum maxime placeat qui rerum sed unde.</p></div>");
             });
         });
 

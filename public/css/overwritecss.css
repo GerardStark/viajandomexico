@@ -122,3 +122,13 @@ nav{
     background: #ffffff !important;
     border: none;
 }
+.img-chica-redonda{
+    height:120px;
+    width: auto;
+}
+.img-chica-redonda:hover,
+.img-select-efecto:hover{
+    transition: border-radius 0.5s ease;
+    border-radius: 25%;
+
+}

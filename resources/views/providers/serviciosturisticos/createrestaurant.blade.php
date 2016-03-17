@@ -125,12 +125,14 @@
                                             </div>
                                     </div>
                                 </div>
+                                    </div>
+                            </form>
                                 {{--END AREA 3--}}
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default">Guardar</button>
                                 </div>
                                 </a><a href="{{URL::previous()}}">Volver</a>
-                            </form>
+
                         </div>
                     </div>
                 </div>

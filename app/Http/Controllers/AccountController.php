@@ -62,6 +62,7 @@ class AccountController extends Controller
         $user->apellidos = $request->input('apellido');
         $user->direccion = $request->input('direccion');
         $user->descripcion = $request->input('descripcion');
+        $user->foto_perfil = $request->input('foto_perfil');
         $user->save();
 
         return redirect('mis_servicios')

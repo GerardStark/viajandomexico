@@ -51,15 +51,23 @@
                                         @lang('auth.login_button')
                                     </button>
                                     <button class="btn btn-primary col-md-6 boton">
-                                        <a href="{{ route('registernew') }}">Regristrate</a>
+                                        <a href="{{ route('registernew') }}" data-toggle="modal" data-target="#myModal">Regristrate</a>
                                     </button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                    <div class="terms">
-                        * al registrarte aceptas los terminos y condiciones y confirmas que los has leido.
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+
+                            </div>
+
+                        </div>
                     </div>
             </div>
         </div>
