@@ -30,7 +30,7 @@
                                         <li id="hotel-btn" role="presentation"><a href="#hoteles" aria-controls="hoteles" role="tab" data-toggle="tab"><img src="{{asset('img/login/hoteles.png')}}" alt="hoteles" class="img-responsive img-select-efecto"></a></li>
                                         <li id="tour-btn" role="presentation"><a href="#tours" aria-controls="tours" role="tab" data-toggle="tab"><img src="{{asset('img/login/tours.png')}}" alt="Tours" class="img-responsive img-select-efecto "></a></li>
                                         <li id="transport-btn" role="presentation"><a href="#transportes" aria-controls="transportes" role="tab" data-toggle="tab"><img src="{{asset('img/login/transport.png')}}" alt="Servicios Turisticos" class="img-responsive img-select-efecto "></a></li>
-                                        <li id="servtur-btn" class="dropdown">
+                                        <li id="" class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{asset('img/login/servtur.png')}}" alt="Transportes" class="img-responsive img-select-efecto "></a>
                                             <ul class="dropdown-menu">
                                                 <li id="restaurant-btn" role="presentation"><a href="#restaurantes" aria-controls="restaurantes" role="tab" data-toggle="tab"><img src="{{asset('img/login/restaurante.png')}}" alt="hoteles" class="img-responsive img-chica-redonda"></a></li>
@@ -138,7 +138,7 @@
                                                                             <div class="panel-body">
                                                                                 <div class="form-inline">
                                                                                     @foreach($servicios as $servicio)
-                                                                                        <div class="checkbox col-md-3">
+                                                                                        <div class="checkbox col-md-6">
                                                                                             <label>
                                                                                                 {!!  Form::checkbox('servicios[]', $servicio->id, null, ['id' => 'servicio'.$servicio->id])  !!}
                                                                                                 {!!$servicio->nombre  !!}
@@ -166,7 +166,7 @@
                                                                             <div class="panel-body">
                                                                                 <div class="form-inline">
                                                                                     @foreach($especiales as $especial)
-                                                                                        <div class="checkbox col-md-3">
+                                                                                        <div class="checkbox col-md-6">
                                                                                             <label>
                                                                                                 {!!  Form::checkbox('necesidades[]', $especial->id, null, ['id' => 'necesidad'.$especial->id])  !!}
                                                                                                 {!!$especial->nombre  !!}
@@ -243,7 +243,7 @@
                                                                                                 <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                                                        <div id="mapCanvasHotel" class="mapCanvas" style="width:100%;height:350px;"></div>
                                                                                         <span id="err" style="color:red"></span>
                                                                                     </div>
                                                                                 </div>
@@ -385,7 +385,7 @@
                                                                             <div class="panel-body">
                                                                                 <div class="form-inline">
                                                                                     @foreach($incluye as $include)
-                                                                                        <div class="checkbox col-md-3">
+                                                                                        <div class="checkbox col-md-6">
                                                                                             <label>
                                                                                                 {!!  Form::checkbox('incluye[]', $include->id, null, ['id' => 'incluye'.$include->id])  !!}
                                                                                                 {!!$include->nombre  !!}
@@ -462,7 +462,7 @@
                                                                                                 <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div id="mapCanvas2" style="width:100%;height:350px;"></div>
+                                                                                        <div id="mapCanvasTour" class="mapCanvas" style="width:100%;height:350px;"></div>
                                                                                         <span id="err" style="color:red"></span>
                                                                                     </div>
                                                                                 </div>
@@ -585,7 +585,7 @@
                                                                                                 <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div id="mapCanvas3" style="width:100%;height:350px;"></div>
+                                                                                        <div id="mapCanvasTransport" class="mapCanvas" style="width:100%;height:350px;"></div>
                                                                                         <span id="err" style="color:red"></span>
                                                                                     </div>
                                                                                 </div>
@@ -719,7 +719,7 @@
                                                                                                         <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                                                                <div id="mapCanvasRestaurant" class="mapCanvas" style="width:100%;height:350px;"></div>
                                                                                                 <span id="err" style="color:red"></span>
                                                                                             </div>
                                                                                         </div>
@@ -865,7 +865,7 @@
                                                                                                         <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                                                                <div id="mapCanvasBar" class="mapCanvas" style="width:100%;height:350px;"></div>
                                                                                                 <span id="err" style="color:red"></span>
                                                                                             </div>
                                                                                         </div>
@@ -1000,7 +1000,7 @@
                                                                                                         <input type="button" value="Ubicar en mapa" class="btn btn-info" onclick="codeLatLon()">
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div id="mapCanvas" style="width:100%;height:350px;"></div>
+                                                                                                <div id="mapCanvasSpa" class="mapCanvas" style="width:100%;height:350px;"></div>
                                                                                                 <span id="err" style="color:red"></span>
                                                                                             </div>
                                                                                         </div>
@@ -1028,189 +1028,6 @@
     </div>
 @stop
 @section('scripts')
-    <script type="text/javascript">
-        $('#myTabs a').click(function (e) {
-            e.preventDefault()
-            $(this).tab('show')
-        })
-        $(document).ready(function(){
-            $("#hotel-btn").click(function(){
-                $("#texto-tipa").empty();
-                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Hotel</h2> "+
-                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias commodi culpa facilis fuga illo iusto labore molestiae necessitatibus numquam quam quis quos ratione, repellat similique voluptatem! Doloribus, nostrum.</p></div>");
-            });
-            $("#tour-btn").click(function(){
-                $("#texto-tipa").empty();
-                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Tour</h2>"+
-                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur autem beatae cumque dignissimos dolor dolorum esse molestiae nobis obcaecati odio, omnis placeat quia sed vero. Blanditiis iusto quis repudiandae!</p></div>");
-            });
-            $("#transport-btn").click(function(){
-                $("#texto-tipa").empty();
-                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Transporte</h2>"+
-                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium magni molestiae ratione. Aliquam, aliquid autem ea esse inventore ipsum itaque laborum laudantium molestias mollitia, natus quasi qui sit soluta vitae?</p></div>");
-            });
-            $("#servtur-btn").click(function(){
-                $("#texto-tipa").empty();
-                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Servicio Turistico</h2>"+
-                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam aut, consequatur cum debitis et eveniet facere, fuga ipsa laudantium maxime, natus non nostrum nulla porro ratione saepe tenetur vitae?</p></div>");
-            });
-            $("#restaurant-btn").click(function(){
-                $("#texto-tipa").empty();
-                $("#texto-tipa").append("<div class='col-md-9'> <h2>Crear Restaurante</h2>"+
-                        "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eaque est excepturi placeat! Dignissimos, doloribus, possimus! Alias architecto beatae dolorem dolores, harum ipsa ipsum maxime placeat qui rerum sed unde.</p></div>");
-            });
-        });
-
-    </script>
     {!! Html::script('js/lugares.js') !!}
-    <script type="text/javascript">
-
-        function yesnoCheck() {
-            if (document.getElementById('yesCheck').checked) {
-                document.getElementById('ifYes').style.display = 'block';
-                document.getElementById('yes').name = 'otro_plan';
-            }
-            else document.getElementById('ifYes').style.display = 'none';
-        }
-
-    </script>
-
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <script type="text/javascript">
-        // VARIABLES GLOBALES JAVASCRIPT
-        var geocoder;
-        var marker;
-        var latLng;
-        var latLng2;
-        var map;
-
-        // INICiALIZACION DE MAPA
-        function initialize() {
-            geocoder = new google.maps.Geocoder();
-            latLng = new google.maps.LatLng('20.6295586' , '-87.07388509999998');
-            map = new google.maps.Map(document.getElementById('mapCanvas'), {
-                zoom:13,
-                center: latLng,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            });
-            // CREACION DEL MARCADOR
-            marker = new google.maps.Marker({
-                position: latLng,
-                title: 'Da click en cualquier parte del mapa para reubicar el marcador',
-                map: map,
-                draggable: false
-            });
-            // Escucho el CLICK sobre el mapa y si se produce actualizo la posicion del marcador
-            google.maps.event.addListener(map, 'click', function(event) {
-                updateMarker(event.latLng);
-            });
-
-            // Inicializo los datos del marcador
-            //    updateMarkerPosition(latLng);
-            geocodePosition(latLng);
-
-            // Permito los eventos drag/drop sobre el marcador
-            google.maps.event.addListener(marker, 'dragstart', function() {
-                updateMarkerAddress('Arrastrando...');
-            });
-
-            google.maps.event.addListener(marker, 'drag', function() {
-                updateMarkerStatus('Arrastrando...');
-                updateMarkerPosition(marker.getPosition());
-            });
-
-            google.maps.event.addListener(marker, 'dragend', function() {
-                updateMarkerStatus('Arrastre finalizado');
-                geocodePosition(marker.getPosition());
-            });
-        }
-
-
-        // Permito la gesti�n de los eventos DOM
-        //google.maps.event.addDomListener(window, 'load', initialize);
-        /*function cargarmapa (){
-         initialize()
-         }*/
-        function cargarmapa(){
-            initialize();
-            document.getElementById("cargarmapa").removeAttribute("onclick");
-        }
-        /*$('#cargarmapa').click(function(){
-         initialize();
-         });*/
-
-        // ESTA FUNCION OBTIENE LA DIRECCION A PARTIR DE LAS COORDENADAS POS
-        function geocodePosition(pos) {
-            geocoder.geocode({
-                latLng: pos
-            }, function(responses) {
-                if (responses && responses.length > 0) {
-                    updateMarkerAddress(responses[0].formatted_address);
-                } else {
-                    updateMarkerAddress('No puedo encontrar esta direccion.');
-                }
-            });
-        }
-
-        // OBTIENE LA DIRECCION A PARTIR DEL LAT y LON DEL FORMULARIO
-        function codeLatLon() {
-            /*str= document.form_mapa.longitud.value+" , "+document.form_mapa.latitud.value;*/
-            str= document.getElementById('longitud').value+" , "+document.getElementById('latitud').value;
-            latLng2 = new google.maps.LatLng(document.getElementById('latitud').value ,document.getElementById('longitud').value);
-            marker.setPosition(latLng2);
-            map.setCenter(latLng2);
-            geocodePosition (latLng2);
-            // document.form_mapa.direccion.value = str+" OK";
-        }
-
-        // OBTIENE LAS COORDENADAS DESDE lA DIRECCION EN LA CAJA DEL FORMULARIO
-        function codeAddress() {
-            var address = document.getElementById('direccion').value;
-            geocoder.geocode( { 'address': address}, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    updateMarkerPosition(results[0].geometry.location);
-                    marker.setPosition(results[0].geometry.location);
-                    map.setCenter(results[0].geometry.location);
-                }
-                else {
-                    alert('ERROR : ' + status);
-                }
-            });
-        }
-
-        // OBTIENE LAS COORDENADAS DESDE lA DIRECCION EN LA CAJA DEL FORMULARIO
-        function codeAddress2 (address) {
-            geocoder.geocode( { 'address': address}, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    updateMarkerPosition(results[0].geometry.location);
-                    marker.setPosition(results[0].geometry.location);
-                    map.setCenter(results[0].geometry.location);
-                    document.form_mapa.direccion.value = address;
-                } else {
-                    alert('ERROR : ' + status);
-                }
-            });
-        }
-
-        function updateMarkerStatus(str) {
-            document.form_mapa.direccion.value = str;
-        }
-
-        // RECUPERO LOS DATOS LON LAT Y DIRECCION Y LOS PONGO EN EL FORMULARIO
-        function updateMarkerPosition (latLng) {
-            document.getElementById('longitud').value =latLng.lng();
-            document.getElementById('latitud').value = latLng.lat();
-        }
-
-        function updateMarkerAddress(str) {
-            document.getElementById('direccion').value = str;
-        }
-
-        // ACTUALIZO LA POSICION DEL MARCADOR
-        function updateMarker(location) {
-            marker.setPosition(location);
-            updateMarkerPosition(location);
-            geocodePosition(location);
-        }
-    </script>
 @stop

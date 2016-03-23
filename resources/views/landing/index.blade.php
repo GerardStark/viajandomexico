@@ -403,10 +403,6 @@
 
 </head>
 <body>
-
-
-
-
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog"role="document">
         <div class="modal-lg">
@@ -438,7 +434,7 @@
         </video>
         <nav>
             <div class="container">
-                <img src="http://placehold.it/100x100" alt="Viajando Mexico" class="logo">
+                <img src="{{asset('img/login/logogris.png')}}" alt="Viajando Mexico" class="logo">
                 <ul class="main-nav">
                     <li><a href="#seccion-destacados">Inicio</a></li>
                     <li><a href="#seccion-nosotros">Nosotros</a></li>
