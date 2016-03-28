@@ -50,7 +50,7 @@
                     <li class="dropdown">
 
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <img src="http://placehold.it/50x50/" alt="">
+                            <img src="{{asset('perfiles/'.Auth::user()->id.'/'.Auth::user()->foto_perfil)}}" alt="Perfil de{{Auth::user()->id}}" class="img-perfil-reg-menu">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">

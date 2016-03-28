@@ -132,3 +132,15 @@ nav{
     border-radius: 25%;
 
 }
+.img-perfil-reg{
+    height: 200px;
+    width: auto;
+}
+.img-perfil-reg-menu{
+    height:80px;
+    width: auto;
+}
+.img-perfil-reg-desc{
+    height:290px;
+    width: auto;
+}

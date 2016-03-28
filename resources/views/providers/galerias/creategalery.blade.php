@@ -27,7 +27,6 @@
                     {!! Form::close() !!}
 
                 </div>
-                </a><a href="{{URL::previous()}}">Volver</a>
             </div>
             <div class="panel-body">
                 {!! Form::open(['url'=> 'updategaleria/'.$galeria.'/', 'method' => 'POST', 'files'=>'true', 'id' => 'editgalery']) !!}
@@ -65,7 +64,7 @@
                 <button type="submit" class="btn btn-success" id="submit">Guardar</button>
                 {!! Form::close() !!}
             </div>
-            </a><a href="{{URL::previous()}}">Volver</a>
+            </a><a href="{{url('mis_servicios')}}">Volver</a>
         </div>
     </div>
 

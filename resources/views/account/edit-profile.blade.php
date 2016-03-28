@@ -11,14 +11,14 @@
 
             {!! method_field('PUT') !!}
             {!! csrf_field() !!}
-            <input type="hidden" name="path" id="path" value="/profiles/{{$user->id}}/">
+            <input type="hidden" name="path" id="path" value="/profiles/{{$user->id}}/" >
             <div class="form-group">
-                <img src="{{asset('img/perfiles/'.$user->foto_perfil.'/')}}" alt="perfil de {{$user->name}}">
+                <img src="{{asset('perfiles/'.$user->id.'/'.$user->foto_perfil)}}" alt="perfil de {{$user->foto_perfil}}" class="img-perfil-reg">
             </div>
             <div class="form-group">
                 <label class="col-md-4 control-label">Foto de perfil</label>
                 <div class="col-md-6">
-                    <input type="file" name="foto_perfil" id="foto_perfil">
+                    <input type="file" name="foto_perfil" id="foto_perfil" value="{{$user->foto_perfil}}">
                 </div>
             </div>
             <div class="form-group">

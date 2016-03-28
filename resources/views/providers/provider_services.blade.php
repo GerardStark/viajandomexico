@@ -13,7 +13,7 @@
                     <div class="panel-body">
                         <div class="col-md-3 text-center user-nombre">
                             <div class="perfil-info">
-                                <img src="http://placehold.it/150x150/" alt="" class="col-md-12 img-circle">
+                                <img src="{{asset('perfiles/'.Auth::user()->id.'/'.Auth::user()->foto_perfil)}}" alt="Perfil de{{Auth::user()->id}}" class="img-perfil-reg-desc">
                                 <label for="descripcion">{!! Auth::user()->name !!}</label>
                             </div>
                             <div class="notificaciones">
