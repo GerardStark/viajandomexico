@@ -1,8 +1,10 @@
+# Laravel
 /vendor
 /node_modules
 .env
 # User-specific stuff:
 .idea/workspace.xml
+.idea/viajandomexico.iml
 .idea/tasks.xml
 .idea/dictionaries
 .idea/vcs.xml
