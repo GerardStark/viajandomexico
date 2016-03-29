@@ -149,9 +149,13 @@ function check (select){
  /*function cargarmapa (){
   initialize()
   }*/
- function cargarmapa(){
+ function cargarmapahotel(){
 	 initialize();
-	 document.getElementById("cargarmapa").removeAttribute("onclick");
+	 document.getElementById("cargarmapaHotel").removeAttribute("onclick");
+ }
+ function cargarmapatour(){
+	 initialize();
+	 document.getElementById("cargarmapaTour").removeAttribute("onclick");
  }
  /*$('#cargarmapa').click(function(){
   initialize();

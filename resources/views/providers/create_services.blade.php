@@ -185,7 +185,7 @@
                                                                     <div class="panel panel-default">
                                                                         <div class="panel-heading" role="tab" id="headingFour">
                                                                             <h4 class="panel-title">
-                                                                                <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                                                <a id="cargarmapaHotel" onclick="cargarmapahotel()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                                                                     Localizacion
                                                                                 </a>
                                                                             </h4>
@@ -404,7 +404,7 @@
                                                                     <div class="panel panel-default">
                                                                         <div class="panel-heading" role="tab" id="headingThree">
                                                                             <h4 class="panel-title">
-                                                                                <a id="cargarmapa" onclick="cargarmapa()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFourTour" aria-expanded="false" aria-controls="collapseFourTour">
+                                                                                <a id="cargarmapaTour" onclick="cargarmapatour()" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFourTour" aria-expanded="false" aria-controls="collapseFourTour">
                                                                                     Localizacion
                                                                                 </a>
                                                                             </h4>

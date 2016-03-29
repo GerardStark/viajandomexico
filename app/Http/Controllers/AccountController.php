@@ -64,7 +64,9 @@ class AccountController extends Controller
         $user->descripcion = $request->input('descripcion');
         $user->foto_perfil = $request->input('foto_perfil');
         $path = public_path().$request->input('path');
-        $files = $request->file('file');
+        $file = $request->file('foto_perfil');
+        $fileName = strtolower(str_random(40) .'.'. $file->getClientOriginalExtension());
+        $file->move($path, $fileName);
         $user->save();
 
         return redirect('mis_servicios')
