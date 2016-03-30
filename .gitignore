@@ -1,7 +1,7 @@
 /vendor
 /node_modules
 .env
-# User-specific stuff:
+# User-specific n stuff:
 .idea/workspace.xml
 .idea/viajandomexico.iml
 .idea/tasks.xml

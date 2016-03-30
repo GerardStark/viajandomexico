@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -59,7 +60,6 @@ class AccountController extends Controller
         $this->validate($request, [
             'name' => 'required|min:2'
         ]);
-
         $user->name = $request->input('name');
         $user->apellidos = $request->input('apellido');
         $user->direccion = $request->input('direccion');
@@ -70,9 +70,14 @@ class AccountController extends Controller
         $file->move($path, $fileName);
         $user->foto_perfil = $fileName;
         $user->save();
+        $this->profilepic($user->foto_perfil, $path,$user->id);
 
         return redirect('mis_servicios')
             ->with('alert', 'Tu perfil ha sido actualizado');
+    }
+    protected function profilepic($imgfile, $path,$iduser){
+        $img = Image::make($path.'/'.$iduser.'/'.$imgfile)->resize(300,300);
+        $img->move($path,$imgfile);
     }
 
     public function verify(Request $request){

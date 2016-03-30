@@ -5,17 +5,18 @@
       <sourceFolder url="file://$MODULE_DIR$/vendor/phpspec/prophecy/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" isTestSource="false" packagePrefix="GuzzleHttp" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/phpspec/phpspec/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/jeremeamia/SuperClosure/src" isTestSource="false" packagePrefix="SuperClosure" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/phpspec/phpspec/features/bootstrap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser/lib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/nesbot/carbon/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-color/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/intervention/image/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/monolog/monolog/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/monolog/monolog/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader/src" isTestSource="false" packagePrefix="ClassPreloader" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/laravel/framework/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/psy/psysh/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/psy/psysh/test" isTestSource="true" />
@@ -29,7 +30,6 @@
       <sourceFolder url="file://$MODULE_DIR$/vendor/psr/log" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader/src" isTestSource="false" packagePrefix="ClassPreloader" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/mtdowling/cron-expression/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/fzaninotto/faker/src" isTestSource="false" />
