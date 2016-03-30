@@ -7,7 +7,8 @@
     <div class="modal-body">
         @include('partials/errors')
 
-        <form class="form-horizontal" role="form" method="POST" action="{{ url('account/edit-profile') }}">
+        <form class="form-horizontal" role="form" method="POST" action="{{ url('account/edit-profile') }}" files="true" enctype="multipart/form-data">
+
 
             {!! method_field('PUT') !!}
             {!! csrf_field() !!}
@@ -18,7 +19,8 @@
                 @else
                     <img id="blah" src="{{asset('perfiles/'.$user->id.'/'.$user->foto_perfil)}}" alt="your image" class="col-md-6  col-md-offset-3"/>
                 @endif
-                <input type='file' id="foto_perfil" name="foto_perfil" class="col-md-6 col-md-offset-3"/>
+                {{--<input type='file' id="foto_perfil" name="foto_perfil" class="col-md-6 col-md-offset-3"/>--}}
+                {!! Form::file('foto_perfil',['class' => 'col-md-6 col-md-offset-3', 'id' => 'foto_perfil']) !!}
             </div>
             <div class="form-group">
                 <label class="col-md-4 control-label">Nombre</label>

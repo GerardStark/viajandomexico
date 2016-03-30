@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use App\User;
 use Validator;
+use Storage;
+use File;
 
 
 class AccountController extends Controller
@@ -62,11 +64,11 @@ class AccountController extends Controller
         $user->apellidos = $request->input('apellido');
         $user->direccion = $request->input('direccion');
         $user->descripcion = $request->input('descripcion');
-        $user->foto_perfil = $request->input('foto_perfil');
         $path = public_path().$request->input('path');
         $file = $request->file('foto_perfil');
         $fileName = strtolower(str_random(40) .'.'. $file->getClientOriginalExtension());
         $file->move($path, $fileName);
+        $user->foto_perfil = $fileName;
         $user->save();
 
         return redirect('mis_servicios')
@@ -81,7 +83,6 @@ class AccountController extends Controller
     }
 
     public function resend(Request $request){
-
         $user = $request->user();
         $user->registration_token = str_random(40);
         $user->save();
