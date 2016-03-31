@@ -8,6 +8,7 @@ textarea {
     resize: none;
 }
 .user-nombre{
+    height: 395px;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
@@ -23,20 +24,24 @@ textarea {
     width: 100%;
 }
 .notificaciones{
+    position: absolute;
+    bottom: 0;
     background: #1ac9ff;
     color: #ffffff;
-    margin: 0;
     padding-top: 5%;
     padding-bottom: 5%;
     border-bottom-right-radius: 10px;
+    width:100%;
 }
 .user-desc{
+    margin-top: 10px;
+    height: 345px;
     background-color: #ffffff;
     border-top: solid 15px #1ac9ff;
     border-bottom: solid 15px #1ac9ff;
 }
 .user-desc p{
-    font-size: 120%;
+    font-size: 110%;
     padding-top: 5%;
     padding-bottom: 5%;
 }
@@ -141,6 +146,6 @@ nav{
     width: auto;
 }
 .img-perfil-reg-desc{
-    height:290px;
-    width: auto;
+    height: auto;
+    width: 300px;
 }
