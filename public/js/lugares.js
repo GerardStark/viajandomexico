@@ -55,14 +55,7 @@
 	 }
 	 else {
 		 var newdiv = document.createElement('div');
-		 newdiv.innerHTML = "<div class='form-group'>"+
-			 "<label for='Horario Inicio'>Horario Inicio "+ counter +"</label>"+
-			 "<input type='time' class='form-control' id='horarios_inicio'"+counter+"name='horarios_inicio'>"+
-			 "</div>"+
-			 "<div class='form-group'>"+
-			 "<label for='Horario Termina'>Horario Termina " + counter +"</label>"+
-			 "<input type='time' class='form-control' id='horarios_fin'"+counter+" name='horarios_fin'>"+
-			 "</div>";
+		 newdiv.innerHTML = "<div class='form-group'>"+"<label for='Horario Inicio'>Horario Inicio "+ counter +"</label>"+"<input type='time' class='form-control' id='horarios_inicio'"+counter+"name='horarios_inicio'>"+"</div>"+"<div class='form-group'>"+"<label for='Horario Termina'>Horario Termina " + counter +"</label>"+"<input type='time' class='form-control' id='horarios_fin'"+counter+" name='horarios_fin'>"+"</div>";
 		 document.getElementById(divName).appendChild(newdiv);
 		 counter++;
 	 }

@@ -986,7 +986,6 @@
                                                                                         <select name="ciudad" id="ciudad" class="form-control">
                                                                                             <option value="0">Seleccione..</option>
                                                                                         </select>
-
                                                                                     </div>
                                                                                     <div class="form-group col-md-12">
                                                                                         {!!  Form::label('codigo_postal', 'Codigo Postal:') !!}
