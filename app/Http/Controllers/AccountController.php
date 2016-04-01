@@ -70,7 +70,7 @@ class AccountController extends Controller
         $file->move($path, $fileName);
         $user->foto_perfil = $fileName;
         $user->save();
-        $this->profilepic($user->foto_perfil, $path,$user->id);
+//        $this->profilepic($user->foto_perfil, $path,$user->id);
 
         return redirect('mis_servicios')
             ->with('alert', 'Tu perfil ha sido actualizado');

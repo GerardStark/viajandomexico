@@ -39,8 +39,34 @@
 	});
 
 });
-
-
+ $('#categoria').on('change',function(){
+	 if( $(this).val()==="otra_categoria"){
+		 $("#otra_categoria").show()
+	 }
+	 else{
+		 $("#otra_categoria").hide()
+	 }
+ });
+ var counter = 2;
+ var limit = 99;
+ function addInput(divName){
+	 if (counter == limit)  {
+		 alert("You have reached the limit of adding " + counter + " inputs");
+	 }
+	 else {
+		 var newdiv = document.createElement('div');
+		 newdiv.innerHTML = "<div class='form-group'>"+
+			 "<label for='Horario Inicio'>Horario Inicio "+ counter +"</label>"+
+			 "<input type='time' class='form-control' id='horarios_inicio'"+counter+"name='horarios_inicio'>"+
+			 "</div>"+
+			 "<div class='form-group'>"+
+			 "<label for='Horario Termina'>Horario Termina " + counter +"</label>"+
+			 "<input type='time' class='form-control' id='horarios_fin'"+counter+" name='horarios_fin'>"+
+			 "</div>";
+		 document.getElementById(divName).appendChild(newdiv);
+		 counter++;
+	 }
+ }
 function getCoords(marker){ 
     $("#latitud").val(marker.getPosition().lat()); 
     $("#longitud").val(marker.getPosition().lng());

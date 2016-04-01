@@ -142,8 +142,9 @@ nav{
     width: auto;
 }
 .img-perfil-reg-menu{
-    height:80px;
-    width: auto;
+    height:auto;
+    width: 80px;
+    border-radius: 50%;
 }
 .img-perfil-reg-desc{
     height: auto;

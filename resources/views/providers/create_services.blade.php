@@ -250,6 +250,9 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="form-group">
+                                                                        <button type="submit" class="btn btn-default">Guardar</button>
+                                                                    </div>
                                                                     {{--END AREA 4--}}
                                                                 </form>
                                                             </div>
@@ -469,6 +472,9 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="form-group">
+                                                                        <button type="submit" class="btn btn-default">Guardar</button>
+                                                                    </div>
                                                                     {{--END AREA 4--}}
                                                                 </form>
                                                             </div>
@@ -592,6 +598,9 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="form-group">
+                                                                        <button type="submit" class="btn btn-default">Guardar</button>
+                                                                    </div>
                                                                     {{--END AREA 3--}}
                                                                 </form>
                                                             </div>
@@ -606,10 +615,9 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="panel panel-default">
-                                                        <div class="panel-body">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">Crear Restaurante</div>
-                                                                <div class="panel-body">
+                                                        <div class="">
+                                                            <div class="">
+                                                                <div class="">
                                                                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                         <form role="form" method="POST" action="{{ route('registerrestaurant') }}" files="true">
                                                                             <div class="panel panel-default">
@@ -726,7 +734,11 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+                                                                            <div class="form-group">
+                                                                                <button type="submit" class="btn btn-default">Guardar</button>
+                                                                            </div>
                                                                         </form>
+
                                                                         {{--END AREA 3--}}
                                                                     </div>
                                                                 </div>
@@ -742,10 +754,9 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="panel panel-default">
-                                                        <div class="panel-body">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">Crear Bar</div>
-                                                                <div class="panel-body">
+                                                        <div class="">
+                                                            <div class="">
+                                                                <div class="">
                                                                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                         <form role="form" method="POST" action="{{ route('registerbar') }}" files="true">
                                                                             <div class="panel panel-default">
@@ -872,6 +883,9 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+                                                                            <div class="form-group">
+                                                                                <button type="submit" class="btn btn-default">Guardar</button>
+                                                                            </div>
                                                                         </form>
                                                                         {{--END AREA 3--}}
                                                                     </div>
@@ -888,10 +902,9 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="panel panel-default">
-                                                        <div class="panel-body">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">Crear Spa</div>
-                                                                <div class="panel-body">
+                                                        <div class="">
+                                                            <div class="">
+                                                                <div class="">
                                                                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                                         <form role="form" method="POST" action="{{ route('registerspa') }}" files="true">
                                                                             <div class="panel panel-default">
@@ -1006,6 +1019,9 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <button type="submit" class="btn btn-default">Guardar</button>
                                                                             </div>
                                                                         </form>
                                                                         {{--END AREA 3--}}

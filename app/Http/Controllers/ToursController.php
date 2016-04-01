@@ -90,7 +90,6 @@ class ToursController extends Controller
             if (count($localincludes) > 0)
                 DB::table('tour_incluye')->insert($localincludes);
         }
-
     }
 
     private function saveincluye($tour, $incluye)
@@ -158,7 +157,6 @@ class ToursController extends Controller
         $tourid = $tour->id;
         $this->saveeditincluye($tourid, $incluye);
         return redirect()->route('mis_servicios');
-
         $tour->save();
         $tourid = $tour->id;
         $this->saveeditincluye($tourid, $incluye);
@@ -221,10 +219,14 @@ class ToursController extends Controller
         $cuantosini = count($horariosini);
         $cuantosfin = count($horariosfin);
         if($cuantosini === $cuantosfin){
-            foreach($horariosini as $horarios){
-                $tourhourario = new Horario();
-                $tourhourario->id_tour = $tourid;
+            for ($a = 0; $a<$cuantosfin;$a++){
+                $tourhorario = new Horario();
+                $tourhorario->id_tour = $tourid;
+                $tourhorario->horario_inicio = $horariosini[$a];
+                $tourhorario->horario_fin = $horariosfin[$a];
+                $tourhorario->save();
             }
+
         }
 
     }
