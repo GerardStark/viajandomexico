@@ -364,11 +364,11 @@
                                                                                     <div id="dynamicInput" class="">
                                                                                         <div class="form-group">
                                                                                             <label for="Horario Inicio">Horario Inicio 1</label>
-                                                                                            <input type="time" class="form-control" id="exampleInputName2" name="horarios_inicio[]">
+                                                                                            <input type="time" class="form-control" id="horarios_inicio" name="horarios_inicio[]">
                                                                                         </div>
                                                                                         <div class="form-group">
                                                                                             <label for="Horario Termina">Horario Termina 1</label>
-                                                                                            <input type="time" class="form-control" id="exampleInputEmail2" name="horarios_fin[]">
+                                                                                            <input type="time" class="form-control" id="horarios_fin" name="horarios_fin[]">
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>

@@ -226,7 +226,6 @@ class ToursController extends Controller
                 $tourhorario->horario_fin = $horariosfin[$a];
                 $tourhorario->save();
             }
-
         }
     }
   }
