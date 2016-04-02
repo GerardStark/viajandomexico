@@ -228,7 +228,5 @@ class ToursController extends Controller
             }
 
         }
-
     }
-
   }
